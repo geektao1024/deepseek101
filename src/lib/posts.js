@@ -1,11 +1,15 @@
+// 文章数据处理工具
+// 提供文章数据的读取、解析和处理功能
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 
+// 文章目录路径
 const postsDirectory = path.join(process.cwd(), 'data', 'md')
 
+// 获取所有文章数据并排序
 export function getSortedPostsData() {
   // Get file names under /data/md
   const fileNames = fs.readdirSync(postsDirectory)
@@ -38,6 +42,7 @@ export function getSortedPostsData() {
   })
 }
 
+// 获取单篇文章的完整数据
 export async function getPostData(slug) {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
