@@ -1,10 +1,5 @@
 [
   {
-    "name": "Next.js",
-    "description": "The React Framework for the Web",
-    "url": "https://nextjs.org/"
-  },
-  {
     "name": "Tailwind CSS",
     "description": "A utility-first CSS framework",
     "url": "https://tailwindcss.com/"
