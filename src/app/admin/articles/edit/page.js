@@ -4,12 +4,11 @@ import { useState, useEffect, useCallback, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import Link from 'next/link';
 
-// Dynamically import the component that uses useSearchParams
 const ArticleEditor = dynamic(() => import('@/components/ArticleEditor'), {
   ssr: false,
+  loading: () => <div>Loading editor...</div>
 });
 
 export default function ArticleEditorPage() {
@@ -42,10 +41,13 @@ export default function ArticleEditorPage() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Edit Article</h1>
-      <Suspense fallback={<div>Loading editor...</div>}>
-        <ArticleEditor />
-      </Suspense>
+      <div className="flex justify-between items-center mb-6">
+        <h1 className="text-2xl font-bold">Edit Article</h1>
+        <Link href="/admin/articles">
+          <Button variant="outline">Back to Articles</Button>
+        </Link>
+      </div>
+      <ArticleEditor />
     </div>
   );
 }

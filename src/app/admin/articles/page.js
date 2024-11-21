@@ -87,9 +87,32 @@ export default function AdminArticlesPage() {
               <TableCell>{new Date(article.date).toLocaleDateString()}</TableCell>
               <TableCell>{new Date(article.lastModified).toLocaleString()}</TableCell>
               <TableCell>
-                <Link href={`/admin/articles/edit?path=${encodeURIComponent(article.path)}`}>
-                  <Button>Edit</Button>
-                </Link>
+                <div className="flex gap-2">
+                  <Link href={`/admin/articles/edit?path=${encodeURIComponent(article.path)}`}>
+                    <Button>Edit</Button>
+                  </Link>
+                  <Button 
+                    onClick={async () => {
+                      if(confirm('Are you sure you want to delete this article?')) {
+                        try {
+                          await fetch('/api/articles/delete', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ path: article.path })
+                          });
+                          // 重新获取文章列表
+                          fetchArticles(true);
+                        } catch (error) {
+                          console.error('Error deleting article:', error);
+                          alert('Failed to delete article');
+                        }
+                      }
+                    }}
+                    variant="destructive"
+                  >
+                    Delete
+                  </Button>
+                </div>
               </TableCell>
             </TableRow>
           ))}
