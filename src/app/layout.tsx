@@ -11,8 +11,8 @@ const inter = Inter({ subsets: ['latin'] })
 // 用于SEO优化,当页面未指定特定元数据时使用这些默认值
 export const metadata: Metadata = {
   title: {
-    default: 'GitBase', // 默认标题
-    template: '%s | GitBase' // 标题模板,用于子页面标题
+    default: 'LemoBook', // 默认标题
+    template: '%s | LemoBook' // 标题模板,用于子页面标题
   },
   description: 'Open source dynamic website without database, built with Next.js and GitHub API',
 }

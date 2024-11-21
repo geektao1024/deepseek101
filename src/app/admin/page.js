@@ -6,6 +6,15 @@ import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { 
+  Plus,           // 添加新资源按钮图标
+  Edit2,          // 编辑按钮图标
+  Save,           // 保存按钮图标
+  X,              // 取消按钮图标
+  Trash2,         // 删除按钮图标
+  ChevronLeft,    // 上一页按钮图标
+  ChevronRight    // 下一页按钮图标
+} from 'lucide-react';
 
 export default function AdminPage() {
   const [resources, setResources] = useState([]);
@@ -153,7 +162,9 @@ export default function AdminPage() {
               />
             </TableCell>
             <TableCell>
-              <Button onClick={() => handleSave(-1)}>Add New</Button>
+              <Button onClick={() => handleSave(-1)} icon={<Plus className="h-4 w-4" />}>
+                Add New
+              </Button>
             </TableCell>
           </TableRow>
           {getCurrentPageItems().map((resource, index) => (
@@ -182,7 +193,9 @@ export default function AdminPage() {
               <TableCell>
                 {editingIndex === index ? (
                   <>
-                    <Button onClick={() => handleSave(index)} className="mr-2">Save</Button>
+                    <Button onClick={() => handleSave(index)} className="mr-2" icon={<Save className="h-4 w-4" />}>
+                      Save
+                    </Button>
                     <Button 
                       onClick={() => {
                         setEditingIndex(null);
@@ -192,14 +205,16 @@ export default function AdminPage() {
                         setOriginalResource(null);
                       }} 
                       variant="outline"
-                      className="mr-2"
+                      icon={<X className="h-4 w-4" />}
                     >
                       Cancel
                     </Button>
                   </>
                 ) : (
                   <>
-                    <Button onClick={() => handleEdit(index)} className="mr-2">Edit</Button>
+                    <Button onClick={() => handleEdit(index)} className="mr-2" icon={<Edit2 className="h-4 w-4" />}>
+                      Edit
+                    </Button>
                     <Button 
                       onClick={async () => {
                         if(confirm('Are you sure you want to delete this resource?')) {
@@ -218,6 +233,7 @@ export default function AdminPage() {
                         }
                       }}
                       variant="destructive"
+                      icon={<Trash2 className="h-4 w-4" />}
                     >
                       Delete
                     </Button>
@@ -235,6 +251,7 @@ export default function AdminPage() {
           onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
           disabled={currentPage === 1}
           variant="outline"
+          icon={<ChevronLeft className="h-4 w-4" />}
         >
           Previous
         </Button>
@@ -245,6 +262,7 @@ export default function AdminPage() {
           onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
           disabled={currentPage === totalPages}
           variant="outline"
+          icon={<ChevronRight className="h-4 w-4" />}
         >
           Next
         </Button>

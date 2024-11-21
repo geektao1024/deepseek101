@@ -5,6 +5,14 @@ import Link from 'next/link'
 import { useRouter, usePathname } from 'next/navigation'
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { 
+  UserCog,      // Admin 按钮图标
+  Users,        // Client 按钮图标
+  LogIn,        // 登录按钮图标
+  X,           // 取消按钮图标
+  Key,         // 密码输入框图标
+  AlertCircle  // 错误提示图标
+} from 'lucide-react'
 
 export function Navigation() {
   const [showLoginDialog, setShowLoginDialog] = useState(false)
@@ -64,7 +72,7 @@ export function Navigation() {
             </Link>
           ) : (
             <Link href="/" className="flex items-center space-x-2">
-              <span className="font-bold">GitBase</span>
+              <span className="font-bold">LemoBook</span>
             </Link>
           )}
 
@@ -117,11 +125,19 @@ export function Navigation() {
         {/* 右侧按钮区域 */}
         <div className="ml-auto">
           {isAdminPage ? (
-            <Button onClick={handleBackToClient} variant="outline">
+            <Button 
+              onClick={handleBackToClient} 
+              variant="outline"
+              icon={<Users className="h-4 w-4" />}
+            >
               Client
             </Button>
           ) : (
-            <Button onClick={() => setShowLoginDialog(true)} variant="outline">
+            <Button 
+              onClick={() => setShowLoginDialog(true)} 
+              variant="outline"
+              icon={<UserCog className="h-4 w-4" />}
+            >
               Admin
             </Button>
           )}
@@ -132,17 +148,40 @@ export function Navigation() {
       {showLoginDialog && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-white p-6 rounded-lg shadow-lg w-96">
-            <h2 className="text-xl font-bold mb-4">Enter Admin Password</h2>
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-bold flex items-center">
+                <Key className="h-5 w-5 mr-2" />
+                Enter Admin Password
+              </h2>
+              <button 
+                onClick={() => {
+                  setShowLoginDialog(false)
+                  setError('')
+                  setPassword('')
+                }}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
             <form onSubmit={handleLogin} className="space-y-4">
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter password"
-                className="w-full p-2 border rounded"
-                autoFocus
-              />
-              {error && <p className="text-red-500 text-sm">{error}</p>}
+              <div className="relative">
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Enter password"
+                  className="w-full p-2 pl-8 border rounded"
+                  autoFocus
+                />
+                <Key className="h-4 w-4 text-gray-400 absolute left-2 top-3" />
+              </div>
+              {error && (
+                <p className="text-red-500 text-sm flex items-center">
+                  <AlertCircle className="h-4 w-4 mr-1" />
+                  {error}
+                </p>
+              )}
               <div className="flex justify-end space-x-2">
                 <Button 
                   type="button" 
@@ -152,10 +191,14 @@ export function Navigation() {
                     setError('')
                     setPassword('')
                   }}
+                  icon={<X className="h-4 w-4" />}
                 >
                   Cancel
                 </Button>
-                <Button type="submit">
+                <Button 
+                  type="submit"
+                  icon={<LogIn className="h-4 w-4" />}
+                >
                   Login
                 </Button>
               </div>

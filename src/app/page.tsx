@@ -9,7 +9,7 @@ import { Metadata } from 'next'
 // 首页组件: GitBase 网站的主页面
 // 展示网站概述、资源列表和最新文章列表
 export const metadata: Metadata = {
-  title: 'GitBase - Open Source Dynamic Website CMS Without Database',
+  title: 'LemoBook - Open Source Dynamic Website CMS Without Database',
   description: 'A Next.js site with Tailwind & Shadcn/UI, using GitHub API for content management. No database needed for dynamic updates.',
 }
 
@@ -30,7 +30,7 @@ export default function Home() {
       <section className="text-center space-y-4">
         {/* 主标题: 响应式字体大小设置 */}
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-          GitBase
+          LemoBook
         </h1>
         {/* 副标题: 响应式字体大小设置 */}
         <h2 className="text-2xl tracking-tighter sm:text-3xl md:text-3xl lg:text-3xl">
@@ -38,7 +38,7 @@ export default function Home() {
         </h2>
         {/* 网站简介: 最大宽度限制和响应式文本大小 */}
         <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl">
-          GitBase is a dynamic, database-free website built with Next.js, Tailwind CSS, and Shadcn/UI, featuring a content management system powered by the GitHub API for seamless updates and administration.
+          LemoBook is a dynamic, database-free website built with Next.js, Tailwind CSS, and Shadcn/UI, featuring a content management system powered by the GitHub API for seamless updates and administration.
         </p>
       </section>
 

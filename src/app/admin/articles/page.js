@@ -5,6 +5,14 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { 
+  RefreshCw,      // 同步按钮图标
+  PlusCircle,     // 创建新文章按钮图标
+  Edit2,          // 编辑按钮图标
+  Trash2,         // 删除按钮图标
+  ChevronLeft,    // 上一页按钮图标
+  ChevronRight    // 下一页按钮图标
+} from 'lucide-react';
 
 export default function AdminArticlesPage() {
   const [articles, setArticles] = useState([]);
@@ -71,9 +79,17 @@ export default function AdminArticlesPage() {
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Article Management</h1>
       <div className="mb-4 flex justify-end">
-        <Button onClick={handleSync} className="mr-2">Sync Articles</Button>
+        <Button 
+          onClick={handleSync} 
+          className="mr-2"
+          icon={<RefreshCw className="h-4 w-4" />}
+        >
+          Sync Articles
+        </Button>
         <Link href="/admin/articles/create">
-          <Button>Create New Article</Button>
+          <Button icon={<PlusCircle className="h-4 w-4" />}>
+            Create New Article
+          </Button>
         </Link>
       </div>
       <Table>
@@ -96,27 +112,18 @@ export default function AdminArticlesPage() {
               <TableCell>
                 <div className="flex gap-2">
                   <Link href={`/admin/articles/edit?path=${encodeURIComponent(article.path)}`}>
-                    <Button>Edit</Button>
+                    <Button icon={<Edit2 className="h-4 w-4" />}>Edit</Button>
                   </Link>
                   <Button 
                     onClick={async () => {
                       if(confirm('Are you sure you want to delete this article?')) {
                         try {
-                          const response = await fetch('/api/articles/delete', {
+                          await fetch('/api/articles/delete', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ 
-                              path: article.path,  // .md 文件路径
-                              title: article.title // 用于日志记录
-                            })
+                            body: JSON.stringify({ path: article.path, title: article.title })
                           });
-
-                          if (!response.ok) {
-                            const data = await response.json();
-                            throw new Error(data.error || 'Failed to delete article');
-                          }
-
-                          await fetchArticles(true);  // 传入 true 表示需要从 GitHub 重新同步
+                          await fetchArticles(true);
                         } catch (error) {
                           console.error('Error deleting article:', error);
                           alert('Failed to delete article: ' + error.message);
@@ -124,6 +131,7 @@ export default function AdminArticlesPage() {
                       }
                     }}
                     variant="destructive"
+                    icon={<Trash2 className="h-4 w-4" />}
                   >
                     Delete
                   </Button>
@@ -140,6 +148,7 @@ export default function AdminArticlesPage() {
           onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
           disabled={currentPage === 1}
           variant="outline"
+          icon={<ChevronLeft className="h-4 w-4" />}
         >
           Previous
         </Button>
@@ -150,6 +159,7 @@ export default function AdminArticlesPage() {
           onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
           disabled={currentPage === totalPages}
           variant="outline"
+          icon={<ChevronRight className="h-4 w-4" />}
         >
           Next
         </Button>
