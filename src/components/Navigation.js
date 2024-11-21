@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter, usePathname } from 'next/navigation'
 import { Button } from "@/components/ui/button"
-import { Github } from 'lucide-react'
 import { cn } from "@/lib/utils"
 
 export function Navigation() {
@@ -116,16 +115,7 @@ export function Navigation() {
         </div>
 
         {/* 右侧按钮区域 */}
-        <div className="ml-auto flex items-center gap-4">
-          <Link
-            href="https://github.com/qiayue/gitbase"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground"
-          >
-            <Github className="h-5 w-5" />
-            <span className="sr-only">GitHub</span>
-          </Link>
+        <div className="ml-auto">
           {isAdminPage ? (
             <Button onClick={handleBackToClient} variant="outline">
               Client
