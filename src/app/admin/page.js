@@ -13,6 +13,7 @@ export default function AdminPage() {
   const [editingIndex, setEditingIndex] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [originalResource, setOriginalResource] = useState(null);
   const router = useRouter();
 
   const checkAuth = useCallback(async () => {
@@ -66,6 +67,7 @@ export default function AdminPage() {
   };
 
   const handleEdit = (index) => {
+    setOriginalResource({...resources[index]});
     setEditingIndex(index);
   };
 
@@ -144,9 +146,47 @@ export default function AdminPage() {
               </TableCell>
               <TableCell>
                 {editingIndex === index ? (
-                  <Button onClick={() => handleSave(index)}>Save</Button>
+                  <>
+                    <Button onClick={() => handleSave(index)} className="mr-2">Save</Button>
+                    <Button 
+                      onClick={() => {
+                        setEditingIndex(null);
+                        const updatedResources = [...resources];
+                        updatedResources[index] = originalResource;
+                        setResources(updatedResources);
+                        setOriginalResource(null);
+                      }} 
+                      variant="outline"
+                      className="mr-2"
+                    >
+                      Cancel
+                    </Button>
+                  </>
                 ) : (
-                  <Button onClick={() => handleEdit(index)}>Edit</Button>
+                  <>
+                    <Button onClick={() => handleEdit(index)} className="mr-2">Edit</Button>
+                    <Button 
+                      onClick={async () => {
+                        if(confirm('Are you sure you want to delete this resource?')) {
+                          const newResources = resources.filter((_, i) => i !== index);
+                          try {
+                            await fetch('/api/resources', {
+                              method: 'POST',
+                              headers: { 'Content-Type': 'application/json' },
+                              body: JSON.stringify(newResources)
+                            });
+                            setResources(newResources);
+                          } catch (error) {
+                            console.error('Error deleting resource:', error);
+                            setError('Failed to delete resource');
+                          }
+                        }
+                      }}
+                      variant="destructive"
+                    >
+                      Delete
+                    </Button>
+                  </>
                 )}
               </TableCell>
             </TableRow>
