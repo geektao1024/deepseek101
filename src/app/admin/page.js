@@ -14,6 +14,8 @@ export default function AdminPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [originalResource, setOriginalResource] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10; // 每页显示10条记录
   const router = useRouter();
 
   const checkAuth = useCallback(async () => {
@@ -94,6 +96,16 @@ export default function AdminPage() {
     }
   };
 
+  // 计算当前页的资源
+  const getCurrentPageItems = () => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    return resources.slice(startIndex, endIndex);
+  };
+
+  // 计算总页数
+  const totalPages = Math.ceil(resources.length / itemsPerPage);
+
   if (isLoading) {
     return <div className="container mx-auto p-4">Loading...</div>;
   }
@@ -121,7 +133,36 @@ export default function AdminPage() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {resources.map((resource, index) => (
+          <TableRow>
+            <TableCell>
+              <Input 
+                name="name" 
+                value={newResource.name} 
+                onChange={handleInputChange} 
+                placeholder="New resource name" 
+              />
+            </TableCell>
+            <TableCell>
+              <Input 
+                name="description" 
+                value={newResource.description} 
+                onChange={handleInputChange} 
+                placeholder="New resource description" 
+              />
+            </TableCell>
+            <TableCell>
+              <Input 
+                name="url" 
+                value={newResource.url} 
+                onChange={handleInputChange} 
+                placeholder="New resource URL" 
+              />
+            </TableCell>
+            <TableCell>
+              <Button onClick={() => handleSave(-1)}>Add New</Button>
+            </TableCell>
+          </TableRow>
+          {getCurrentPageItems().map((resource, index) => (
             <TableRow key={index}>
               <TableCell>
                 {editingIndex === index ? (
@@ -191,22 +232,29 @@ export default function AdminPage() {
               </TableCell>
             </TableRow>
           ))}
-          <TableRow>
-            <TableCell>
-              <Input name="name" value={newResource.name} onChange={handleInputChange} placeholder="New resource name" />
-            </TableCell>
-            <TableCell>
-              <Input name="description" value={newResource.description} onChange={handleInputChange} placeholder="New resource description" />
-            </TableCell>
-            <TableCell>
-              <Input name="url" value={newResource.url} onChange={handleInputChange} placeholder="New resource URL" />
-            </TableCell>
-            <TableCell>
-              <Button onClick={() => handleSave(-1)}>Add New</Button>
-            </TableCell>
-          </TableRow>
         </TableBody>
       </Table>
+
+      {/* 分页控制 */}
+      <div className="flex justify-center mt-4 space-x-2">
+        <Button
+          onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+          disabled={currentPage === 1}
+          variant="outline"
+        >
+          Previous
+        </Button>
+        <span className="py-2 px-4">
+          Page {currentPage} of {totalPages}
+        </span>
+        <Button
+          onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+          disabled={currentPage === totalPages}
+          variant="outline"
+        >
+          Next
+        </Button>
+      </div>
     </div>
   );
 }

@@ -10,6 +10,8 @@ export default function AdminArticlesPage() {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10; // 每页显示10条记录
   const router = useRouter();
 
   const checkAuth = useCallback(async () => {
@@ -52,6 +54,16 @@ export default function AdminArticlesPage() {
     fetchArticles(true);
   }, [fetchArticles]);
 
+  // 计算当前页的文章
+  const getCurrentPageItems = () => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    return articles.slice(startIndex, endIndex);
+  };
+
+  // 计算总页数
+  const totalPages = Math.ceil(articles.length / itemsPerPage);
+
   if (isLoading) return <div className="container mx-auto p-4">Loading...</div>;
   if (error) return <div className="container mx-auto p-4">Error: {error}</div>;
 
@@ -80,7 +92,7 @@ export default function AdminArticlesPage() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {articles.map((article, index) => (
+          {getCurrentPageItems().map((article, index) => (
             <TableRow key={index}>
               <TableCell>{article.title}</TableCell>
               <TableCell>{article.description}</TableCell>
@@ -95,16 +107,24 @@ export default function AdminArticlesPage() {
                     onClick={async () => {
                       if(confirm('Are you sure you want to delete this article?')) {
                         try {
-                          await fetch('/api/articles/delete', {
+                          const response = await fetch('/api/articles/delete', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ path: article.path })
+                            body: JSON.stringify({ 
+                              path: article.path,  // .md 文件路径
+                              title: article.title // 用于日志记录
+                            })
                           });
-                          // 重新获取文章列表
-                          fetchArticles(true);
+
+                          if (!response.ok) {
+                            const data = await response.json();
+                            throw new Error(data.error || 'Failed to delete article');
+                          }
+
+                          await fetchArticles(true);  // 传入 true 表示需要从 GitHub 重新同步
                         } catch (error) {
                           console.error('Error deleting article:', error);
-                          alert('Failed to delete article');
+                          alert('Failed to delete article: ' + error.message);
                         }
                       }
                     }}
@@ -118,6 +138,27 @@ export default function AdminArticlesPage() {
           ))}
         </TableBody>
       </Table>
+
+      {/* 分页控制 */}
+      <div className="flex justify-center mt-4 space-x-2">
+        <Button
+          onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+          disabled={currentPage === 1}
+          variant="outline"
+        >
+          Previous
+        </Button>
+        <span className="py-2 px-4">
+          Page {currentPage} of {totalPages}
+        </span>
+        <Button
+          onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+          disabled={currentPage === totalPages}
+          variant="outline"
+        >
+          Next
+        </Button>
+      </div>
     </div>
   );
 }
