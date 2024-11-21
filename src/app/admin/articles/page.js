@@ -70,16 +70,11 @@ export default function AdminArticlesPage() {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Article Management</h1>
-      <div className="mb-4 flex justify-between">
-        <Link href="/admin">
-          <Button>Back to Admin Dashboard</Button>
+      <div className="mb-4 flex justify-end">
+        <Button onClick={handleSync} className="mr-2">Sync Articles</Button>
+        <Link href="/admin/articles/create">
+          <Button>Create New Article</Button>
         </Link>
-        <div>
-          <Button onClick={handleSync} className="mr-2">Sync Articles</Button>
-          <Link href="/admin/articles/create">
-            <Button>Create New Article</Button>
-          </Link>
-        </div>
       </div>
       <Table>
         <TableHeader>
