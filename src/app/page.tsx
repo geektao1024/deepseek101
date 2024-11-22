@@ -15,12 +15,13 @@ export const metadata: Metadata = {
 
 export default function Home() {
   // 构建资源文件路径并读取资源数据
-  // 从 data/json/resources.json 文件中读取资源列表
   const resourcesPath = path.join(process.cwd(), 'data', 'json', 'resources.json')
-  const resources = JSON.parse(fs.readFileSync(resourcesPath, 'utf8'))
+  const allResources = JSON.parse(fs.readFileSync(resourcesPath, 'utf8'))
   
-  // 获取排序后的文章列表
-  // slice(0, 6) 限制只显示最新的6篇文章
+  // 限制首页只显示前10个资源
+  const resources = allResources.slice(0, 10)
+  
+  // 获取排序后的文章列表，限制显示最新的6篇文章
   const allPostsData = getSortedPostsData().slice(0, 6)
 
   return (
@@ -42,9 +43,9 @@ export default function Home() {
         </p>
       </section>
 
-      {/* 资源列表组件: 展示网站资源 */}
-      <ResourceList resources={resources} />
-      {/* 文章列表组件: 展示最新文章 */}
+      {/* 资源列表组件: 展示前10个资源，并添加"查看更多"链接 */}
+      <ResourceList resources={resources} showMoreLink={true} />
+      {/* 文章列表组件: 展示最新6篇文章 */}
       <ArticleList articles={allPostsData} />
     </div>
   )

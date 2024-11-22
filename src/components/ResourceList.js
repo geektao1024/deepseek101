@@ -21,7 +21,7 @@ export default function ResourceList({ resources, showMoreLink = true }) {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {resources.map((resource, index) => (
-          <Card key={index}>
+          <Card key={index} className="h-[130px] flex flex-col">
             <CardHeader>
               <a 
                 href={resource.url} 
