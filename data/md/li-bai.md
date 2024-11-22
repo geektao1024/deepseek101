@@ -5,7 +5,7 @@ date: '2024-11-22T03:33:33.266Z'
 coverImage: /images/pictures/main.png
 tags:
   - 李白
-lastModified: '2024-11-22T12:08:57.658Z'
+lastModified: '2024-11-22T12:09:54.339Z'
 ---
 床前明月光
 
@@ -13,4 +13,4 @@ lastModified: '2024-11-22T12:08:57.658Z'
 
 举头望明月
 
-低头思故乡
+低头思故乡。
