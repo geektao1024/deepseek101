@@ -8,6 +8,11 @@ const octokit = new Octokit({
 const owner = process.env.GITHUB_OWNER;
 const repo = process.env.GITHUB_REPO;
 
+// 新的配置方式
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+export const maxDuration = 60;
+
 export async function POST(request) {
   console.log('开始处理文件上传请求...');
   try {
@@ -72,12 +77,4 @@ export async function POST(request) {
       { status: 500 }
     );
   }
-}
-
-// 配置文件大小限制
-export const config = {
-  api: {
-    bodyParser: false, // 禁用默认的 body 解析
-    responseLimit: false, // 禁用响应大小限制
-  },
-}; 
+} 
