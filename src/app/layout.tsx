@@ -22,8 +22,8 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 
-// 根布局组件
-// 为所有页面提供统一的布局结构
+// 根布局组件: 为整个应用提供基础布局结构
+// 包含全局样式、字体配置和元数据设置
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">

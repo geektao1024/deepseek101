@@ -15,6 +15,7 @@ import {
   ChevronLeft,    // 上一页按钮图标
   ChevronRight    // 下一页按钮图标
 } from 'lucide-react';
+import { AuthWrapper } from '@/components/auth/AuthWrapper';
 
 export default function AdminPage() {
   const [resources, setResources] = useState([]);
@@ -25,28 +26,10 @@ export default function AdminPage() {
   const [originalResource, setOriginalResource] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10; // 每页显示10条记录
-  const router = useRouter();
-
-  const checkAuth = useCallback(async () => {
-    try {
-      const response = await fetch('/api/check-auth');
-      const data = await response.json();
-      if (!data.isLoggedIn) {
-        router.push('/login');
-      } else {
-        setIsLoading(false);
-      }
-    } catch (error) {
-      console.error('Error checking auth:', error);
-      setError('Failed to authenticate. Please try again.');
-      setIsLoading(false);
-    }
-  }, [router]);
 
   useEffect(() => {
-    checkAuth();
     fetchResources();
-  }, [checkAuth]);
+  }, []);
 
   const fetchResources = async () => {
     setIsLoading(true);
@@ -116,153 +99,163 @@ export default function AdminPage() {
   const totalPages = Math.ceil(resources.length / itemsPerPage);
 
   if (isLoading) {
-    return <div className="container mx-auto p-4">Loading...</div>;
+    return (
+      <AuthWrapper>
+        <div className="container mx-auto p-4">Loading...</div>
+      </AuthWrapper>
+    );
   }
 
   if (error) {
-    return <div className="container mx-auto p-4">Error: {error}</div>;
+    return (
+      <AuthWrapper>
+        <div className="container mx-auto p-4">Error: {error}</div>
+      </AuthWrapper>
+    );
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Resource Management</h1>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead className="w-[200px]">Name</TableHead>
-            <TableHead className="w-[300px]">Description</TableHead>
-            <TableHead className="w-[300px]">URL</TableHead>
-            <TableHead className="w-[120px]">Actions</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          <TableRow>
-            <TableCell>
-              <Input 
-                name="name" 
-                value={newResource.name} 
-                onChange={handleInputChange} 
-                placeholder="New resource name" 
-              />
-            </TableCell>
-            <TableCell>
-              <Input 
-                name="description" 
-                value={newResource.description} 
-                onChange={handleInputChange} 
-                placeholder="New resource description" 
-              />
-            </TableCell>
-            <TableCell>
-              <Input 
-                name="url" 
-                value={newResource.url} 
-                onChange={handleInputChange} 
-                placeholder="New resource URL" 
-              />
-            </TableCell>
-            <TableCell>
-              <div className="flex gap-2 whitespace-nowrap">
-                <Button onClick={() => handleSave(-1)} icon={<Plus className="h-4 w-4" />}>
-                  Add New
-                </Button>
-              </div>
-            </TableCell>
-          </TableRow>
-          {getCurrentPageItems().map((resource, index) => (
-            <TableRow key={index}>
+    <AuthWrapper>
+      <div className="container mx-auto p-4">
+        <h1 className="text-2xl font-bold mb-4">Resource Management</h1>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead className="w-[200px]">Name</TableHead>
+              <TableHead className="w-[300px]">Description</TableHead>
+              <TableHead className="w-[300px]">URL</TableHead>
+              <TableHead className="w-[120px]">Actions</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            <TableRow>
               <TableCell>
-                {editingIndex === index ? (
-                  <Input name="name" value={resource.name} onChange={(e) => handleInputChange(e, index)} />
-                ) : (
-                  <div className="truncate" title={resource.name}>{resource.name}</div>
-                )}
+                <Input 
+                  name="name" 
+                  value={newResource.name} 
+                  onChange={handleInputChange} 
+                  placeholder="New resource name" 
+                />
               </TableCell>
               <TableCell>
-                {editingIndex === index ? (
-                  <Input name="description" value={resource.description} onChange={(e) => handleInputChange(e, index)} />
-                ) : (
-                  <div className="truncate" title={resource.description}>{resource.description}</div>
-                )}
+                <Input 
+                  name="description" 
+                  value={newResource.description} 
+                  onChange={handleInputChange} 
+                  placeholder="New resource description" 
+                />
               </TableCell>
               <TableCell>
-                {editingIndex === index ? (
-                  <Input name="url" value={resource.url} onChange={(e) => handleInputChange(e, index)} />
-                ) : (
-                  <div className="truncate" title={resource.url}>{resource.url}</div>
-                )}
+                <Input 
+                  name="url" 
+                  value={newResource.url} 
+                  onChange={handleInputChange} 
+                  placeholder="New resource URL" 
+                />
               </TableCell>
               <TableCell>
                 <div className="flex gap-2 whitespace-nowrap">
-                  {editingIndex === index ? (
-                    <>
-                      <Button onClick={() => handleSave(index)} icon={<Save className="h-4 w-4" />} />
-                      <Button 
-                        onClick={() => {
-                          setEditingIndex(null);
-                          const updatedResources = [...resources];
-                          updatedResources[index] = originalResource;
-                          setResources(updatedResources);
-                          setOriginalResource(null);
-                        }} 
-                        variant="outline"
-                        icon={<X className="h-4 w-4" />}
-                      />
-                    </>
-                  ) : (
-                    <>
-                      <Button onClick={() => handleEdit(index)} icon={<Edit2 className="h-4 w-4" />} />
-                      <Button 
-                        onClick={async () => {
-                          if(confirm('Are you sure you want to delete this resource?')) {
-                            const newResources = resources.filter((_, i) => i !== index);
-                            try {
-                              await fetch('/api/resources', {
-                                method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify(newResources)
-                              });
-                              setResources(newResources);
-                            } catch (error) {
-                              console.error('Error deleting resource:', error);
-                              setError('Failed to delete resource');
-                            }
-                          }
-                        }}
-                        variant="destructive"
-                        icon={<Trash2 className="h-4 w-4" />}
-                      />
-                    </>
-                  )}
+                  <Button onClick={() => handleSave(-1)} icon={<Plus className="h-4 w-4" />}>
+                    Add New
+                  </Button>
                 </div>
               </TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+            {getCurrentPageItems().map((resource, index) => (
+              <TableRow key={index}>
+                <TableCell>
+                  {editingIndex === index ? (
+                    <Input name="name" value={resource.name} onChange={(e) => handleInputChange(e, index)} />
+                  ) : (
+                    <div className="truncate" title={resource.name}>{resource.name}</div>
+                  )}
+                </TableCell>
+                <TableCell>
+                  {editingIndex === index ? (
+                    <Input name="description" value={resource.description} onChange={(e) => handleInputChange(e, index)} />
+                  ) : (
+                    <div className="truncate" title={resource.description}>{resource.description}</div>
+                  )}
+                </TableCell>
+                <TableCell>
+                  {editingIndex === index ? (
+                    <Input name="url" value={resource.url} onChange={(e) => handleInputChange(e, index)} />
+                  ) : (
+                    <div className="truncate" title={resource.url}>{resource.url}</div>
+                  )}
+                </TableCell>
+                <TableCell>
+                  <div className="flex gap-2 whitespace-nowrap">
+                    {editingIndex === index ? (
+                      <>
+                        <Button onClick={() => handleSave(index)} icon={<Save className="h-4 w-4" />} />
+                        <Button 
+                          onClick={() => {
+                            setEditingIndex(null);
+                            const updatedResources = [...resources];
+                            updatedResources[index] = originalResource;
+                            setResources(updatedResources);
+                            setOriginalResource(null);
+                          }} 
+                          variant="outline"
+                          icon={<X className="h-4 w-4" />}
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <Button onClick={() => handleEdit(index)} icon={<Edit2 className="h-4 w-4" />} />
+                        <Button 
+                          onClick={async () => {
+                            if(confirm('Are you sure you want to delete this resource?')) {
+                              const newResources = resources.filter((_, i) => i !== index);
+                              try {
+                                await fetch('/api/resources', {
+                                  method: 'POST',
+                                  headers: { 'Content-Type': 'application/json' },
+                                  body: JSON.stringify(newResources)
+                                });
+                                setResources(newResources);
+                              } catch (error) {
+                                console.error('Error deleting resource:', error);
+                                setError('Failed to delete resource');
+                              }
+                            }
+                          }}
+                          variant="destructive"
+                          icon={<Trash2 className="h-4 w-4" />}
+                        />
+                      </>
+                    )}
+                  </div>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
 
-      {/* 分页控制 */}
-      <div className="flex justify-center mt-4 space-x-2">
-        <Button
-          onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-          disabled={currentPage === 1}
-          variant="outline"
-          icon={<ChevronLeft className="h-4 w-4" />}
-        >
-          Previous
-        </Button>
-        <span className="py-2 px-4">
-          Page {currentPage} of {totalPages}
-        </span>
-        <Button
-          onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
-          disabled={currentPage === totalPages}
-          variant="outline"
-          icon={<ChevronRight className="h-4 w-4" />}
-        >
-          Next
-        </Button>
+        {/* 分页控制 */}
+        <div className="flex justify-center mt-4 space-x-2">
+          <Button
+            onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+            disabled={currentPage === 1}
+            variant="outline"
+            icon={<ChevronLeft className="h-4 w-4" />}
+          >
+            Previous
+          </Button>
+          <span className="py-2 px-4">
+            Page {currentPage} of {totalPages}
+          </span>
+          <Button
+            onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+            disabled={currentPage === totalPages}
+            variant="outline"
+            icon={<ChevronRight className="h-4 w-4" />}
+          >
+            Next
+          </Button>
+        </div>
       </div>
-    </div>
+    </AuthWrapper>
   );
 }

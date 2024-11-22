@@ -27,6 +27,7 @@ export function Navigation() {
   // 检查具体的管理页面路径
   const isAdminDashboard = pathname === '/admin'
   const isArticlesManagement = pathname.startsWith('/admin/articles')
+  const isImagesManagement = pathname.startsWith('/admin/images')
 
   // 处理密码提交
   const handleLogin = async (e) => {
@@ -79,15 +80,26 @@ export function Navigation() {
           {/* 导航链接 */}
           <nav className="flex gap-6">
             {isAdminPage ? (
-              <Link 
-                href="/admin/articles" 
-                className={cn(
-                  "flex items-center transition-colors",
-                  isArticlesManagement ? "text-blue-600 font-bold" : "text-gray-600 hover:text-blue-600"
-                )}
-              >
-                Manage Articles
-              </Link>
+              <>
+                <Link 
+                  href="/admin/articles" 
+                  className={cn(
+                    "flex items-center transition-colors",
+                    isArticlesManagement ? "text-blue-600 font-bold" : "text-gray-600 hover:text-blue-600"
+                  )}
+                >
+                  Manage Articles
+                </Link>
+                <Link 
+                  href="/admin/images" 
+                  className={cn(
+                    "flex items-center transition-colors",
+                    isImagesManagement ? "text-blue-600 font-bold" : "text-gray-600 hover:text-blue-600"
+                  )}
+                >
+                  Manage Images
+                </Link>
+              </>
             ) : (
               <>
                 <Link 
