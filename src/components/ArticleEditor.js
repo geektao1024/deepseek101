@@ -7,51 +7,60 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 export default function ArticleEditor() {
-  const [article, setArticle] = useState({ title: '', description: '', content: '' });
+  const [article, setArticle] = useState({
+    title: '',
+    description: '',
+    content: '',
+    coverImage: '',
+    tags: '',
+  });
   const [isDirty, setIsDirty] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const searchParams = useSearchParams();
   const path = searchParams.get('path');
 
-  // 获取文章数据
   const fetchArticle = async (path) => {
     try {
       const response = await fetch(`/api/articles?path=${encodeURIComponent(path)}`);
       if (!response.ok) throw new Error('Failed to fetch article');
       const data = await response.json();
-      setArticle(data);
+      setArticle({
+        ...data,
+        tags: Array.isArray(data.tags) ? data.tags.join(', ') : ''
+      });
       setIsDirty(false);
     } catch (error) {
       console.error('Error fetching article:', error);
     }
   };
 
-  // 保存文章
   const saveArticle = async (articleData) => {
+    const processedArticle = {
+      ...articleData,
+      tags: articleData.tags.split(',').map(tag => tag.trim()).filter(Boolean)
+    };
+
     const response = await fetch('/api/articles', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ article: articleData, path })
+      body: JSON.stringify({ article: processedArticle, path })
     });
     if (!response.ok) throw new Error('Failed to save article');
     return response.json();
   };
 
-  // 加载文章数据
   useEffect(() => {
     if (path) {
       fetchArticle(path);
     }
   }, [path]);
 
-  // 处理输入变化
   const handleChange = (e) => {
     const { name, value } = e.target;
     setArticle(prev => ({ ...prev, [name]: value }));
     setIsDirty(true);
   };
 
-  // 保存文章
   const handleSave = async () => {
     setIsSaving(true);
     try {
@@ -64,11 +73,9 @@ export default function ArticleEditor() {
     }
   };
 
-  // 重置修改
   const handleReset = () => {
     if (confirm('Are you sure you want to discard all changes?')) {
       fetchArticle(path);
-      setIsDirty(false);
     }
   };
 
@@ -78,7 +85,6 @@ export default function ArticleEditor() {
         <label className="text-sm font-medium text-gray-700">
           Title
           <span className="text-red-500 ml-1">*</span>
-          <span className="text-gray-500 text-xs ml-2">(Required)</span>
         </label>
         <Input
           name="title"
@@ -91,7 +97,6 @@ export default function ArticleEditor() {
       <div className="space-y-2">
         <label className="text-sm font-medium text-gray-700">
           Description
-          <span className="text-gray-500 text-xs ml-2">(A brief summary of your article)</span>
         </label>
         <Textarea
           name="description"
@@ -104,9 +109,34 @@ export default function ArticleEditor() {
 
       <div className="space-y-2">
         <label className="text-sm font-medium text-gray-700">
+          Cover Image URL
+          <span className="text-gray-500 text-xs ml-2">(Optional)</span>
+        </label>
+        <Input
+          name="coverImage"
+          value={article.coverImage}
+          onChange={handleChange}
+          placeholder="https://example.com/image.jpg"
+        />
+      </div>
+
+      <div className="space-y-2">
+        <label className="text-sm font-medium text-gray-700">
+          Tags
+          <span className="text-gray-500 text-xs ml-2">(Comma separated)</span>
+        </label>
+        <Input
+          name="tags"
+          value={article.tags}
+          onChange={handleChange}
+          placeholder="nextjs, react, tutorial"
+        />
+      </div>
+
+      <div className="space-y-2">
+        <label className="text-sm font-medium text-gray-700">
           Content
           <span className="text-red-500 ml-1">*</span>
-          <span className="text-gray-500 text-xs ml-2">(Markdown format supported)</span>
         </label>
         <Textarea
           name="content"

@@ -13,7 +13,9 @@ export default function CreateArticlePage() {
     title: '',
     description: '',
     content: '',
-    slug: ''  // 用作文章的 Markdown 文件名
+    slug: '',
+    coverImage: '',
+    tags: '',
   });
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -28,11 +30,16 @@ export default function CreateArticlePage() {
     setIsLoading(true);
     setError(null);
 
+    const processedArticle = {
+      ...article,
+      tags: article.tags.split(',').map(tag => tag.trim()).filter(Boolean)
+    };
+
     try {
       const response = await fetch('/api/articles/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(article),
+        body: JSON.stringify(processedArticle),
       });
 
       if (!response.ok) {
@@ -66,7 +73,6 @@ export default function CreateArticlePage() {
           <label className="text-sm font-medium text-gray-700">
             Title
             <span className="text-red-500 ml-1">*</span>
-            <span className="text-gray-500 text-xs ml-2">(Required)</span>
           </label>
           <Input
             name="title"
@@ -81,7 +87,6 @@ export default function CreateArticlePage() {
         <div className="space-y-2">
           <label className="text-sm font-medium text-gray-700">
             Description
-            <span className="text-gray-500 text-xs ml-2">(A brief summary of your article)</span>
           </label>
           <Textarea
             name="description"
@@ -92,12 +97,39 @@ export default function CreateArticlePage() {
           />
         </div>
 
+        {/* 新增：封面图片 URL */}
+        <div className="space-y-2">
+          <label className="text-sm font-medium text-gray-700">
+            Cover Image URL
+            <span className="text-gray-500 text-xs ml-2">(Optional)</span>
+          </label>
+          <Input
+            name="coverImage"
+            value={article.coverImage}
+            onChange={handleInputChange}
+            placeholder="https://example.com/image.jpg"
+          />
+        </div>
+
+        {/* 新增：文章标签 */}
+        <div className="space-y-2">
+          <label className="text-sm font-medium text-gray-700">
+            Tags
+            <span className="text-gray-500 text-xs ml-2">(Comma separated)</span>
+          </label>
+          <Input
+            name="tags"
+            value={article.tags}
+            onChange={handleInputChange}
+            placeholder="nextjs, react, tutorial"
+          />
+        </div>
+
         {/* 文件名 */}
         <div className="space-y-2">
           <label className="text-sm font-medium text-gray-700">
             File Name
             <span className="text-red-500 ml-1">*</span>
-            <span className="text-gray-500 text-xs ml-2">(Will be used as the .md file name)</span>
           </label>
           <Input
             name="slug"
@@ -113,7 +145,6 @@ export default function CreateArticlePage() {
           <label className="text-sm font-medium text-gray-700">
             Content
             <span className="text-red-500 ml-1">*</span>
-            <span className="text-gray-500 text-xs ml-2">(Markdown format supported)</span>
           </label>
           <Textarea
             name="content"
@@ -126,7 +157,6 @@ export default function CreateArticlePage() {
           />
         </div>
 
-        {/* 操作按钮 */}
         <div className="flex justify-end">
           <Button 
             onClick={handleSave} 

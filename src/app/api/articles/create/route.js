@@ -12,7 +12,7 @@ const articlesJsonPath = 'data/json/articles.json';
 const mdFolderPath = 'data/md';
 
 export async function POST(request) {
-  const { title, description, content, slug } = await request.json();
+  const { title, description, content, slug, coverImage, tags } = await request.json();
 
   // Validate slug
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
@@ -36,11 +36,13 @@ export async function POST(request) {
       }
     }
 
-    // Create new file
+    // Create new file with frontmatter including coverImage and tags
     const fileContent = matter.stringify(content, {
       title,
       description,
       date: new Date().toISOString(),
+      coverImage: coverImage || '',  // 添加封面图片字段
+      tags: tags || []               // 添加标签字段
     });
 
     await octokit.repos.createOrUpdateFileContents({

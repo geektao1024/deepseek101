@@ -94,7 +94,7 @@ async function syncArticles() {
       });
 
       const content = Buffer.from(data.content, 'base64').toString('utf8');
-      const { data: frontMatter, content: articleContent } = matter(content);
+      const { data: frontMatter } = matter(content);
 
       // Fetch the last commit for this file
       const { data: commits } = await octokit.repos.listCommits({
@@ -111,6 +111,8 @@ async function syncArticles() {
         description: frontMatter.description,
         date: frontMatter.date,
         lastModified: lastModified,
+        coverImage: frontMatter.coverImage || '',
+        tags: frontMatter.tags || [],
         path: file.path,
       };
     }));
