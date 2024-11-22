@@ -129,10 +129,10 @@ export default function AdminPage() {
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>Name</TableHead>
-            <TableHead>Description</TableHead>
-            <TableHead>URL</TableHead>
-            <TableHead>Actions</TableHead>
+            <TableHead className="w-[200px]">Name</TableHead>
+            <TableHead className="w-[300px]">Description</TableHead>
+            <TableHead className="w-[300px]">URL</TableHead>
+            <TableHead className="w-[120px]">Actions</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -162,9 +162,11 @@ export default function AdminPage() {
               />
             </TableCell>
             <TableCell>
-              <Button onClick={() => handleSave(-1)} icon={<Plus className="h-4 w-4" />}>
-                {/* Add New */}
-              </Button>
+              <div className="flex gap-2 whitespace-nowrap">
+                <Button onClick={() => handleSave(-1)} icon={<Plus className="h-4 w-4" />}>
+                  Add New
+                </Button>
+              </div>
             </TableCell>
           </TableRow>
           {getCurrentPageItems().map((resource, index) => (
@@ -173,72 +175,66 @@ export default function AdminPage() {
                 {editingIndex === index ? (
                   <Input name="name" value={resource.name} onChange={(e) => handleInputChange(e, index)} />
                 ) : (
-                  resource.name
+                  <div className="truncate" title={resource.name}>{resource.name}</div>
                 )}
               </TableCell>
               <TableCell>
                 {editingIndex === index ? (
                   <Input name="description" value={resource.description} onChange={(e) => handleInputChange(e, index)} />
                 ) : (
-                  resource.description
+                  <div className="truncate" title={resource.description}>{resource.description}</div>
                 )}
               </TableCell>
               <TableCell>
                 {editingIndex === index ? (
                   <Input name="url" value={resource.url} onChange={(e) => handleInputChange(e, index)} />
                 ) : (
-                  resource.url
+                  <div className="truncate" title={resource.url}>{resource.url}</div>
                 )}
               </TableCell>
               <TableCell>
-                {editingIndex === index ? (
-                  <>
-                    <Button onClick={() => handleSave(index)} className="mr-2" icon={<Save className="h-4 w-4" />}>
-                      {/* Save */}
-                    </Button>
-                    <Button 
-                      onClick={() => {
-                        setEditingIndex(null);
-                        const updatedResources = [...resources];
-                        updatedResources[index] = originalResource;
-                        setResources(updatedResources);
-                        setOriginalResource(null);
-                      }} 
-                      variant="outline"
-                      icon={<X className="h-4 w-4" />}
-                    >
-                      {/* Cancel */}
-                    </Button>
-                  </>
-                ) : (
-                  <>
-                    <Button onClick={() => handleEdit(index)} className="mr-2" icon={<Edit2 className="h-4 w-4" />}>
-                      {/* Edit */}
-                    </Button>
-                    <Button 
-                      onClick={async () => {
-                        if(confirm('Are you sure you want to delete this resource?')) {
-                          const newResources = resources.filter((_, i) => i !== index);
-                          try {
-                            await fetch('/api/resources', {
-                              method: 'POST',
-                              headers: { 'Content-Type': 'application/json' },
-                              body: JSON.stringify(newResources)
-                            });
-                            setResources(newResources);
-                          } catch (error) {
-                            console.error('Error deleting resource:', error);
-                            setError('Failed to delete resource');
+                <div className="flex gap-2 whitespace-nowrap">
+                  {editingIndex === index ? (
+                    <>
+                      <Button onClick={() => handleSave(index)} icon={<Save className="h-4 w-4" />} />
+                      <Button 
+                        onClick={() => {
+                          setEditingIndex(null);
+                          const updatedResources = [...resources];
+                          updatedResources[index] = originalResource;
+                          setResources(updatedResources);
+                          setOriginalResource(null);
+                        }} 
+                        variant="outline"
+                        icon={<X className="h-4 w-4" />}
+                      />
+                    </>
+                  ) : (
+                    <>
+                      <Button onClick={() => handleEdit(index)} icon={<Edit2 className="h-4 w-4" />} />
+                      <Button 
+                        onClick={async () => {
+                          if(confirm('Are you sure you want to delete this resource?')) {
+                            const newResources = resources.filter((_, i) => i !== index);
+                            try {
+                              await fetch('/api/resources', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify(newResources)
+                              });
+                              setResources(newResources);
+                            } catch (error) {
+                              console.error('Error deleting resource:', error);
+                              setError('Failed to delete resource');
+                            }
                           }
-                        }
-                      }}
-                      variant="destructive"
-                      icon={<Trash2 className="h-4 w-4" />}
-                    >
-                      {/* Delete */}
-                    </Button>
-                  </>
-                )}
+                        }}
+                        variant="destructive"
+                        icon={<Trash2 className="h-4 w-4" />}
+                      />
+                    </>
+                  )}
+                </div>
               </TableCell>
             </TableRow>
           ))}

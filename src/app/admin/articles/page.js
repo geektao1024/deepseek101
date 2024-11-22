@@ -95,24 +95,40 @@ export default function AdminArticlesPage() {
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>Title</TableHead>
-            <TableHead>Description</TableHead>
-            <TableHead>Created</TableHead>
-            <TableHead>Last Modified</TableHead>
-            <TableHead>Actions</TableHead>
+            <TableHead className="w-[250px]">Title</TableHead>
+            <TableHead className="w-[300px]">Description</TableHead>
+            <TableHead className="w-[120px]">Created</TableHead>
+            <TableHead className="w-[150px]">Last Modified</TableHead>
+            <TableHead className="w-[100px]">Actions</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {getCurrentPageItems().map((article, index) => (
             <TableRow key={index}>
-              <TableCell>{article.title}</TableCell>
-              <TableCell>{article.description}</TableCell>
-              <TableCell>{new Date(article.date).toLocaleDateString()}</TableCell>
-              <TableCell>{new Date(article.lastModified).toLocaleString()}</TableCell>
               <TableCell>
-                <div className="flex gap-2">
+                <div className="truncate" title={article.title}>
+                  {article.title}
+                </div>
+              </TableCell>
+              <TableCell>
+                <div className="truncate" title={article.description}>
+                  {article.description}
+                </div>
+              </TableCell>
+              <TableCell>
+                <div className="truncate" title={new Date(article.date).toLocaleDateString()}>
+                  {new Date(article.date).toLocaleDateString()}
+                </div>
+              </TableCell>
+              <TableCell>
+                <div className="truncate" title={new Date(article.lastModified).toLocaleString()}>
+                  {new Date(article.lastModified).toLocaleString()}
+                </div>
+              </TableCell>
+              <TableCell>
+                <div className="flex gap-2 whitespace-nowrap">
                   <Link href={`/admin/articles/edit?path=${encodeURIComponent(article.path)}`}>
-                    <Button icon={<Edit2 className="h-4 w-4" />}>{/* Edit */}</Button>
+                    <Button icon={<Edit2 className="h-4 w-4" />} />
                   </Link>
                   <Button 
                     onClick={async () => {
@@ -132,9 +148,7 @@ export default function AdminArticlesPage() {
                     }}
                     variant="destructive"
                     icon={<Trash2 className="h-4 w-4" />}
-                  >
-                    {/* Delete */}
-                  </Button>
+                  />
                 </div>
               </TableCell>
             </TableRow>

@@ -116,6 +116,10 @@ const TableCell = React.forwardRef<
       "p-4 align-middle [&:has([role=checkbox])]:pr-0",
       "text-gray-700",
       "border-r border-gray-100 last:border-0",
+      "max-w-[300px]",
+      "whitespace-nowrap",
+      "overflow-hidden",
+      "text-ellipsis",
       className
     )}
     {...props}

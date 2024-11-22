@@ -107,7 +107,7 @@ export default function CreateArticlePage() {
             name="coverImage"
             value={article.coverImage}
             onChange={handleInputChange}
-            placeholder="https://example.com/image.jpg"
+            placeholder="/images/pictures/your-image-name.png"
           />
         </div>
 
