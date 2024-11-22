@@ -36,17 +36,6 @@
     "path": "data/md/gitbase-introduction.md"
   },
   {
-    "title": "hello",
-    "description": "hello world ",
-    "date": "2024-11-20T09:25:04.287Z",
-    "lastModified": "2024-11-22T03:29:38Z",
-    "coverImage": "https://i-blog.csdnimg.cn/direct/e66f3991fe884c1ab0e917e1e01eb5b4.png#pic_center",
-    "tags": [
-      "测试"
-    ],
-    "path": "data/md/hello-world.md"
-  },
-  {
     "title": "Contributing to GitBase",
     "description": "Hi, I'm Qiayue, creator of GitBase. I'm excited to welcome you to our project and look forward to your contributions in making GitBase even better!",
     "date": "2024-08-16T03:57:46.153Z",
