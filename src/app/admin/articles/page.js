@@ -112,7 +112,7 @@ export default function AdminArticlesPage() {
               <TableCell>
                 <div className="flex gap-2">
                   <Link href={`/admin/articles/edit?path=${encodeURIComponent(article.path)}`}>
-                    <Button icon={<Edit2 className="h-4 w-4" />}>Edit</Button>
+                    <Button icon={<Edit2 className="h-4 w-4" />}>{/* Edit */}</Button>
                   </Link>
                   <Button 
                     onClick={async () => {
@@ -133,7 +133,7 @@ export default function AdminArticlesPage() {
                     variant="destructive"
                     icon={<Trash2 className="h-4 w-4" />}
                   >
-                    Delete
+                    {/* Delete */}
                   </Button>
                 </div>
               </TableCell>

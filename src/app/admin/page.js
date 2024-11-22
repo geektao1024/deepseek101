@@ -163,7 +163,7 @@ export default function AdminPage() {
             </TableCell>
             <TableCell>
               <Button onClick={() => handleSave(-1)} icon={<Plus className="h-4 w-4" />}>
-                Add New
+                {/* Add New */}
               </Button>
             </TableCell>
           </TableRow>
@@ -194,7 +194,7 @@ export default function AdminPage() {
                 {editingIndex === index ? (
                   <>
                     <Button onClick={() => handleSave(index)} className="mr-2" icon={<Save className="h-4 w-4" />}>
-                      Save
+                      {/* Save */}
                     </Button>
                     <Button 
                       onClick={() => {
@@ -207,13 +207,13 @@ export default function AdminPage() {
                       variant="outline"
                       icon={<X className="h-4 w-4" />}
                     >
-                      Cancel
+                      {/* Cancel */}
                     </Button>
                   </>
                 ) : (
                   <>
                     <Button onClick={() => handleEdit(index)} className="mr-2" icon={<Edit2 className="h-4 w-4" />}>
-                      Edit
+                      {/* Edit */}
                     </Button>
                     <Button 
                       onClick={async () => {
@@ -235,7 +235,7 @@ export default function AdminPage() {
                       variant="destructive"
                       icon={<Trash2 className="h-4 w-4" />}
                     >
-                      Delete
+                      {/* Delete */}
                     </Button>
                   </>
                 )}

@@ -130,7 +130,7 @@ export function Navigation() {
               variant="outline"
               icon={<Users className="h-4 w-4" />}
             >
-              Client
+              {/* Client */}
             </Button>
           ) : (
             <Button 
@@ -138,7 +138,7 @@ export function Navigation() {
               variant="outline"
               icon={<UserCog className="h-4 w-4" />}
             >
-              Admin
+              {/* Admin */}
             </Button>
           )}
         </div>
