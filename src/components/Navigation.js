@@ -56,7 +56,7 @@ export function Navigation() {
   }
 
   return (
-    <header className="border-b">
+    <div className="border-b">
       <div className="container mx-auto flex h-16 items-center px-4">
         <div className="flex gap-6 md:gap-10">
           {/* 根据当前页面显示不同的主标题/链接 */}
@@ -144,10 +144,20 @@ export function Navigation() {
         </div>
       </div>
 
-      {/* 登录对话框 */}
+      {/* 登录对话框 - 修改遮罩层和对话框的样式 */}
       {showLoginDialog && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-96">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
+          {/* 点击遮罩层关闭对话框 */}
+          <div 
+            className="absolute inset-0" 
+            onClick={() => {
+              setShowLoginDialog(false)
+              setError('')
+              setPassword('')
+            }}
+          />
+          {/* 对话框内容 */}
+          <div className="bg-white p-6 rounded-lg shadow-lg w-96 relative">  {/* 添加 relative 确保内容在遮罩层之上 */}
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold flex items-center">
                 <Key className="h-5 w-5 mr-2" />
@@ -206,6 +216,6 @@ export function Navigation() {
           </div>
         </div>
       )}
-    </header>
+    </div>
   )
 }

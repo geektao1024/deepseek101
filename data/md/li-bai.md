@@ -1,9 +1,9 @@
 ---
 title: 古诗三首
-description: 李三白
+description: 李三白xxxxxx
 date: '2024-11-22T03:33:33.266Z'
 coverImage: >-
-  https://i-blog.csdnimg.cn/direct/25c352cb6fa94077af301cc0b40efcbb.png#pic_center
+  /images/main.png
 tags:
   - 李白
 lastModified: '2024-11-22T03:56:47.058Z'

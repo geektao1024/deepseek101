@@ -110,13 +110,13 @@ export default function ArticleEditor() {
       <div className="space-y-2">
         <label className="text-sm font-medium text-gray-700">
           Cover Image URL
-          <span className="text-gray-500 text-xs ml-2">(Optional)</span>
+          <span className="text-gray-500 text-xs ml-2">(e.g., /images/example.png)</span>
         </label>
         <Input
           name="coverImage"
           value={article.coverImage}
           onChange={handleChange}
-          placeholder="https://example.com/image.jpg"
+          placeholder="/images/your-image.png"
         />
       </div>
 

@@ -2,12 +2,14 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import {
   Card,
   CardHeader,
   CardTitle,
   CardDescription,
+  CardContent,
 } from "@/components/ui/card"
 import { LayoutGrid, List } from 'lucide-react'
 
@@ -50,11 +52,22 @@ export default function ArticleList({ articles, showMoreLink = true }) {
       {layout === 'masonry' ? (
         // 瀑布流布局
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-          {articles.map(({ id, title, description, tags = [] }) => (
+          {articles.map(({ id, title, description, tags = [], coverImage }) => (
             <Card 
               key={id} 
               className="break-inside-avoid-column hover:shadow-lg transition-shadow"
             >
+              {coverImage && (
+                <div className="relative w-full h-48 overflow-hidden rounded-t-lg">
+                  <Image
+                    src={coverImage.startsWith('/') ? coverImage : `/${coverImage}`}
+                    alt={title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+              )}
               <CardHeader>
                 <div className="space-y-2">
                   <Link href={`/posts/${id}`} className="group">
