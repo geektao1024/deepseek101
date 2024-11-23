@@ -98,6 +98,17 @@
     "path": "data/md/li-bu-bai.md"
   },
   {
+    "title": "测试图片名拼接",
+    "description": "测试图片名拼接",
+    "date": "2024-11-23T07:08:34.333Z",
+    "lastModified": "2024-11-23T07:08:33Z",
+    "coverImage": "/images/pictures/main.png",
+    "tags": [
+      "李太白"
+    ],
+    "path": "data/md/li-tai-bai.md"
+  },
+  {
     "title": "Managing Articles in GitBase Admin Panel",
     "description": "This guide will walk you through the process of viewing, editing, and creating new articles using the admin panel.",
     "date": "2024-08-11T13:16:44.231Z",
