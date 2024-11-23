@@ -12,10 +12,10 @@
     "title": "测试图片2",
     "description": "测试图片2",
     "date": "2024-11-23T06:00:39.941Z",
-    "lastModified": "2024-11-23T06:07:41Z",
+    "lastModified": "2024-11-23T07:17:46Z",
     "coverImage": "/images/pictures/main2.png",
     "tags": [
-      "李不白"
+      "李不白2"
     ],
     "path": "data/md/ce-shi-tu-pian-2.md"
   },
@@ -112,9 +112,11 @@
     "title": "Managing Articles in GitBase Admin Panel",
     "description": "This guide will walk you through the process of viewing, editing, and creating new articles using the admin panel.",
     "date": "2024-08-11T13:16:44.231Z",
-    "lastModified": "2024-08-11T13:16:44Z",
-    "coverImage": "",
-    "tags": [],
+    "lastModified": "2024-11-23T08:11:15Z",
+    "coverImage": "/images/pictures/website.webp",
+    "tags": [
+      "教程"
+    ],
     "path": "data/md/managing-articles.md"
   }
 ]
