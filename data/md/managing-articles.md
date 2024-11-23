@@ -4,6 +4,10 @@ description: >-
   This guide will walk you through the process of viewing, editing, and creating
   new articles using the admin panel.
 date: '2024-08-11T13:16:44.231Z'
+coverImage: /images/pictures/website.webp
+tags:
+  - 教程
+lastModified: '2024-11-23T08:11:15.546Z'
 ---
 # Managing Articles in GitBase Admin Panel
 
