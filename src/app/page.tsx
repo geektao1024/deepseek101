@@ -21,8 +21,8 @@ export default function Home() {
   // 限制首页只显示前10个资源
   const resources = allResources.slice(0, 10)
   
-  // 获取排序后的文章列表，限制显示最新的6篇文章
-  const allPostsData = getSortedPostsData().slice(0, 6)
+  // 获取所有文章数据
+  const allPostsData = getSortedPostsData()
 
   return (
     // 页面主容器,使用 Tailwind 类设置布局和间距
@@ -45,8 +45,12 @@ export default function Home() {
 
       {/* 资源列表组件: 展示前10个资源，并添加"查看更多"链接 */}
       <ResourceList resources={resources} showMoreLink={true} />
-      {/* 文章列表组件: 展示最新6篇文章 */}
-      <ArticleList articles={allPostsData} />
+      {/* 文章列表组件: 展示最新12篇文章，不启用分页 */}
+      <ArticleList 
+        articles={allPostsData} 
+        showMoreLink={true} 
+        enablePagination={false}
+      />
     </div>
   )
 }

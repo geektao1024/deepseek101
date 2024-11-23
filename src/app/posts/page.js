@@ -18,8 +18,13 @@ export default function Articles() {
   return (
     // 页面容器
     <div className="container mx-auto py-12">
-        {/* 文章列表组件: showMoreLink=false 表示显示完整列表 */}
-      <ArticleList articles={allPostsData} showMoreLink={false} />
+        {/* 文章列表组件: showMoreLink=false 表示显示完整列表，启用分页 */}
+      <ArticleList 
+        articles={allPostsData} 
+        showMoreLink={false} 
+        enablePagination={true}
+        itemsPerPage={50}  // 每页显示50篇文章
+      />
     </div>
   )
 }

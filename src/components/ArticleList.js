@@ -9,12 +9,45 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-  CardContent,
 } from "@/components/ui/card"
-import { LayoutGrid, List } from 'lucide-react'
+import { LayoutGrid, List, ChevronLeft, ChevronRight } from 'lucide-react'
 
-export default function ArticleList({ articles, showMoreLink = true }) {
+export default function ArticleList({ 
+  articles, 
+  showMoreLink = true,  // 在主页上显示"更多文章"链接
+  enablePagination = false,  // 是否启用分页
+  itemsPerPage = 50,  // 默认每页50篇文章
+  homePageLimit = 12  // 主页显示文章数量
+}) {
   const [layout, setLayout] = useState('masonry')
+  const [currentPage, setCurrentPage] = useState(1)
+
+  // 获取当前页的文章
+  const getCurrentPageArticles = () => {
+    // 如果是主页，限制显示数量
+    if (showMoreLink) {
+      return articles.slice(0, homePageLimit);
+    }
+    // 否则进行分页处理
+    if (enablePagination) {
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+      return articles.slice(startIndex, endIndex);
+    }
+    return articles;
+  }
+
+  // 计算总页数
+  const totalPages = Math.ceil(articles.length / itemsPerPage)
+
+  // 处理页面变化
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+    // 滚动到页面顶部
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  const currentArticles = getCurrentPageArticles();
 
   return (
     <section>
@@ -28,18 +61,14 @@ export default function ArticleList({ articles, showMoreLink = true }) {
               onClick={() => setLayout('masonry')}
               className="px-2"
               icon={<LayoutGrid className="h-4 w-4" />}
-            >
-              
-            </Button>
+            />
             <Button
               variant={layout === 'list' ? 'default' : 'ghost'}
               size="sm"
               onClick={() => setLayout('list')}
               className="px-2"
               icon={<List className="h-4 w-4" />}
-            >
-              
-            </Button>
+            />
           </div>
         </div>
         {showMoreLink && (
@@ -52,7 +81,7 @@ export default function ArticleList({ articles, showMoreLink = true }) {
       {layout === 'masonry' ? (
         // 瀑布流布局
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-          {articles.map(({ id, title, description, tags = [], coverImage }) => (
+          {currentArticles.map(({ id, title, description, tags = [], coverImage }) => (
             <Card 
               key={id} 
               className="break-inside-avoid-column hover:shadow-lg transition-shadow"
@@ -98,7 +127,7 @@ export default function ArticleList({ articles, showMoreLink = true }) {
       ) : (
         // 列表布局
         <div className="space-y-6">
-          {articles.map(({ id, title, description, tags = [] }) => (
+          {currentArticles.map(({ id, title, description, tags = [] }) => (
             <Card key={id} className="hover:shadow-md transition-shadow">
               <CardHeader>
                 <div className="space-y-2">
@@ -126,6 +155,44 @@ export default function ArticleList({ articles, showMoreLink = true }) {
               </CardHeader>
             </Card>
           ))}
+        </div>
+      )}
+
+      {/* 分页控制 - 只在启用分页且总页数大于1时显示 */}
+      {enablePagination && totalPages > 1 && (
+        <div className="flex justify-center mt-8 space-x-2">
+          <Button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            variant="outline"
+            className="gap-1"
+          >
+            <ChevronLeft className="h-4 w-4" />
+            Previous
+          </Button>
+          
+          <div className="flex items-center gap-2">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <Button
+                key={page}
+                onClick={() => handlePageChange(page)}
+                variant={currentPage === page ? 'default' : 'outline'}
+                className="w-10 h-10 p-0"
+              >
+                {page}
+              </Button>
+            ))}
+          </div>
+
+          <Button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            variant="outline"
+            className="gap-1"
+          >
+            Next
+            <ChevronRight className="h-4 w-4" />
+          </Button>
         </div>
       )}
     </section>
