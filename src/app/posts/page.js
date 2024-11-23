@@ -14,6 +14,12 @@ export default function Articles() {
     // 获取所有文章数据,按日期排序
   const allPostsData = getSortedPostsData();
 
+  // 从所有文章中提取唯一标签
+  const allTags = Array.from(
+    new Set(
+      allPostsData.flatMap(post => post.tags || [])
+    )
+  ).sort();
 
   return (
     // 页面容器
@@ -24,6 +30,7 @@ export default function Articles() {
         showMoreLink={false} 
         enablePagination={true}
         itemsPerPage={50}  // 每页显示50篇文章
+        allTags={allTags}
       />
     </div>
   )

@@ -10,42 +10,54 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card"
-import { LayoutGrid, List, ChevronLeft, ChevronRight } from 'lucide-react'
+import { LayoutGrid, List, ChevronLeft, ChevronRight, X } from 'lucide-react'
+import { cn } from '@/lib/utils'
 
 export default function ArticleList({ 
   articles, 
-  showMoreLink = true,  // 在主页上显示"更多文章"链接
-  enablePagination = false,  // 是否启用分页
-  itemsPerPage = 50,  // 默认每页50篇文章
-  homePageLimit = 12  // 主页显示文章数量
+  showMoreLink = true,
+  enablePagination = false,
+  itemsPerPage = 50,
+  homePageLimit = 12,
+  allTags = []
 }) {
   const [layout, setLayout] = useState('masonry')
   const [currentPage, setCurrentPage] = useState(1)
+  const [selectedTag, setSelectedTag] = useState(null)
+
+  // 根据选中的标签过滤文章
+  const getFilteredArticles = () => {
+    if (!selectedTag) return articles;
+    return articles.filter(article => 
+      article.tags && article.tags.includes(selectedTag)
+    );
+  }
 
   // 获取当前页的文章
   const getCurrentPageArticles = () => {
+    const filteredArticles = getFilteredArticles();
+    
     // 如果是主页，限制显示数量
     if (showMoreLink) {
-      return articles.slice(0, homePageLimit);
+      return filteredArticles.slice(0, homePageLimit);
     }
     // 否则进行分页处理
     if (enablePagination) {
       const startIndex = (currentPage - 1) * itemsPerPage;
       const endIndex = startIndex + itemsPerPage;
-      return articles.slice(startIndex, endIndex);
+      return filteredArticles.slice(startIndex, endIndex);
     }
-    return articles;
+    return filteredArticles;
   }
 
-  // 计算总页数
-  const totalPages = Math.ceil(articles.length / itemsPerPage)
-
-  // 处理页面变化
-  const handlePageChange = (newPage) => {
-    setCurrentPage(newPage);
-    // 滚动到页面顶部
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  // 处理标签点击
+  const handleTagClick = (tag) => {
+    setSelectedTag(tag === selectedTag ? null : tag);
+    setCurrentPage(1);  // 重置页码
   }
+
+  // 计算总页数（基于过滤后的文章）
+  const totalPages = Math.ceil(getFilteredArticles().length / itemsPerPage)
 
   const currentArticles = getCurrentPageArticles();
 
@@ -77,6 +89,37 @@ export default function ArticleList({
           </Link>
         )}
       </div>
+
+      {/* 标签过滤器 - 只在文章列表页显示 */}
+      {!showMoreLink && allTags.length > 0 && (
+        <div className="mb-8 flex flex-wrap gap-2">
+          {allTags.map(tag => (
+            <button
+              key={tag}
+              onClick={() => handleTagClick(tag)}
+              className={cn(
+                "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm transition-all",
+                "border border-gray-200",
+                selectedTag === tag
+                  ? "bg-blue-50 text-blue-600 border-blue-200 font-medium shadow-sm"
+                  : "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+              )}
+            >
+              <span>{tag}</span>
+              {selectedTag === tag && (
+                <X className="h-3.5 w-3.5 text-blue-500 hover:text-blue-600" />
+              )}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* 显示过滤结果统计 */}
+      {selectedTag && (
+        <p className="text-sm text-gray-500 mb-4">
+          Showing {getFilteredArticles().length} articles tagged with "{selectedTag}"
+        </p>
+      )}
 
       {layout === 'masonry' ? (
         // 瀑布流布局
