@@ -33,6 +33,7 @@ export default function CreateArticlePage() {
 
     const processedArticle = {
       ...article,
+      coverImage: article.coverImage ? `/images/pictures/${article.coverImage}` : '',
       tags: article.tags.split(',').map(tag => tag.trim()).filter(Boolean)
     };
 
@@ -102,15 +103,18 @@ export default function CreateArticlePage() {
           {/* 新增：封面图片 URL */}
           <div className="space-y-2">
             <label className="text-sm font-medium text-gray-700">
-              Cover Image URL
+              Cover Image Name
               <span className="text-gray-500 text-xs ml-2">(Optional)</span>
             </label>
             <Input
               name="coverImage"
               value={article.coverImage}
               onChange={handleInputChange}
-            placeholder="/images/pictures/your-image-name.png"
+              placeholder="example.png"
             />
+            <p className="text-xs text-gray-500">
+              The image should be uploaded to /images/pictures/ first
+            </p>
           </div>
 
           {/* 新增：文章标签 */}

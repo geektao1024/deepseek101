@@ -66,7 +66,6 @@ export async function POST(request) {
 
 async function syncArticles() {
   try {
-    // Fetch all MD files
     const { data: files } = await octokit.repos.getContent({
       owner,
       repo,
@@ -83,9 +82,8 @@ async function syncArticles() {
       });
 
       const content = Buffer.from(data.content, 'base64').toString('utf8');
-      const { data: frontMatter, content: articleContent } = matter(content);
+      const { data: frontMatter } = matter(content);
 
-      // Fetch the last commit for this file
       const { data: commits } = await octokit.repos.listCommits({
         owner,
         repo,
@@ -100,6 +98,8 @@ async function syncArticles() {
         description: frontMatter.description,
         date: frontMatter.date,
         lastModified: lastModified,
+        coverImage: frontMatter.coverImage || '',  // 添加这行
+        tags: frontMatter.tags || [],              // 添加这行
         path: file.path,
       };
     }));

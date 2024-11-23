@@ -24,8 +24,12 @@ export default function ArticleEditor() {
       const response = await fetch(`/api/articles?path=${encodeURIComponent(path)}`);
       if (!response.ok) throw new Error('Failed to fetch article');
       const data = await response.json();
+      
+      const coverImageName = data.coverImage ? data.coverImage.split('/').pop() : '';
+      
       setArticle({
         ...data,
+        coverImage: coverImageName,
         tags: Array.isArray(data.tags) ? data.tags.join(', ') : ''
       });
       setIsDirty(false);
@@ -37,6 +41,7 @@ export default function ArticleEditor() {
   const saveArticle = async (articleData) => {
     const processedArticle = {
       ...articleData,
+      coverImage: articleData.coverImage ? `/images/pictures/${articleData.coverImage}` : '',
       tags: articleData.tags.split(',').map(tag => tag.trim()).filter(Boolean)
     };
 
@@ -109,15 +114,18 @@ export default function ArticleEditor() {
 
       <div className="space-y-2">
         <label className="text-sm font-medium text-gray-700">
-          Cover Image URL
-          <span className="text-gray-500 text-xs ml-2">(e.g., /images/pictures/example.png)</span>
+          Cover Image Name
+          <span className="text-gray-500 text-xs ml-2">(Optional)</span>
         </label>
         <Input
           name="coverImage"
           value={article.coverImage}
           onChange={handleChange}
-          placeholder="/images/pictures/your-image-name.png"
+          placeholder="example.png"
         />
+        <p className="text-xs text-gray-500">
+          The image should be uploaded to /images/pictures/ first
+        </p>
       </div>
 
       <div className="space-y-2">

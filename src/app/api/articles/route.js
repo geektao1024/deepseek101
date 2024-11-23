@@ -148,12 +148,14 @@ async function updateMdFile(article) {
     });
 
     const currentContent = Buffer.from(currentFile.content, 'base64').toString('utf8');
-    const { data: frontMatter, content: articleContent } = matter(currentContent);
+    const { data: frontMatter } = matter(currentContent);
 
     const updatedFrontMatter = {
       ...frontMatter,
       title: article.title,
       description: article.description,
+      coverImage: article.coverImage || '',
+      tags: article.tags || [],
       lastModified: new Date().toISOString(),
     };
 
