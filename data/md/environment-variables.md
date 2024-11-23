@@ -2,6 +2,9 @@
 title: Configuring Environment Variables for GitBase
 description: How to configure GitBase environment variables
 date: '2024-08-11T13:08:05.474Z'
+coverImage: /images/pictures/website.webp
+tags:
+  - 教程
 ---
 # Configuring Environment Variables for GitBase
 

@@ -13,6 +13,9 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
 
+// 添加 .webp 到支持的图片格式中
+const SUPPORTED_IMAGE_TYPES = /\.(png|jpg|jpeg|gif|svg|webp)$/i;
+
 export async function POST(request) {
   console.log('开始处理文件上传请求...');
   try {
@@ -26,6 +29,15 @@ export async function POST(request) {
       类型: type,
       目标路径: folderPath
     });
+
+    // 验证文件类型
+    const invalidFiles = files.filter(file => !SUPPORTED_IMAGE_TYPES.test(file.name));
+    if (invalidFiles.length > 0) {
+      return NextResponse.json({
+        error: 'Invalid file type. Only PNG, JPG, JPEG, GIF, SVG, and WebP files are allowed.',
+        invalidFiles: invalidFiles.map(f => f.name)
+      }, { status: 400 });
+    }
 
     // 处理所有文件上传
     const uploadPromises = files.map(async (file) => {

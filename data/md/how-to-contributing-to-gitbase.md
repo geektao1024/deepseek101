@@ -4,6 +4,9 @@ description: >-
   Hi, I'm Qiayue, creator of GitBase. I'm excited to welcome you to our project
   and look forward to your contributions in making GitBase even better!
 date: '2024-08-16T03:57:46.153Z'
+coverImage: /images/pictures/website.webp
+tags:
+  - 教程
 ---
 # Contributing to GitBase
 

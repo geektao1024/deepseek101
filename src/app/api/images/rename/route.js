@@ -86,7 +86,7 @@ export async function POST(request) {
 
       // 过滤并格式化图片数据
       const images = updatedFiles
-        .filter(file => file.type === 'file' && /\.(png|jpg|jpeg|gif|svg)$/i.test(file.name))
+        .filter(file => file.type === 'file' && /\.(png|jpg|jpeg|gif|svg|webp)$/i.test(file.name))
         .map(file => ({
           name: file.name,
           path: file.path,

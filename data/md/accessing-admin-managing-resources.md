@@ -2,6 +2,9 @@
 title: Accessing the Admin Panel and Managing Resources in GitBase
 description: How to access the admin panel and manage your resource list in GitBase
 date: '2024-08-11T13:14:40.737Z'
+coverImage: /images/pictures/website.webp
+tags:
+  - 教程
 lastModified: '2024-11-22T12:03:45.561Z'
 ---
 # Accessing the Admin Panel and Managing Resources in GitBase

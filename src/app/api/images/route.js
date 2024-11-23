@@ -75,7 +75,7 @@ export async function GET(request) {
     console.log('开始处理图片数据...');
     const favicons = faviconFiles
       .filter(file => {
-        const isImage = file.type === 'file' && /\.(png|jpg|jpeg|gif|svg)$/i.test(file.name);
+        const isImage = file.type === 'file' && /\.(png|jpg|jpeg|gif|svg|webp)$/i.test(file.name);
         console.log(`文件 ${file.name} 是否为图片:`, isImage);
         return isImage;
       })
@@ -89,7 +89,7 @@ export async function GET(request) {
 
     const pictures = pictureFiles
       .filter(file => {
-        const isImage = file.type === 'file' && /\.(png|jpg|jpeg|gif|svg)$/i.test(file.name);
+        const isImage = file.type === 'file' && /\.(png|jpg|jpeg|gif|svg|webp)$/i.test(file.name);
         console.log(`文件 ${file.name} 是否为图片:`, isImage);
         return isImage;
       })
