@@ -4,13 +4,19 @@
     "description": "How to access the admin panel and manage your resource list in GitBase",
     "date": "2024-08-11T13:14:40.737Z",
     "lastModified": "2024-11-22T12:03:46Z",
+    "coverImage": "",
+    "tags": [],
     "path": "data/md/accessing-admin-managing-resources.md"
   },
   {
     "title": "测试图片2",
     "description": "测试图片2",
     "date": "2024-11-23T06:00:39.941Z",
-    "lastModified": "2024-11-23T06:00:39Z",
+    "lastModified": "2024-11-23T06:07:41Z",
+    "coverImage": "/images/pictures/main2.png",
+    "tags": [
+      "李不白"
+    ],
     "path": "data/md/ce-shi-tu-pian-2.md"
   },
   {
@@ -18,6 +24,8 @@
     "description": "How to configure GitBase environment variables",
     "date": "2024-08-11T13:08:05.474Z",
     "lastModified": "2024-08-11T13:08:05Z",
+    "coverImage": "",
+    "tags": [],
     "path": "data/md/environment-variables.md"
   },
   {
@@ -25,6 +33,8 @@
     "description": "A comprehensive guide for setting up GitBase locally and deploying it to Vercel, suitable for beginners.",
     "date": "2024-08-11",
     "lastModified": "2024-08-11T11:34:30Z",
+    "coverImage": "",
+    "tags": [],
     "path": "data/md/gitbase-install-guide.md"
   },
   {
@@ -32,6 +42,8 @@
     "description": "Explore the features and implementation of GitBase, an innovative open-source project that combines Next.js, Tailwind CSS, and GitHub API for content management.",
     "date": "2024-08-11",
     "lastModified": "2024-08-11T11:34:30Z",
+    "coverImage": "",
+    "tags": [],
     "path": "data/md/gitbase-introduction.md"
   },
   {
@@ -39,6 +51,8 @@
     "description": "Hi, I'm Qiayue, creator of GitBase. I'm excited to welcome you to our project and look forward to your contributions in making GitBase even better!",
     "date": "2024-08-16T03:57:46.153Z",
     "lastModified": "2024-08-16T03:57:46Z",
+    "coverImage": "",
+    "tags": [],
     "path": "data/md/how-to-contributing-to-gitbase.md"
   },
   {
@@ -46,6 +60,8 @@
     "description": "作者：李白",
     "date": "2024-11-21T08:31:39.981Z",
     "lastModified": "2024-11-21T09:24:59Z",
+    "coverImage": "",
+    "tags": [],
     "path": "data/md/jing-ye-shi.md"
   },
   {
@@ -53,6 +69,10 @@
     "description": "李四白xxxxxx",
     "date": "2024-11-22T03:33:33.266Z",
     "lastModified": "2024-11-22T12:09:54Z",
+    "coverImage": "/images/pictures/main.png",
+    "tags": [
+      "李白"
+    ],
     "path": "data/md/li-bai.md"
   },
   {
@@ -60,6 +80,10 @@
     "description": "黧黑很黑",
     "date": "2024-11-22T12:11:29.772Z",
     "lastModified": "2024-11-23T05:48:14Z",
+    "coverImage": "/images/picture/p_theme.png",
+    "tags": [
+      "李不白"
+    ],
     "path": "data/md/li-bu-bai.md"
   },
   {
@@ -67,6 +91,8 @@
     "description": "This guide will walk you through the process of viewing, editing, and creating new articles using the admin panel.",
     "date": "2024-08-11T13:16:44.231Z",
     "lastModified": "2024-08-11T13:16:44Z",
+    "coverImage": "",
+    "tags": [],
     "path": "data/md/managing-articles.md"
   }
 ]
