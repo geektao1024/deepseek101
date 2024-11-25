@@ -2,12 +2,18 @@
 
 [LemoBook](https://lemobook.vercel.app/) is an open-source dynamic website solution without a traditional database, built with Next.js, Tailwind CSS, and Shadcn/UI. It leverages GitHub as a content management system, providing a seamless way to create and manage website content.
 
-![LemoBook](https://toimg.xyz/file/5aa892c8e8385232fcdf3.png)
+![LemoBook](./public/images/gititd/shili1.png)
+![LemoBook](./public/images/gititd/shili2.png)
+![LemoBook](./public/images/gititd/shili3.png)
+![LemoBook](./public/images/gititd/shili7.png)
+![LemoBook](./public/images/gititd/shili4.png)
+![LemoBook](./public/images/gititd/shili5.png)
+![LemoBook](./public/images/gititd/shili6.png)
 
 
 ## Deploy on Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flemoabc%2Fgitbase&project-name=LemoBook&repository-name=LemoBook&external-id=https%3A%2F%2Fgithub.com%2Flemoabc%2Fgitbase%2Ftree%2Fmain)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flemoabc%2FGitBase&project-name=LemoBook&repository-name=LemoBook&external-id=https%3A%2F%2Fgithub.com%2Flemoabc%2FGitBase%2Ftree%2Fmain)
 
 
 ## Features
