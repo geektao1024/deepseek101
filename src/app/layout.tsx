@@ -3,32 +3,93 @@ import { Inter } from 'next/font/google'
 import { Layout } from '@/components/Layout'
 import { Metadata } from 'next'
 
-// 配置 Inter 字体
-// subsets 指定只加载拉丁字符集,优化加载性能
 const inter = Inter({ subsets: ['latin'] })
 
-// 配置全局默认元数据
-// 用于SEO优化,当页面未指定特定元数据时使用这些默认值
 export const metadata: Metadata = {
   title: {
-    default: 'LemoBook', // 默认标题
-    template: '%s | LemoBook' // 标题模板,用于子页面标题
+    default: 'LemoBook - Open Source Dynamic Website CMS',
+    template: '%s | LemoBook'
   },
-  description: 'Open source dynamic website without database, built with Next.js and GitHub API',
+  description: 'A Next.js site with Tailwind & Shadcn/UI, using GitHub API for content management. No database needed for dynamic updates.',
+  keywords: ['Next.js', 'React', 'GitHub API', 'CMS', 'Open Source'],
+  authors: [{ name: 'Lemo', url: 'https://github.com/lemoabc' }],
+  creator: 'Lemo',
+  publisher: 'Lemo',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://lemobook.vercel.app'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+      'zh-CN': '/zh-CN',
+    },
+  },
+  openGraph: {
+    title: 'LemoBook - Open Source Dynamic Website CMS',
+    description: 'A Next.js site with Tailwind & Shadcn/UI, using GitHub API for content management.',
+    url: 'https://lemobook.vercel.app',
+    siteName: 'LemoBook',
+    images: [
+      {
+        url: '/images/web.webp',
+        width: 1200,
+        height: 630,
+        alt: 'LemoBook Preview',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'LemoBook - Open Source Dynamic Website CMS',
+    description: 'A Next.js site with Tailwind & Shadcn/UI, using GitHub API for content management.',
+    images: ['/images/web.webp'],
+    creator: '@lemoabc',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/apple-touch-icon-precomposed.png',
+    },
+  },
+  manifest: '/site.webmanifest',
+  verification: {
+    google: 'your-google-site-verification',
+  }
 }
 
-// 定义根布局组件的属性接口
 interface RootLayoutProps {
   children: React.ReactNode
 }
 
-// 根布局组件: 为整个应用提供基础布局结构
-// 包含全局样式、字体配置和元数据设置
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
+      <head>
+        <link rel="alternate" href="https://lemobook.vercel.app" hrefLang="x-default" />
+        <link rel="alternate" href="https://lemobook.vercel.app/en-US" hrefLang="en-US" />
+        <link rel="alternate" href="https://lemobook.vercel.app/zh-CN" hrefLang="zh-CN" />
+      </head>
       <body className={inter.className}>
-        {/* Layout 组件包装所有页面内容,提供统一的页面结构 */}
         <Layout>{children}</Layout>
       </body>
     </html>
