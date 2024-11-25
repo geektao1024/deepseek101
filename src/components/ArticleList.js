@@ -117,7 +117,7 @@ export default function ArticleList({
       {/* 显示过滤结果统计 */}
       {selectedTag && (
         <p className="text-sm text-gray-500 mb-4">
-          Showing {getFilteredArticles().length} articles tagged with "{selectedTag}"
+          Showing {getFilteredArticles().length} articles tagged with &ldquo;{selectedTag}&rdquo;
         </p>
       )}
 
