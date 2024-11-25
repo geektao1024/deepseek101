@@ -57,7 +57,7 @@ export function Navigation() {
   }
 
   return (
-    <div className="border-b">
+    <div className="fixed top-0 left-0 right-0 bg-white border-b z-50">
       <div className="container mx-auto flex h-16 items-center px-4">
         <div className="flex gap-6 md:gap-10">
           {/* 根据当前页面显示不同的主标题/链接 */}

@@ -6,7 +6,7 @@ import ResourceList from '@/components/ResourceList'
 import ArticleList from '@/components/ArticleList'
 import { Metadata } from 'next'
 
-// 首页组件: GitBase 网站的主页面
+// 首页组件: LemoBook 网站的主页面
 // 展示网站概述、资源列表和最新文章列表
 export const metadata: Metadata = {
   title: 'LemoBook - Open Source Dynamic Website CMS Without Database',

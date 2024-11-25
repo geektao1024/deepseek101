@@ -1,131 +1,133 @@
 [
   {
-    "title": "Accessing the Admin Panel and Managing Resources in GitBase",
-    "description": "How to access the admin panel and manage your resource list in GitBase",
+    "title": "访问 LemoBook 管理面板和管理资源",
+    "description": "如何访问管理面板并管理 LemoBook 中的资源列表",
+    "date": "2024-08-11T13:14:40.737Z",
+    "lastModified": "2024-11-22T12:03:45.561Z",
+    "coverImage": "/images/pictures/webcn.webp",
+    "tags": [
+      "教程"
+    ],
+    "path": "data/md/accessing-admin-managing-resources-zh.md"
+  },
+  {
+    "title": "Accessing the Admin Panel and Managing Resources in LemoBook",
+    "description": "How to access the admin panel and manage your resource list in LemoBook",
     "date": "2024-08-11T13:14:40.737Z",
     "lastModified": "2024-11-22T12:03:46Z",
     "coverImage": "/images/pictures/website.webp",
     "tags": [
-      "教程"
+      "Tutorial"
     ],
     "path": "data/md/accessing-admin-managing-resources.md"
   },
   {
-    "title": "测试图片2",
-    "description": "测试图片2",
-    "date": "2024-11-23T06:00:39.941Z",
-    "lastModified": "2024-11-23T07:17:46Z",
-    "coverImage": "/images/pictures/main2.png",
+    "title": "配置 LemoBook 的环境变量",
+    "description": "如何配置 LemoBook 的环境变量",
+    "date": "2024-08-11T13:08:05.474Z",
+    "lastModified": "2024-08-11T13:08:05Z",
+    "coverImage": "/images/pictures/webcn.webp",
     "tags": [
-      "李不白2"
+      "教程"
     ],
-    "path": "data/md/ce-shi-tu-pian-2.md"
+    "path": "data/md/environment-variables-zh.md"
   },
   {
-    "title": "测试图片3",
-    "description": "测试图片3",
-    "date": "2024-11-23T06:23:22.258Z",
-    "lastModified": "2024-11-23T06:25:23Z",
-    "coverImage": "/images/pictures/main2.png",
-    "tags": [
-      "李小黑不黑"
-    ],
-    "path": "data/md/ce-shi-tu-pian-3.md"
-  },
-  {
-    "title": "Configuring Environment Variables for GitBase",
-    "description": "How to configure GitBase environment variables",
+    "title": "Configuring Environment Variables for LemoBook",
+    "description": "How to configure LemoBook environment variables",
     "date": "2024-08-11T13:08:05.474Z",
     "lastModified": "2024-08-11T13:08:05Z",
     "coverImage": "/images/pictures/website.webp",
     "tags": [
-      "教程"
+      "Tutorial"
     ],
     "path": "data/md/environment-variables.md"
   },
   {
-    "title": "Installing and Deploying GitBase: A Step-by-Step Guide",
-    "description": "A comprehensive guide for setting up GitBase locally and deploying it to Vercel, suitable for beginners.",
+    "title": "安装和部署 LemoBook：分步指南",
+    "description": "一个适合初学者的完整指南，介绍如何在本地安装 LemoBook 并将其部署到 Vercel。",
+    "date": "2024-08-11",
+    "lastModified": "2024-08-11T11:34:30Z",
+    "coverImage": "/images/pictures/webcn.webp",
+    "tags": [
+      "教程"
+    ],
+    "path": "data/md/gitbase-install-guide-zh.md"
+  },
+  {
+    "title": "Installing and Deploying LemoBook: A Step-by-Step Guide",
+    "description": "A comprehensive guide for setting up LemoBook locally and deploying it to Vercel, suitable for beginners.",
     "date": "2024-08-11",
     "lastModified": "2024-08-11T11:34:30Z",
     "coverImage": "/images/pictures/website.webp",
     "tags": [
-      "教程"
+      "Tutorial"
     ],
     "path": "data/md/gitbase-install-guide.md"
   },
   {
-    "title": "GitBase: A Dynamic, Database-Free Website Solution",
-    "description": "Explore the features and implementation of GitBase, an innovative open-source project that combines Next.js, Tailwind CSS, and GitHub API for content management.",
+    "title": "LemoBook：一个动态的无数据库网站解决方案",
+    "description": "探索 LemoBook 的特性和实现，这是一个创新的开源项目，结合了 Next.js、Tailwind CSS 和 GitHub API 进行内容管理。",
+    "date": "2024-08-11",
+    "lastModified": "2024-08-11T11:34:30Z",
+    "coverImage": "/images/pictures/webcn.webp",
+    "tags": [
+      "教程"
+    ],
+    "path": "data/md/gitbase-introduction-zh.md"
+  },
+  {
+    "title": "LemoBook: A Dynamic, Database-Free Website Solution",
+    "description": "Explore the features and implementation of LemoBook, an innovative open-source project that combines Next.js, Tailwind CSS, and GitHub API for content management.",
     "date": "2024-08-11",
     "lastModified": "2024-08-11T11:34:30Z",
     "coverImage": "/images/pictures/website.webp",
     "tags": [
-      "教程"
+      "Tutorial"
     ],
     "path": "data/md/gitbase-introduction.md"
   },
   {
-    "title": "Contributing to GitBase",
-    "description": "Hi, I'm Qiayue, creator of GitBase. I'm excited to welcome you to our project and look forward to your contributions in making GitBase even better!",
+    "title": "为 LemoBook 贡献代码",
+    "description": "你好，我是 Lemo，LemoBook 的创建者。我很高兴欢迎你加入我们的项目，期待你为让 LemoBook 变得更好做出贡献！",
+    "date": "2024-08-16T03:57:46.153Z",
+    "lastModified": "2024-08-16T03:57:46Z",
+    "coverImage": "/images/pictures/webcn.webp",
+    "tags": [
+      "教程"
+    ],
+    "path": "data/md/how-to-contributing-to-gitbase-zh.md"
+  },
+  {
+    "title": "Contributing to LemoBook",
+    "description": "Hi, I'm Lemo, creator of LemoBook. I'm excited to welcome you to our project and look forward to your contributions in making LemoBook even better!",
     "date": "2024-08-16T03:57:46.153Z",
     "lastModified": "2024-08-16T03:57:46Z",
     "coverImage": "/images/pictures/website.webp",
     "tags": [
-      "教程"
+      "Tutorial"
     ],
     "path": "data/md/how-to-contributing-to-gitbase.md"
   },
   {
-    "title": "静夜思",
-    "description": "作者：李白",
-    "date": "2024-11-21T08:31:39.981Z",
-    "lastModified": "2024-11-21T09:24:59Z",
-    "coverImage": "",
-    "tags": [],
-    "path": "data/md/jing-ye-shi.md"
-  },
-  {
-    "title": "古诗三首",
-    "description": "李四白xxxxxx",
-    "date": "2024-11-22T03:33:33.266Z",
-    "lastModified": "2024-11-22T12:09:54Z",
-    "coverImage": "/images/pictures/main.png",
+    "title": "在 LemoBook 管理面板中管理文章",
+    "description": "本指南将带您了解如何使用管理面板查看、编辑和创建新文章。",
+    "date": "2024-08-11T13:16:44.231Z",
+    "lastModified": "2024-11-23T08:11:15Z",
+    "coverImage": "/images/pictures/webcn.webp",
     "tags": [
-      "李白"
+      "教程"
     ],
-    "path": "data/md/li-bai.md"
+    "path": "data/md/managing-articles-zh.md"
   },
   {
-    "title": "李黑",
-    "description": "黧黑很黑",
-    "date": "2024-11-22T12:11:29.772Z",
-    "lastModified": "2024-11-23T05:48:14Z",
-    "coverImage": "/images/picture/p_theme.png",
-    "tags": [
-      "李不白"
-    ],
-    "path": "data/md/li-bu-bai.md"
-  },
-  {
-    "title": "测试图片名拼接",
-    "description": "测试图片名拼接",
-    "date": "2024-11-23T07:08:34.333Z",
-    "lastModified": "2024-11-23T07:13:27Z",
-    "coverImage": "/images/pictures/main2.png",
-    "tags": [
-      "李太白"
-    ],
-    "path": "data/md/li-tai-bai.md"
-  },
-  {
-    "title": "Managing Articles in GitBase Admin Panel",
+    "title": "Managing Articles in LemoBook Admin Panel",
     "description": "This guide will walk you through the process of viewing, editing, and creating new articles using the admin panel.",
     "date": "2024-08-11T13:16:44.231Z",
     "lastModified": "2024-11-23T08:11:15Z",
     "coverImage": "/images/pictures/website.webp",
     "tags": [
-      "教程"
+      "Tutorial"
     ],
     "path": "data/md/managing-articles.md"
   }

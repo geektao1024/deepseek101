@@ -4,9 +4,11 @@ import { Footer } from '@/components/Footer'
 
 export function Layout({ children }) {
   return (
-    <div className="min-h-screen bg-background font-sans antialiased">
+    <div className="min-h-screen flex flex-col">
       <Navigation />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 mt-16">
+        {children}
+      </main>
       <Footer />
     </div>
   )

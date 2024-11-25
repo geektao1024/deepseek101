@@ -5,6 +5,8 @@ import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
+import { slug } from 'github-slugger'  // 需要安装这个包
+import { visit } from 'unist-util-visit'
 
 // 文章目录路径
 const postsDirectory = path.join(process.cwd(), 'data/md')
@@ -46,28 +48,117 @@ export function getSortedPostsData() {
 }
 
 // 获取单篇文章的完整数据
-export async function getPostData(slug) {
-  const fullPath = path.join(postsDirectory, `${slug}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
+export async function getPostData(id) {
+  const fullPath = path.join(postsDirectory, `${id}.md`)
+  const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   // Use gray-matter to parse the post metadata section
-  const matterResult = matter(fileContents);
+  const matterResult = matter(fileContents)
 
-  // Use remark to convert markdown into HTML string
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+  // 自定义处理函数，为标题添加 id
+  function addIdsToHeadings() {
+    return (tree) => {
+      let headings = [];
 
-  // Combine the data with the id and contentHtml
-  return {
-    slug,
-    contentHtml,
-    title: matterResult.data.title,
-    description: matterResult.data.description,
-    date: matterResult.data.date,
-    // ... any other fields you want to include
-  };
+      // 首先解析 Markdown 为 AST
+      const ast = remark().parse(matterResult.content);
+      
+      // 遍历 AST 查找标题节点
+      visit(ast, 'heading', (node) => {
+        if (!node.children) return;
+
+        const title = node.children
+          .filter(n => n.type === 'text')
+          .map(n => n.value)
+          .join('')
+        
+        const id = slug(title)
+        
+        // 添加 id 属性到标题节点
+        node.data = node.data || {}
+        node.data.hProperties = node.data.hProperties || {}
+        node.data.hProperties.id = id
+        
+        // 收集标题信息
+        headings.push({
+          id,
+          text: title,
+          level: node.depth
+        })
+
+        console.log('Found heading:', { id, text: title, level: node.depth });
+      });
+      
+      console.log('Collected headings:', headings);
+      
+      // 将标题信息存储在树的数据中
+      tree.data = tree.data || {}
+      tree.data.headings = headings;
+
+      return tree;
+    }
+  }
+
+  try {
+    // 先解析 Markdown
+    const ast = remark().parse(matterResult.content);
+    
+    // 收集标题信息
+    let headings = [];
+    visit(ast, 'heading', (node) => {
+      if (!node.children) return;
+      
+      const title = node.children
+        .filter(n => n.type === 'text')
+        .map(n => n.value)
+        .join('')
+      
+      const id = slug(title)
+      
+      headings.push({
+        id,
+        text: title,
+        level: node.depth
+      })
+    });
+
+    // 转换为 HTML
+    const processedContent = await remark()
+      .use(() => tree => {
+        // 为标题添加 ID
+        visit(tree, 'heading', (node) => {
+          if (!node.children) return;
+          
+          const title = node.children
+            .filter(n => n.type === 'text')
+            .map(n => n.value)
+            .join('')
+          
+          const id = slug(title)
+          
+          node.data = node.data || {}
+          node.data.hProperties = node.data.hProperties || {}
+          node.data.hProperties.id = id
+        });
+        return tree;
+      })
+      .use(html)
+      .process(matterResult.content);
+
+    const contentHtml = processedContent.toString();
+
+    console.log('Final headings data:', headings);
+
+    return {
+      id,
+      contentHtml,
+      headings,
+      ...matterResult.data
+    }
+  } catch (error) {
+    console.error('Error processing markdown:', error);
+    throw error;
+  }
 }
 
 export async function getPostData2(id) {
