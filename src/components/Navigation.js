@@ -69,10 +69,20 @@ export function Navigation() {
                 isAdminDashboard ? "text-blue-600 font-bold" : "text-gray-600 hover:text-blue-600"
               )}
             >
+              <img 
+                src="/favicon-16x16.png"
+                alt="LemoBook Logo"
+                className="h-8 w-auto mr-2"  // 调整 logo 大小
+              />
               <span>Admin Dashboard</span>
             </Link>
           ) : (
             <Link href="/" className="flex items-center space-x-2">
+              <img 
+                src="/favicon-16x16.png"
+                alt="LemoBook Logo"
+                className="h-8 w-auto mr-2"  // 调整 logo 大小
+              />
               <span className="font-bold">LemoBook</span>
             </Link>
           )}
