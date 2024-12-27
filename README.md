@@ -107,3 +107,9 @@ LemoBook is built with the following open-source libraries:
 - [Shadcn/UI](https://ui.shadcn.com/)
 
 We are grateful to the maintainers and contributors of these projects.
+
+## Bug Fixes and Feature Improvements Log
+
+2024/12/27
+- [bugfix] Fixed incorrect table of contents highlighting when clicking navigation links
+- [feature add] Added full-text search functionality on homepage

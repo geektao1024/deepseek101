@@ -11,15 +11,18 @@ import {
   LogIn,        // 登录按钮图标
   X,           // 取消按钮图标
   Key,         // 密码输入框图标
-  AlertCircle  // 错误提示图标
+  AlertCircle,  // 错误提示图标
+  Search
 } from 'lucide-react'
+import { SearchDialog } from '@/components/SearchDialog'
 
-export function Navigation() {
+export function Navigation({ articles }) {
   const [showLoginDialog, setShowLoginDialog] = useState(false)
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const router = useRouter()
   const pathname = usePathname()
+  const [showSearchDialog, setShowSearchDialog] = useState(false)
 
   // 检查当前是否在管理界面
   const isAdminPage = pathname.startsWith('/admin')
@@ -145,7 +148,19 @@ export function Navigation() {
         </div>
 
         {/* 右侧按钮区域 */}
-        <div className="ml-auto">
+        <div className="ml-auto flex items-center gap-2">
+          {/* 非管理页面才显示搜索按钮 */}
+          {!isAdminPage && (
+            <button
+              onClick={() => setShowSearchDialog(true)}
+              className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
+              title="Search Articles"
+            >
+              <Search className="h-4 w-4" />
+            </button>
+          )}
+          
+          {/* 原有的 Admin/Client 按钮 */}
           {isAdminPage ? (
             <Button 
               onClick={handleBackToClient} 
@@ -237,6 +252,13 @@ export function Navigation() {
             </form>
           </div>
         </div>
+      )}
+
+      {showSearchDialog && (
+        <SearchDialog
+          articles={articles}
+          onClose={() => setShowSearchDialog(false)}
+        />
       )}
     </div>
   )
