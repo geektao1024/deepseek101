@@ -35,7 +35,8 @@ export function ArticleLayout({ article, allArticles, children }: ArticleLayoutP
       (entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            setActiveHeading(entry.target.id);
+            const headingId = entry.target.id.replace('user-content-', '');
+            setActiveHeading(headingId);
           }
         });
       },
@@ -43,7 +44,7 @@ export function ArticleLayout({ article, allArticles, children }: ArticleLayoutP
     );
 
     article.headings.forEach(heading => {
-      const element = document.getElementById(heading.id);
+      const element = document.getElementById(`user-content-${heading.id}`);
       if (element) observer.observe(element);
     });
 
@@ -52,29 +53,18 @@ export function ArticleLayout({ article, allArticles, children }: ArticleLayoutP
 
   // 处理目录点击
   const handleTocClick = (headingId: string) => {
-    console.log('目录点击 - 目标ID:', headingId);
-    const element = document.getElementById(headingId);
+    const element = document.getElementById(`user-content-${headingId}`);
     
     if (element) {
-      console.log('目录点击 - 找到目标元素:', element);
       const offset = 80; // 顶部导航栏的高度
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-      console.log('目录点击 - 滚动位置计算:', {
-        elementPosition,
-        pageYOffset: window.pageYOffset,
-        offset,
-        finalPosition: offsetPosition
-      });
 
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
       });
       setActiveHeading(headingId);
-    } else {
-      console.warn('目录点击 - 未找到目标元素:', headingId);
     }
   };
 
