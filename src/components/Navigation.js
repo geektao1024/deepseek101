@@ -154,7 +154,7 @@ export function Navigation({ articles }) {
             <button
               onClick={() => setShowSearchDialog(true)}
               className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
-              title="Search Articles"
+              title=""
             >
               <Search className="h-4 w-4" />
             </button>

@@ -63,12 +63,12 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon-16x16.png',
     other: {
-      rel: 'apple-touch-icon-precomposed',
-      url: '/apple-touch-icon-precomposed.png',
+      rel: 'icon',
+      url: '/favicon-16x16.png',
     },
   },
   manifest: '/site.webmanifest',
@@ -85,6 +85,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" type="" href="/favicon.svg" />
+        <link rel="shortcut icon" type="" href="/favicon.svg" />
         <link rel="alternate" href="https://lemobook.vercel.app" hrefLang="x-default" />
         <link rel="alternate" href="https://lemobook.vercel.app/en-US" hrefLang="en-US" />
         <link rel="alternate" href="https://lemobook.vercel.app/zh-CN" hrefLang="zh-CN" />
