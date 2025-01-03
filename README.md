@@ -1,5 +1,14 @@
 # LemoBook
 
+## Bug Fixes and Feature Improvements Log
+2025/01/03
+- [improvement] Optimized mobile display: 1. Enhanced header display; 2. Improved article content display
+
+2024/12/27
+- [bugfix] Fixed incorrect table of contents highlighting when clicking navigation links
+- [feature add] Added full-text search functionality on homepage
+
+## Description
 [LemoBook](https://lemobook.vercel.app/) is an open-source dynamic website solution without a traditional database, built with Next.js, Tailwind CSS, and Shadcn/UI. It leverages GitHub as a content management system, providing a seamless way to create and manage website content.
 
 ![LemoBook](./public/images/gititd/shili1.png)
@@ -107,9 +116,3 @@ LemoBook is built with the following open-source libraries:
 - [Shadcn/UI](https://ui.shadcn.com/)
 
 We are grateful to the maintainers and contributors of these projects.
-
-## Bug Fixes and Feature Improvements Log
-
-2024/12/27
-- [bugfix] Fixed incorrect table of contents highlighting when clicking navigation links
-- [feature add] Added full-text search functionality on homepage
