@@ -62,7 +62,8 @@ export function Navigation({ articles }) {
   return (
     <div className="fixed top-0 left-0 right-0 bg-white border-b z-50">
       <div className="container mx-auto flex h-16 items-center px-4">
-        <div className="flex flex-1 items-center justify-between">
+        {/* 左侧 Logo 和导航链接区域 */}
+        <div className="flex gap-6 md:gap-10">
           {/* Logo 部分 */}
           {isAdminPage ? (
             <Link 
@@ -75,29 +76,29 @@ export function Navigation({ articles }) {
               <img 
                 src="/favicon-16x16.png"
                 alt="LemoBook Logo"
-                className="h-8 w-auto"
+                className="h-8 w-auto mr-2"
               />
-              <span className="hidden sm:inline">Admin Dashboard</span>
+              <span className="hidden md:inline">Admin Dashboard</span>
             </Link>
           ) : (
             <Link href="/" className="flex items-center space-x-2">
               <img 
                 src="/favicon-16x16.png"
                 alt="LemoBook Logo"
-                className="h-8 w-auto"
+                className="h-8 w-auto mr-2"
               />
-              <span className="font-bold hidden sm:inline">LemoBook</span>
+              <span className="hidden md:inline font-bold">LemoBook</span>
             </Link>
           )}
 
-          {/* 导航链接 - 移动端使用下拉菜单 */}
-          <nav className="hidden sm:flex gap-6">
+          {/* 导航链接 - 在移动端和桌面端都显示 */}
+          <nav className="flex gap-4 md:gap-6 overflow-x-auto">
             {isAdminPage ? (
               <>
                 <Link 
                   href="/admin/articles" 
                   className={cn(
-                    "flex items-center transition-colors",
+                    "flex items-center transition-colors whitespace-nowrap",
                     isArticlesManagement ? "text-blue-600 font-bold" : "text-gray-600 hover:text-blue-600"
                   )}
                 >
@@ -106,7 +107,7 @@ export function Navigation({ articles }) {
                 <Link 
                   href="/admin/images" 
                   className={cn(
-                    "flex items-center transition-colors",
+                    "flex items-center transition-colors whitespace-nowrap",
                     isImagesManagement ? "text-blue-600 font-bold" : "text-gray-600 hover:text-blue-600"
                   )}
                 >
@@ -118,7 +119,7 @@ export function Navigation({ articles }) {
                 <Link 
                   href="/" 
                   className={cn(
-                    "flex items-center transition-colors",
+                    "flex items-center transition-colors whitespace-nowrap",
                     pathname === "/" ? "text-blue-600 font-bold" : "text-gray-600 hover:text-blue-600"
                   )}
                 >
@@ -127,7 +128,7 @@ export function Navigation({ articles }) {
                 <Link 
                   href="/resources" 
                   className={cn(
-                    "flex items-center transition-colors",
+                    "flex items-center transition-colors whitespace-nowrap",
                     pathname === "/resources" ? "text-blue-600 font-bold" : "text-gray-600 hover:text-blue-600"
                   )}
                 >
@@ -136,7 +137,7 @@ export function Navigation({ articles }) {
                 <Link 
                   href="/posts" 
                   className={cn(
-                    "flex items-center transition-colors",
+                    "flex items-center transition-colors whitespace-nowrap",
                     pathname === "/posts" ? "text-blue-600 font-bold" : "text-gray-600 hover:text-blue-600"
                   )}
                 >
@@ -145,27 +146,41 @@ export function Navigation({ articles }) {
               </>
             )}
           </nav>
+        </div>
 
-          {/* 右侧按钮区域 */}
-          <div className="flex items-center gap-2">
-            {!isAdminPage && (
-              <button
-                onClick={() => setShowSearchDialog(true)}
-                className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
-              >
-                <Search className="h-4 w-4" />
-              </button>
-            )}
-          
-            <Button 
-              onClick={isAdminPage ? handleBackToClient : () => setShowLoginDialog(true)} 
-              variant="outline"
-              className="hidden sm:flex"
-              icon={isAdminPage ? <Users className="h-4 w-4" /> : <UserCog className="h-4 w-4" />}
+        {/* 右侧按钮区域 */}
+        <div className="ml-auto flex items-center gap-2">
+          {/* 搜索按钮 - 在非管理页面显示 */}
+          {!isAdminPage && (
+            <button
+              onClick={() => setShowSearchDialog(true)}
+              className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
+              title=""
             >
-              {isAdminPage ? 'Client' : 'Admin'}
+              <Search className="h-4 w-4" />
+            </button>
+          )}
+          
+          {/* Admin/Client 按钮 - 在移动端隐藏 */}
+          {isAdminPage ? (
+            <Button 
+              onClick={handleBackToClient} 
+              variant="outline"
+              className="hidden md:flex"
+              icon={<Users className="h-4 w-4" />}
+            >
+              {/* Client */}
             </Button>
-          </div>
+          ) : (
+            <Button 
+              onClick={() => setShowLoginDialog(true)} 
+              variant="outline"
+              className="hidden md:flex"
+              icon={<UserCog className="h-4 w-4" />}
+            >
+              {/* Admin */}
+            </Button>
+          )}
         </div>
       </div>
 
