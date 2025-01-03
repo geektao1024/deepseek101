@@ -62,8 +62,8 @@ export function Navigation({ articles }) {
   return (
     <div className="fixed top-0 left-0 right-0 bg-white border-b z-50">
       <div className="container mx-auto flex h-16 items-center px-4">
-        <div className="flex gap-6 md:gap-10">
-          {/* 根据当前页面显示不同的主标题/链接 */}
+        <div className="flex flex-1 items-center justify-between">
+          {/* Logo 部分 */}
           {isAdminPage ? (
             <Link 
               href="/admin" 
@@ -75,23 +75,23 @@ export function Navigation({ articles }) {
               <img 
                 src="/favicon-16x16.png"
                 alt="LemoBook Logo"
-                className="h-8 w-auto mr-2"  // 调整 logo 大小
+                className="h-8 w-auto"
               />
-              <span>Admin Dashboard</span>
+              <span className="hidden sm:inline">Admin Dashboard</span>
             </Link>
           ) : (
             <Link href="/" className="flex items-center space-x-2">
               <img 
                 src="/favicon-16x16.png"
                 alt="LemoBook Logo"
-                className="h-8 w-auto mr-2"  // 调整 logo 大小
+                className="h-8 w-auto"
               />
-              <span className="font-bold">LemoBook</span>
+              <span className="font-bold hidden sm:inline">LemoBook</span>
             </Link>
           )}
 
-          {/* 导航链接 */}
-          <nav className="flex gap-6">
+          {/* 导航链接 - 移动端使用下拉菜单 */}
+          <nav className="hidden sm:flex gap-6">
             {isAdminPage ? (
               <>
                 <Link 
@@ -145,39 +145,27 @@ export function Navigation({ articles }) {
               </>
             )}
           </nav>
-        </div>
 
-        {/* 右侧按钮区域 */}
-        <div className="ml-auto flex items-center gap-2">
-          {/* 非管理页面才显示搜索按钮 */}
-          {!isAdminPage && (
-            <button
-              onClick={() => setShowSearchDialog(true)}
-              className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
-              title=""
-            >
-              <Search className="h-4 w-4" />
-            </button>
-          )}
+          {/* 右侧按钮区域 */}
+          <div className="flex items-center gap-2">
+            {!isAdminPage && (
+              <button
+                onClick={() => setShowSearchDialog(true)}
+                className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
+              >
+                <Search className="h-4 w-4" />
+              </button>
+            )}
           
-          {/* 原有的 Admin/Client 按钮 */}
-          {isAdminPage ? (
             <Button 
-              onClick={handleBackToClient} 
+              onClick={isAdminPage ? handleBackToClient : () => setShowLoginDialog(true)} 
               variant="outline"
-              icon={<Users className="h-4 w-4" />}
+              className="hidden sm:flex"
+              icon={isAdminPage ? <Users className="h-4 w-4" /> : <UserCog className="h-4 w-4" />}
             >
-              {/* Client */}
+              {isAdminPage ? 'Client' : 'Admin'}
             </Button>
-          ) : (
-            <Button 
-              onClick={() => setShowLoginDialog(true)} 
-              variant="outline"
-              icon={<UserCog className="h-4 w-4" />}
-            >
-              {/* Admin */}
-            </Button>
-          )}
+          </div>
         </div>
       </div>
 
