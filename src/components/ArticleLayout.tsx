@@ -106,8 +106,8 @@ export function ArticleLayout({ article, allArticles, children }: ArticleLayoutP
   return (
     <div className="container mx-auto px-4 relative">
       <div className="flex gap-8 py-8">
-        {/* 左侧边栏 - 移除折叠功能 */}
-        <aside className="w-64 shrink-0 border-r border-gray-200">
+        {/* 左侧边栏 - 在移动端隐藏 */}
+        <aside className="w-64 shrink-0 border-r border-gray-200 hidden md:block">
           <div className="sticky top-24 space-y-6 pr-4">
             {article.tags?.map(tag => (
               <div key={tag} className="space-y-2">
@@ -152,9 +152,9 @@ export function ArticleLayout({ article, allArticles, children }: ArticleLayoutP
           </div>
         </aside>
 
-        {/* 主内容区 */}
+        {/* 主内容区域 - 移动端占满宽度 */}
         <main className="flex-1 min-w-0">
-          <article className="prose prose-lg max-w-none">
+          <article className="prose prose-slate max-w-none">
             {children}
           </article>
 
@@ -212,8 +212,8 @@ export function ArticleLayout({ article, allArticles, children }: ArticleLayoutP
           </nav>
         </main>
 
-        {/* 右侧目录 - 优化后的设计 */}
-        <aside className="w-64 shrink-0">
+        {/* 右侧目录 - 在移动端隐藏 */}
+        <aside className="w-64 shrink-0 hidden md:block">
           <div className="sticky top-24">
             <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
               {/* 目录标题栏 */}
