@@ -83,7 +83,7 @@ export function SearchDialog({ articles, onClose }: SearchDialogProps) {
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-start justify-center z-50">
       <div className="absolute inset-0" onClick={onClose} />
       <div className="bg-white rounded-lg shadow-lg w-[550px] max-w-[90vw] relative mt-[20vh]">
-        <div className="flex items-center p-4 border-b">
+        <div className="flex items-center p-4">
           <Search className="h-5 w-5 text-gray-400" />
           <input
             type="text"
