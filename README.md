@@ -1,6 +1,9 @@
 # LemoBook
 
 ## Bug Fixes and Feature Improvements Log
+2025/01/06
+- [improvement] Optimized SearchDialog
+
 2025/01/03
 - [improvement] Optimized mobile display: 1. Enhanced header display; 2. Improved article content display
 
