@@ -74,3 +74,49 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* 标签云样式 */
+.tag-cloud {
+  @apply flex flex-wrap gap-2 py-4;
+  @apply container mx-auto;
+  @apply justify-center;
+}
+
+.tag-cloud-item {
+  @apply cursor-pointer transition-all duration-300 ease-in-out;
+  @apply text-sm font-medium px-3 py-1.5 rounded-full;
+  @apply hover:scale-105 hover:shadow-md;
+  @apply select-none;
+  @apply flex items-center;
+  @apply min-w-[80px] justify-center;
+  @apply border border-gray-200;
+  @apply dark:border-gray-700;
+}
+
+.tag-cloud-item.active {
+  @apply bg-blue-600 text-white shadow-sm;
+  @apply hover:bg-blue-700;
+  @apply border-transparent;
+}
+
+.tag-cloud-item.active svg {
+  @apply text-white;
+}
+
+.tag-cloud-item:not(.active) {
+  @apply bg-gray-50 text-gray-700;
+  @apply hover:bg-gray-100;
+  @apply dark:bg-gray-800 dark:text-gray-300;
+  @apply dark:hover:bg-gray-700;
+  @apply hover:border-gray-300;
+  @apply dark:hover:border-gray-600;
+}
+
+.tag-cloud-item:not(.active) svg {
+  @apply text-gray-500;
+  @apply dark:text-gray-400;
+}
+
+.tag-cloud-item svg {
+  @apply transition-colors duration-300;
+}

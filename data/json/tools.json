@@ -1,0 +1,168 @@
+{
+  "categories": [
+    {
+      "id": "applications",
+      "name": "Applications",
+      "description": "DeepSeek 应用工具",
+      "icon": "app"
+    },
+    {
+      "id": "ai-frameworks",
+      "name": "AI Agent Frameworks",
+      "description": "AI 代理框架",
+      "icon": "brain"
+    },
+    {
+      "id": "rag-frameworks",
+      "name": "RAG Frameworks",
+      "description": "检索增强生成框架",
+      "icon": "database"
+    },
+    {
+      "id": "solana-frameworks",
+      "name": "Solana Frameworks",
+      "description": "Solana 开发框架",
+      "icon": "code"
+    },
+    {
+      "id": "synthetic-data",
+      "name": "Synthetic Data",
+      "description": "合成数据工具",
+      "icon": "data"
+    },
+    {
+      "id": "im-plugins",
+      "name": "IM Application Plugins",
+      "description": "即时通讯应用插件",
+      "icon": "message-square"
+    },
+    {
+      "id": "browser-extensions",
+      "name": "Browser Extensions",
+      "description": "浏览器扩展",
+      "icon": "globe"
+    },
+    {
+      "id": "vscode-extensions",
+      "name": "VS Code Extensions",
+      "description": "VS Code 扩展",
+      "icon": "code"
+    },
+    {
+      "id": "curation",
+      "name": "Curation",
+      "description": "内容策划工具",
+      "icon": "list"
+    },
+    {
+      "id": "visual-studio-extensions",
+      "name": "Visual Studio Extensions",
+      "description": "Visual Studio 扩展",
+      "icon": "code"
+    },
+    {
+      "id": "neovim-extensions",
+      "name": "Neovim Extensions",
+      "description": "Neovim 扩展",
+      "icon": "terminal"
+    },
+    {
+      "id": "jetbrains-extensions",
+      "name": "JetBrains Extensions",
+      "description": "JetBrains IDE 扩展",
+      "icon": "code"
+    },
+    {
+      "id": "discord-bots",
+      "name": "Discord Bots",
+      "description": "Discord 机器人",
+      "icon": "bot"
+    },
+    {
+      "id": "ai-code-editor",
+      "name": "Native AI Code Editor",
+      "description": "原生 AI 代码编辑器",
+      "icon": "edit"
+    },
+    {
+      "id": "emacs",
+      "name": "Emacs",
+      "description": "Emacs 工具和扩展",
+      "icon": "terminal"
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "description": "安全工具",
+      "icon": "shield"
+    },
+    {
+      "id": "others",
+      "name": "Others",
+      "description": "其他工具",
+      "icon": "more-horizontal"
+    }
+  ],
+  "tools": [
+    {
+      "id": "quantalogic",
+      "name": "QuantaLogic",
+      "description": "一个用于构建高级 AI 代理的 ReAct（推理和行动）框架，无缝集成大型语言模型",
+      "category": "ai-frameworks",
+      "url": "https://www.quantalogic.app/",
+      "tags": ["AI", "框架", "ReAct", "代理", "LLM", "Python"],
+      "rating": {
+        "score": 4.8,
+        "count": 264
+      }
+    },
+    {
+      "id": "tailwind",
+      "name": "Tailwind CSS",
+      "description": "A utility-first CSS framework",
+      "category": "resources",
+      "url": "https://tailwindcss.com/",
+      "tags": ["CSS", "框架", "工具"],
+      "rating": {
+        "score": 4.8,
+        "count": 1000
+      }
+    },
+    {
+      "id": "shadcn-ui",
+      "name": "Shadcn/ui",
+      "description": "Re-usable components built with Radix UI and Tailwind CSS",
+      "category": "resources",
+      "url": "https://ui.shadcn.com/",
+      "tags": ["UI", "组件", "React"],
+      "rating": {
+        "score": 4.7,
+        "count": 800
+      }
+    },
+    {
+      "id": "deepseek-coder",
+      "name": "DeepSeek Coder",
+      "description": "AI驱动的代码智能助手，提供代码补全、重构和解释功能",
+      "category": "applications",
+      "url": "https://www.deepseek.com/coder",
+      "tags": ["AI", "编程", "助手"],
+      "rating": {
+        "score": 4.9,
+        "count": 500
+      }
+    },
+    {
+      "id": "deepseek-chat",
+      "name": "DeepSeek Chat",
+      "description": "智能对话助手，支持多领域知识问答和任务辅助",
+      "category": "applications",
+      "url": "https://www.deepseek.com/chat",
+      "tags": ["AI", "对话", "助手"],
+      "rating": {
+        "score": 4.8,
+        "count": 600
+      }
+    }
+  ]
+} 

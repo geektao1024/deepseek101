@@ -1,0 +1,82 @@
+{
+  "id": "deepseek-coder",
+  "name": "DeepSeek Coder",
+  "description": "AI驱动的代码智能助手，提供代码补全、重构和解释功能",
+  "url": "https://www.deepseek.com/coder",
+  "category": "applications",
+  "tags": ["AI", "编程", "助手"],
+  "rating": {
+    "score": 4.9,
+    "count": 500
+  },
+  "content": {
+    "overview": "DeepSeek Coder 是一款强大的 AI 编程助手，它能够理解您的代码意图，提供智能的代码补全、重构建议和详细的解释。无论您是经验丰富的开发者还是编程新手，都能从中获得帮助。",
+    "features": [
+      {
+        "title": "智能代码补全",
+        "description": "基于上下文的智能代码补全，提高编码效率"
+      },
+      {
+        "title": "代码重构建议",
+        "description": "分析代码质量，提供优化和重构建议"
+      },
+      {
+        "title": "实时代码解释",
+        "description": "详细解释代码的功能和实现原理"
+      },
+      {
+        "title": "多语言支持",
+        "description": "支持主流编程语言，包括 Python、JavaScript、Java 等"
+      }
+    ],
+    "useCases": [
+      {
+        "title": "日常开发",
+        "description": "在日常编码中获得实时的智能提示和帮助"
+      },
+      {
+        "title": "代码审查",
+        "description": "快速理解和审查他人的代码"
+      },
+      {
+        "title": "学习编程",
+        "description": "通过详细的解释和示例学习编程概念"
+      }
+    ],
+    "advantages": [
+      "强大的代码理解能力",
+      "实时响应，低延迟",
+      "准确的代码补全",
+      "详细的解释和文档",
+      "持续更新和改进"
+    ],
+    "faqs": [
+      {
+        "question": "如何开始使用 DeepSeek Coder？",
+        "answer": "您可以通过访问官网下载并安装 DeepSeek Coder，支持主流的 IDE 和编辑器。"
+      },
+      {
+        "question": "是否支持离线使用？",
+        "answer": "目前 DeepSeek Coder 需要联网使用，我们会在后续版本中考虑添加离线支持。"
+      },
+      {
+        "question": "如何获取技术支持？",
+        "answer": "您可以通过官方文档、社区论坛或联系我们的技术支持团队获取帮助。"
+      }
+    ],
+    "resources": [
+      {
+        "title": "官方文档",
+        "url": "https://docs.deepseek.com/coder"
+      },
+      {
+        "title": "快速入门指南",
+        "url": "https://docs.deepseek.com/coder/quickstart"
+      },
+      {
+        "title": "API 文档",
+        "url": "https://docs.deepseek.com/coder/api"
+      }
+    ]
+  }
+} 
