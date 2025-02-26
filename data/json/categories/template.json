@@ -1,0 +1,22 @@
+{
+  "id": "category-id",
+  "name": "Category Name",
+  "description": "Category description",
+  "icon": "icon-name",
+  "last_updated": "YYYY-MM-DD",
+  "tools": [
+    {
+      "id": "tool-id",
+      "name": "Tool Name",
+      "description": "Tool description",
+      "url": "https://tool-url.com",
+      "tags": ["tag1", "tag2", "tag3"],
+      "isFree": true,
+      "isOpenSource": true,
+      "rating": {
+        "score": 4.5,
+        "count": 100
+      }
+    }
+  ]
+} 

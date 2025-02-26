@@ -53,6 +53,8 @@
       "url": "https://github.com/ThinkInAIXYZ/deepchat",
       "tags": ["AI", "assistant", "desktop", "chat", "search", "file upload", "knowledge base"],
       "category": "applications",
+      "isFree": true,
+      "isOpenSource": true,
       "rating": {
         "score": 4.8,
         "count": 350
@@ -65,6 +67,8 @@
       "url": "https://github.com/quantalogic-ai/quantalogic",
       "tags": ["AI", "agents", "ReAct", "framework", "development"],
       "category": "applications",
+      "isFree": true,
+      "isOpenSource": true,
       "rating": {
         "score": 4.7,
         "count": 320
@@ -77,6 +81,8 @@
       "url": "https://github.com/Bin-Huang/chatbox",
       "tags": ["AI", "desktop", "chat", "LLM", "cross-platform", "OpenAI"],
       "category": "applications",
+      "isFree": true,
+      "isOpenSource": true,
       "rating": {
         "score": 4.6,
         "count": 280
@@ -89,6 +95,8 @@
       "url": "https://github.com/ChatGPTNextWeb/NextChat",
       "tags": ["AI", "web", "chat", "UI", "cross-platform", "PWA", "OpenAI"],
       "category": "applications",
+      "isFree": true,
+      "isOpenSource": true,
       "rating": {
         "score": 4.9,
         "count": 580
@@ -101,6 +109,8 @@
       "url": "https://github.com/infinilabs/coco-app",
       "tags": ["AI", "search", "productivity", "organization", "summarization", "open-source"],
       "category": "applications",
+      "isFree": true,
+      "isOpenSource": true,
       "rating": {
         "score": 4.5,
         "count": 240
@@ -113,6 +123,8 @@
       "url": "https://github.com/deepseek-ai/awesome-deepseek-integration/tree/main/docs/liubai",
       "tags": ["AI", "WeChat", "notes", "todo", "management", "productivity", "organization"],
       "category": "applications",
+      "isFree": true,
+      "isOpenSource": true,
       "rating": {
         "score": 4.4,
         "count": 180
@@ -125,6 +137,8 @@
       "url": "https://github.com/hey-pal/toolkit-ai",
       "tags": ["AI", "iOS", "chat", "mobile", "GPT", "DeepSeek", "Claude"],
       "category": "applications",
+      "isFree": true,
+      "isOpenSource": true,
       "rating": {
         "score": 4.5,
         "count": 210
@@ -137,6 +151,8 @@
       "url": "https://github.com/danny-avila/LibreChat",
       "tags": ["AI", "chat", "open-source", "multi-model", "ChatGPT", "DeepSeek", "Claude"],
       "category": "applications",
+      "isFree": true,
+      "isOpenSource": true,
       "rating": {
         "score": 4.7,
         "count": 340
@@ -149,6 +165,8 @@
       "url": "https://github.com/lobehub/lobe-chat",
       "tags": ["AI", "chat", "open-source", "multi-model", "knowledge-base", "PWA", "DeepSeek", "Claude", "Ollama"],
       "category": "applications",
+      "isFree": true,
+      "isOpenSource": true,
       "rating": {
         "score": 4.8,
         "count": 520
@@ -161,6 +179,8 @@
       "url": "https://github.com/papersgpt/papersgpt-for-zotero",
       "tags": ["AI", "Zotero", "research", "academic", "papers", "reading", "LLM", "DeepSeek", "ChatGPT", "Gemini", "Claude"],
       "category": "applications",
+      "isFree": true,
+      "isOpenSource": true,
       "rating": {
         "score": 4.6,
         "count": 220
@@ -173,6 +193,8 @@
       "url": "https://github.com/deepseek-ai/DeepSeek-Coder",
       "tags": ["AI", "coding", "programming", "development", "code generation", "infilling", "error fixing"],
       "category": "applications",
+      "isFree": true,
+      "isOpenSource": true,
       "rating": {
         "score": 4.9,
         "count": 450

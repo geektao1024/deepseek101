@@ -1,0 +1,95 @@
+{
+  "id": "maxkb",
+  "name": "MaxKB",
+  "description": "MaxKB is a ready-to-use, flexible RAG Chatbot.",
+  "url": "https://github.com/1Panel-dev/MaxKB",
+  "category": "applications",
+  "tags": ["AI", "RAG", "chatbot", "knowledge base"],
+  "rating": {
+    "score": 4.6,
+    "count": 180
+  },
+  "content": {
+    "overview": "MaxKB is a ready-to-use, flexible Retrieval-Augmented Generation (RAG) chatbot solution. It combines the power of large language models with knowledge base retrieval to provide accurate, context-aware responses. Designed for ease of deployment and customization, MaxKB offers a practical solution for organizations looking to implement AI-powered knowledge assistants without extensive development resources.",
+    "features": [
+      {
+        "title": "RAG Architecture",
+        "description": "Implements Retrieval-Augmented Generation to combine knowledge base information with language model capabilities"
+      },
+      {
+        "title": "Ready-to-Use Solution",
+        "description": "Designed for immediate deployment with minimal setup requirements"
+      },
+      {
+        "title": "Flexible Configuration",
+        "description": "Offers extensive customization options to adapt to different use cases and requirements"
+      },
+      {
+        "title": "Knowledge Base Integration",
+        "description": "Seamlessly connects with existing knowledge bases to leverage organizational information"
+      },
+      {
+        "title": "DeepSeek Support",
+        "description": "Compatible with DeepSeek models for enhanced language understanding and generation"
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Customer Support",
+        "description": "Provide automated customer support with access to product documentation and FAQs"
+      },
+      {
+        "title": "Internal Knowledge Assistant",
+        "description": "Help employees access and utilize internal knowledge and documentation"
+      },
+      {
+        "title": "Educational Tool",
+        "description": "Create interactive learning experiences with access to educational content"
+      },
+      {
+        "title": "Documentation Navigator",
+        "description": "Enable users to efficiently navigate and extract information from large documentation sets"
+      }
+    ],
+    "advantages": [
+      "Combines the benefits of knowledge retrieval and language model generation",
+      "Reduces hallucinations by grounding responses in retrieved information",
+      "Ready-to-use solution requiring minimal setup and configuration",
+      "Flexible architecture adaptable to various knowledge base structures",
+      "Open-source design allowing for customization and extension",
+      "Support for DeepSeek and other advanced language models"
+    ],
+    "faqs": [
+      {
+        "question": "How does MaxKB's RAG implementation work?",
+        "answer": "MaxKB uses Retrieval-Augmented Generation to first search a knowledge base for relevant information based on a user query, then uses this retrieved information to augment the context provided to a language model. This allows the model to generate responses that are both fluent and factually grounded in the knowledge base."
+      },
+      {
+        "question": "What types of knowledge bases can MaxKB connect to?",
+        "answer": "MaxKB is designed to be flexible and can connect to various knowledge base formats, including document collections, structured databases, and vector stores. The system includes adapters for common knowledge base formats and can be extended to support custom implementations."
+      },
+      {
+        "question": "How does MaxKB integrate with DeepSeek?",
+        "answer": "MaxKB supports integration with DeepSeek models through the DeepSeek API, allowing the chatbot to leverage DeepSeek's advanced language understanding and generation capabilities while maintaining the benefits of knowledge retrieval."
+      },
+      {
+        "question": "Is MaxKB suitable for production environments?",
+        "answer": "Yes, MaxKB is designed as a production-ready solution that can be deployed in real-world environments. It includes features for scalability, reliability, and security that make it suitable for production use cases."
+      }
+    ],
+    "resources": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/1Panel-dev/MaxKB"
+      },
+      {
+        "title": "Documentation",
+        "url": "https://maxkb.cn/docs"
+      },
+      {
+        "title": "Community",
+        "url": "https://github.com/1Panel-dev/MaxKB/discussions"
+      }
+    ]
+  }
+} 

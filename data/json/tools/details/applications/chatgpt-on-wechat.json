@@ -1,0 +1,95 @@
+{
+  "id": "chatgpt-on-wechat",
+  "name": "Chatgpt-on-Wechat",
+  "description": "Chatgpt-on-Wechat(CoW) is a flexible chatbot framework that supports seamless integration of multiple LLMs, including DeepSeek, OpenAI, Claude, Qwen, and others, into commonly used platforms or office software such as WeChat Official Accounts, WeCom, Feishu, DingTalk, and websites. It also supports a wide range of custom plugins.",
+  "url": "https://github.com/zhayujie/chatgpt-on-wechat",
+  "category": "applications",
+  "tags": ["AI", "chatbot", "WeChat", "WeCom", "Feishu", "DingTalk", "plugins"],
+  "rating": {
+    "score": 4.8,
+    "count": 300
+  },
+  "content": {
+    "overview": "Chatgpt-on-Wechat (CoW) is a versatile chatbot framework designed to integrate multiple large language models (LLMs) into popular messaging and office platforms. It provides seamless access to advanced AI capabilities through familiar interfaces like WeChat Official Accounts, WeCom, Feishu, DingTalk, and websites. With support for DeepSeek, OpenAI, Claude, Qwen, and other LLMs, it offers powerful conversational AI experiences enhanced by a wide range of custom plugins.",
+    "features": [
+      {
+        "title": "Multi-LLM Support",
+        "description": "Integrates with multiple LLMs including DeepSeek, OpenAI, Claude, Qwen, and others"
+      },
+      {
+        "title": "Multi-Platform Integration",
+        "description": "Works with WeChat Official Accounts, WeCom, Feishu, DingTalk, and websites"
+      },
+      {
+        "title": "Custom Plugin System",
+        "description": "Supports a wide range of custom plugins to extend functionality"
+      },
+      {
+        "title": "Flexible Configuration",
+        "description": "Highly configurable to meet different deployment needs and use cases"
+      },
+      {
+        "title": "Open-Source Architecture",
+        "description": "Fully open-source design allows for community contributions and customizations"
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Customer Service",
+        "description": "Deploy AI-powered customer service chatbots on WeChat and other platforms"
+      },
+      {
+        "title": "Internal Knowledge Base",
+        "description": "Create internal knowledge assistants for company information and procedures"
+      },
+      {
+        "title": "Personal Assistant",
+        "description": "Use as a personal AI assistant through familiar messaging platforms"
+      },
+      {
+        "title": "Educational Tool",
+        "description": "Deploy educational chatbots to assist with learning and information access"
+      }
+    ],
+    "advantages": [
+      "Seamless integration with popular messaging and office platforms",
+      "Support for multiple advanced LLMs including DeepSeek",
+      "Extensive plugin system for customized functionality",
+      "Open-source architecture allowing for modifications and extensions",
+      "Active community development and support",
+      "Flexible deployment options for various use cases"
+    ],
+    "faqs": [
+      {
+        "question": "How does Chatgpt-on-Wechat integrate with DeepSeek?",
+        "answer": "Chatgpt-on-Wechat includes built-in support for the DeepSeek API, allowing you to configure the framework to use DeepSeek's language models for generating responses to user queries on various platforms."
+      },
+      {
+        "question": "Can I use multiple LLMs simultaneously?",
+        "answer": "Yes, Chatgpt-on-Wechat allows you to configure different LLMs for different use cases or user groups, providing flexibility in how you deploy AI capabilities."
+      },
+      {
+        "question": "What types of plugins are available?",
+        "answer": "The framework supports a wide range of plugins, including those for information retrieval, image generation, scheduling, reminders, weather information, and many more. The plugin system is also extensible, allowing you to create custom plugins."
+      },
+      {
+        "question": "Is it difficult to deploy?",
+        "answer": "Chatgpt-on-Wechat is designed to be relatively straightforward to deploy, with comprehensive documentation and setup guides. Basic technical knowledge is required, but the process is well-documented."
+      }
+    ],
+    "resources": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/zhayujie/chatgpt-on-wechat"
+      },
+      {
+        "title": "Documentation",
+        "url": "https://github.com/zhayujie/chatgpt-on-wechat/wiki"
+      },
+      {
+        "title": "Community",
+        "url": "https://github.com/zhayujie/chatgpt-on-wechat/discussions"
+      }
+    ]
+  }
+} 

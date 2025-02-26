@@ -5,43 +5,120 @@
     {
       "id": "applications",
       "name": "Applications",
-      "description": "DeepSeek 应用工具",
+      "description": "DeepSeek applications and tools",
       "icon": "app",
       "tool_count": 11
     },
     {
-      "id": "ai-frameworks",
-      "name": "AI Frameworks",
-      "description": "人工智能框架和库",
-      "icon": "framework",
+      "id": "ai-agent-frameworks",
+      "name": "AI Agent frameworks",
+      "description": "AI Agent frameworks and tools",
+      "icon": "brain",
       "tool_count": 0
     },
     {
       "id": "rag-frameworks",
-      "name": "RAG Frameworks",
-      "description": "检索增强生成（RAG）框架",
-      "icon": "rag",
+      "name": "RAG frameworks",
+      "description": "Retrieval Augmented Generation (RAG) frameworks",
+      "icon": "database",
+      "tool_count": 0
+    },
+    {
+      "id": "fhe-frameworks",
+      "name": "FHE frameworks",
+      "description": "Fully Homomorphic Encryption (FHE) frameworks",
+      "icon": "shield",
+      "tool_count": 0
+    },
+    {
+      "id": "solana-frameworks",
+      "name": "Solana frameworks",
+      "description": "Solana blockchain frameworks and tools",
+      "icon": "code",
+      "tool_count": 0
+    },
+    {
+      "id": "synthetic-data-curation",
+      "name": "Synthetic data curation",
+      "description": "Synthetic data generation and curation tools",
+      "icon": "data",
+      "tool_count": 0
+    },
+    {
+      "id": "im-application-plugins",
+      "name": "IM Application Plugins",
+      "description": "Instant Messaging application plugins",
+      "icon": "message-square",
       "tool_count": 0
     },
     {
       "id": "browser-extensions",
       "name": "Browser Extensions",
-      "description": "浏览器扩展和插件",
-      "icon": "browser",
+      "description": "Browser extensions and plugins",
+      "icon": "globe",
       "tool_count": 0
     },
     {
       "id": "vscode-extensions",
-      "name": "VSCode Extensions",
-      "description": "Visual Studio Code 扩展",
+      "name": "VS Code Extensions",
+      "description": "Visual Studio Code extensions",
       "icon": "vscode",
+      "tool_count": 0
+    },
+    {
+      "id": "visual-studio-extensions",
+      "name": "Visual Studio Extensions",
+      "description": "Visual Studio extensions",
+      "icon": "code",
+      "tool_count": 0
+    },
+    {
+      "id": "neovim-extensions",
+      "name": "Neovim Extensions",
+      "description": "Neovim editor extensions",
+      "icon": "terminal",
+      "tool_count": 0
+    },
+    {
+      "id": "jetbrains-extensions",
+      "name": "JetBrains Extensions",
+      "description": "JetBrains IDE extensions",
+      "icon": "code",
+      "tool_count": 0
+    },
+    {
+      "id": "discord-bots",
+      "name": "Discord Bots",
+      "description": "Discord bots powered by DeepSeek",
+      "icon": "bot",
+      "tool_count": 0
+    },
+    {
+      "id": "native-ai-code-editor",
+      "name": "Native AI Code Editor",
+      "description": "Native AI-powered code editors",
+      "icon": "edit",
+      "tool_count": 0
+    },
+    {
+      "id": "emacs",
+      "name": "Emacs",
+      "description": "Emacs editor extensions and plugins",
+      "icon": "terminal",
+      "tool_count": 0
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "description": "Security tools and applications",
+      "icon": "shield",
       "tool_count": 0
     },
     {
       "id": "others",
       "name": "Others",
-      "description": "其他工具和资源",
-      "icon": "other",
+      "description": "Other tools and resources",
+      "icon": "more-horizontal",
       "tool_count": 0
     }
   ]

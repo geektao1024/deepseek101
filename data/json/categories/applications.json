@@ -1,8 +1,9 @@
 {
   "id": "applications",
   "name": "Applications",
-  "description": "DeepSeek 应用工具",
+  "description": "DeepSeek applications and tools",
   "icon": "app",
+  "last_updated": "2024-02-25",
   "tools": [
     {
       "id": "deepchat",
@@ -10,10 +11,8 @@
       "description": "A fully free desktop smart assistant, with a powerful DeepSeek large model, supporting multi-round conversations, internet search, file uploads, knowledge bases, and more.",
       "url": "https://github.com/ThinkInAIXYZ/deepchat",
       "tags": ["AI", "assistant", "desktop", "chat", "search", "file upload", "knowledge base"],
-      "rating": {
-        "score": 4.8,
-        "count": 350
-      },
+      "isFree": true,
+      "isOpenSource": true,
       "details_file": "../tools/details/applications/deepchat.json"
     },
     {
@@ -22,10 +21,8 @@
       "description": "A ReAct framework for building advanced AI agents. It aims to accelerate the development of powerful, safe, and accessible AI agents.",
       "url": "https://github.com/quantalogic-ai/quantalogic",
       "tags": ["AI", "agents", "ReAct", "framework", "development"],
-      "rating": {
-        "score": 4.7,
-        "count": 320
-      },
+      "isFree": true,
+      "isOpenSource": true,
       "details_file": "../tools/details/applications/quantalogic.json"
     },
     {
@@ -34,10 +31,8 @@
       "description": "A desktop client for multiple cutting-edge LLM models. Cross-platform, supports search providers, custom models, Azure OpenAI, and more.",
       "url": "https://github.com/Bin-Huang/chatbox",
       "tags": ["AI", "desktop", "chat", "LLM", "cross-platform", "OpenAI"],
-      "rating": {
-        "score": 4.6,
-        "count": 280
-      },
+      "isFree": true,
+      "isOpenSource": true,
       "details_file": "../tools/details/applications/chatbox.json"
     },
     {
@@ -46,10 +41,8 @@
       "description": "A cross-platform ChatGPT web UI with PWA support, optimized for conversation, Prompt Library, and plugins. Based on Vercel.",
       "url": "https://github.com/ChatGPTNextWeb/NextChat",
       "tags": ["AI", "web", "chat", "UI", "cross-platform", "PWA", "OpenAI"],
-      "rating": {
-        "score": 4.9,
-        "count": 580
-      },
+      "isFree": true,
+      "isOpenSource": true,
       "details_file": "../tools/details/applications/chatgpt-next-web.json"
     },
     {
@@ -58,10 +51,8 @@
       "description": "An open source unified search and productivity tool that searches, summarizes and organizes your digital information.",
       "url": "https://github.com/infinilabs/coco-app",
       "tags": ["AI", "search", "productivity", "organization", "summarization", "open-source"],
-      "rating": {
-        "score": 4.5,
-        "count": 240
-      },
+      "isFree": true,
+      "isOpenSource": true,
       "details_file": "../tools/details/applications/coco-ai.json"
     },
     {
@@ -70,10 +61,8 @@
       "description": "A note/todo management system within WeChat, where simple tags help with classification, and AI helps with analysis, content creation, summarization and more.",
       "url": "https://github.com/deepseek-ai/awesome-deepseek-integration/tree/main/docs/liubai",
       "tags": ["AI", "WeChat", "notes", "todo", "management", "productivity", "organization"],
-      "rating": {
-        "score": 4.4,
-        "count": 180
-      },
+      "isFree": true,
+      "isOpenSource": true,
       "details_file": "../tools/details/applications/liubai.json"
     },
     {
@@ -82,10 +71,8 @@
       "description": "A customized chat playground for iOS, integrating multiple LLM models like GPT, DeepSeek, Claude, etc.",
       "url": "https://github.com/hey-pal/toolkit-ai",
       "tags": ["AI", "iOS", "chat", "mobile", "GPT", "DeepSeek", "Claude"],
-      "rating": {
-        "score": 4.5,
-        "count": 210
-      },
+      "isFree": true,
+      "isOpenSource": true,
       "details_file": "../tools/details/applications/pal.json"
     },
     {
@@ -94,10 +81,8 @@
       "description": "A customizable open-source app for interacting with multiple AI models, including ChatGPT, DeepSeek AI, Claude 3, and more.",
       "url": "https://github.com/danny-avila/LibreChat",
       "tags": ["AI", "chat", "open-source", "multi-model", "ChatGPT", "DeepSeek", "Claude"],
-      "rating": {
-        "score": 4.7,
-        "count": 340
-      },
+      "isFree": true,
+      "isOpenSource": true,
       "details_file": "../tools/details/applications/librechat.json"
     },
     {
@@ -106,10 +91,8 @@
       "description": "An open-source, modern-design AI chat framework supporting multiple AI providers (OpenAI, Claude 3, Gemini, Ollama, Qwen, DeepSeek), knowledge base, multi-modals, and one-click free deployment.",
       "url": "https://github.com/lobehub/lobe-chat",
       "tags": ["AI", "chat", "open-source", "multi-model", "knowledge-base", "PWA", "DeepSeek", "Claude", "Ollama"],
-      "rating": {
-        "score": 4.8,
-        "count": 520
-      },
+      "isFree": true,
+      "isOpenSource": true,
       "details_file": "../tools/details/applications/just-chat.json"
     },
     {
@@ -118,10 +101,8 @@
       "description": "A Zotero plugin for improved papers reading and research with ChatGPT, Gemini, Claude, DeepSeek, Phi 4, Llama 3.2, Gemma and Mistral.",
       "url": "https://github.com/papersgpt/papersgpt-for-zotero",
       "tags": ["AI", "Zotero", "research", "academic", "papers", "reading", "LLM", "DeepSeek", "ChatGPT", "Gemini", "Claude"],
-      "rating": {
-        "score": 4.6,
-        "count": 220
-      },
+      "isFree": true,
+      "isOpenSource": true,
       "details_file": "../tools/details/applications/papersgpt.json"
     },
     {
@@ -130,13 +111,370 @@
       "description": "A suite of AI coding models and tools, supporting various programming languages, with outstanding performance in code generation, infilling, and error fixing.",
       "url": "https://github.com/deepseek-ai/DeepSeek-Coder",
       "tags": ["AI", "coding", "programming", "development", "code generation", "infilling", "error fixing"],
-      "rating": {
-        "score": 4.9,
-        "count": 450
-      },
+      "isFree": true,
+      "isOpenSource": true,
       "details_file": "../tools/details/applications/deepseek-coder.json"
+    },
+    {
+      "id": "rss-translator",
+      "name": "RSS Translator",
+      "description": "Translate RSS feeds into your language.",
+      "url": "https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/docs/rss_translator/README.md",
+      "tags": ["AI", "translation", "RSS", "feed"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/rss-translator.json"
+    },
+    {
+      "id": "enconvo",
+      "name": "Enconvo",
+      "description": "The Launcher of the AI era, the entry point for all AI functions, and a thoughtful intelligent assistant.",
+      "url": "https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/docs/enconvo/README.md",
+      "tags": ["AI", "launcher", "assistant", "productivity"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/enconvo.json"
+    },
+    {
+      "id": "cherry-studio",
+      "name": "Cherry Studio",
+      "description": "A powerful desktop AI assistant for producers.",
+      "url": "https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/docs/cherrystudio/README.md",
+      "tags": ["AI", "desktop", "assistant", "production"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/cherry-studio.json"
+    },
+    {
+      "id": "tomemo",
+      "name": "ToMemo",
+      "description": "A phrasebook + clipboard history + keyboard iOS app with integrated AI macromodeling for quick output use in the keyboard.",
+      "url": "https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/docs/tomemo/README.md",
+      "tags": ["AI", "iOS", "phrasebook", "keyboard", "clipboard"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/tomemo.json"
+    },
+    {
+      "id": "video-subtitle-master",
+      "name": "Video Subtitle Master",
+      "description": "Batch generate subtitles for videos, with the ability to translate subtitles into other languages.",
+      "url": "https://github.com/buxuku/video-subtitle-master",
+      "tags": ["AI", "video", "subtitles", "translation", "multi-platform"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/video-subtitle-master.json"
+    },
+    {
+      "id": "chatworm",
+      "name": "Chatworm",
+      "description": "A webapp for multiple cutting-edge LLM models, open-source and also available on Android.",
+      "url": "https://github.com/UnknownEnergy/chatgpt-api/blob/master/README.md",
+      "tags": ["AI", "webapp", "multi-model", "Android"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/chatworm.json"
+    },
+    {
+      "id": "easydict",
+      "name": "Easydict",
+      "description": "A concise and easy-to-use translation dictionary macOS App that allows you to easily and elegantly look up words or translate text.",
+      "url": "https://github.com/tisfeng/Easydict",
+      "tags": ["AI", "macOS", "translation", "dictionary"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/easydict.json"
+    },
+    {
+      "id": "raycast",
+      "name": "Raycast",
+      "description": "A productivity tool for macOS that lets you control your tools with a few keystrokes. It supports various extensions including DeepSeek AI.",
+      "url": "https://raycast.com/?via=ViGeng",
+      "tags": ["AI", "macOS", "productivity", "tools"],
+      "isFree": true,
+      "isOpenSource": false,
+      "details_file": "../tools/details/applications/raycast.json"
+    },
+    {
+      "id": "nice-prompt",
+      "name": "Nice Prompt",
+      "description": "Organize, share and use your prompts in your code editor, with Cursor and VSCode.",
+      "url": "https://niceprompt.app",
+      "tags": ["AI", "prompts", "code editor", "Cursor", "VSCode"],
+      "isFree": true,
+      "isOpenSource": false,
+      "details_file": "../tools/details/applications/nice-prompt.json"
+    },
+    {
+      "id": "deepseek-php-client",
+      "name": "PHP Client",
+      "description": "Deepseek PHP Client is a robust and community-driven PHP client library for seamless integration with the Deepseek API.",
+      "url": "https://github.com/deepseek-php/deepseek-php-client/blob/master/README.md",
+      "tags": ["AI", "PHP", "API", "client library"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/deepseek-php-client.json"
+    },
+    {
+      "id": "deepswiftseek",
+      "name": "DeepSwiftSeek",
+      "description": "A lightweight yet powerful Swift client library with good integration with the DeepSeek API. It provides easy-to-use Swift concurrency for chat, streaming, FIM completions, and more.",
+      "url": "https://github.com/tornikegomareli/DeepSwiftSeek/blob/main/README.md",
+      "tags": ["AI", "Swift", "API", "client library", "iOS", "macOS"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/deepswiftseek.json"
+    },
+    {
+      "id": "laravel-integration",
+      "name": "Laravel Integration",
+      "description": "Laravel wrapper for Deepseek PHP client, for seamless Deepseek API integration with Laravel applications.",
+      "url": "https://github.com/deepseek-php/deepseek-laravel/blob/master/README.md",
+      "tags": ["AI", "Laravel", "PHP", "API", "framework"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/laravel-integration.json"
+    },
+    {
+      "id": "zotero",
+      "name": "Zotero",
+      "description": "A free, easy-to-use tool to help you collect, organize, annotate, cite, and share research.",
+      "url": "https://www.zotero.org",
+      "tags": ["AI", "research", "academic", "organization", "citation"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/zotero.json"
+    },
+    {
+      "id": "siyuan",
+      "name": "SiYuan",
+      "description": "A privacy-first personal knowledge management system that supports complete offline usage, as well as end-to-end encrypted data sync.",
+      "url": "https://b3log.org/siyuan/",
+      "tags": ["AI", "knowledge management", "privacy", "offline", "encryption"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/siyuan.json"
+    },
+    {
+      "id": "go-stock",
+      "name": "go-stock",
+      "description": "A Chinese stock data viewer built by Wails with NativeUI and powered by LLM.",
+      "url": "https://github.com/ArvinLovegood/go-stock/blob/master/README.md",
+      "tags": ["AI", "stock", "finance", "Wails", "NativeUI"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/go-stock.json"
+    },
+    {
+      "id": "wordware",
+      "name": "Wordware",
+      "description": "A toolkit that enables anyone to build, iterate, and deploy their AI stack with just natural language.",
+      "url": "https://www.wordware.ai/",
+      "tags": ["AI", "natural language", "development", "deployment"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/wordware.json"
+    },
+    {
+      "id": "dify",
+      "name": "Dify",
+      "description": "An LLM application development platform that supports DeepSeek models for creating assistants, workflows, text generators, and more.",
+      "url": "https://dify.ai/",
+      "tags": ["AI", "LLM", "development", "platform", "workflow"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/dify.json"
+    },
+    {
+      "id": "big-agi",
+      "name": "Big-AGI",
+      "description": "A groundbreaking AI suite designed to democratize access to advanced artificial intelligence for everyone.",
+      "url": "https://big-agi.com/",
+      "tags": ["AI", "suite", "democratization", "accessibility"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/big-agi.json"
+    },
+    {
+      "id": "libersonora",
+      "name": "LiberSonora",
+      "description": "An AI-powered, robust, open-source audiobook toolkit that includes features like intelligent subtitle extraction, AI title generation, multilingual translation, with support for GPU acceleration and batch offline processing.",
+      "url": "https://github.com/LiberSonora/LiberSonora/blob/main/README_en.md",
+      "tags": ["AI", "audiobook", "subtitle", "translation", "GPU"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/libersonora.json"
+    },
+    {
+      "id": "bob",
+      "name": "Bob",
+      "description": "A macOS translation & OCR tool ready to use in any app — right out of the box!",
+      "url": "https://bobtranslate.com/",
+      "tags": ["AI", "macOS", "translation", "OCR"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/bob.json"
+    },
+    {
+      "id": "agenticflow",
+      "name": "AgenticFlow",
+      "description": "A no-code platform where marketers build agentic AI workflows for go-to-market automation, powered by hundreds of everyday apps as tools for your AI agents.",
+      "url": "https://agenticflow.ai/",
+      "tags": ["AI", "no-code", "workflow", "automation", "marketing"],
+      "isFree": true,
+      "isOpenSource": false,
+      "details_file": "../tools/details/applications/agenticflow.json"
+    },
+    {
+      "id": "stranslate",
+      "name": "STranslate",
+      "description": "A ready-to-go translation OCR tool developed by WPF for Windows.",
+      "url": "https://stranslate.zggsong.com/en/",
+      "tags": ["AI", "Windows", "translation", "OCR", "WPF"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/stranslate.json"
+    },
+    {
+      "id": "asp-client",
+      "name": "ASP Client",
+      "description": "A lightweight ASP.NET wrapper for the Deepseek AI API, designed to simplify AI-driven text processing in .NET applications.",
+      "url": "https://github.com/Anwar-alhitar/Deepseek.Asp.Client/blob/master/README.md",
+      "tags": ["AI", "ASP.NET", "API", "wrapper", ".NET"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/asp-client.json"
+    },
+    {
+      "id": "gpt-ai-flow",
+      "name": "GPT AI Flow",
+      "description": "The ultimate productivity weapon built by engineers for efficiency enthusiasts, with features like desktop intelligent hub, local encrypted storage, and custom instruction engine.",
+      "url": "https://www.gptaiflow.tech/",
+      "tags": ["AI", "productivity", "desktop", "encryption", "custom instructions"],
+      "isFree": true,
+      "isOpenSource": false,
+      "details_file": "../tools/details/applications/gpt-ai-flow.json"
+    },
+    {
+      "id": "story-flicks",
+      "name": "Story-Flicks",
+      "description": "With just one sentence, you can quickly generate high-definition story short videos, supporting models such as DeepSeek.",
+      "url": "https://github.com/alecm20/story-flicks",
+      "tags": ["AI", "video", "generation", "storytelling"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/story-flicks.json"
+    },
+    {
+      "id": "16x-prompt",
+      "name": "16x Prompt",
+      "description": "An AI coding tool with context management. It helps developers manage source code context and craft prompts for complex coding tasks on existing codebases.",
+      "url": "https://prompt.16x.engineer/",
+      "tags": ["AI", "coding", "context management", "prompts", "development"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/16x-prompt.json"
+    },
+    {
+      "id": "alpha-pai",
+      "name": "Alpha Pai",
+      "description": "AI Research Assistant / The Next-Generation Financial Information Portal Driven by AI. Proxy for investors to attend meetings and take notes, as well as providing search and Q&A services for financial information and quantitative analysis for investment research.",
+      "url": "https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/docs/Alpha派/README.md",
+      "tags": ["AI", "finance", "research", "investment", "notes", "Q&A"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/alpha-pai.json"
+    },
+    {
+      "id": "argo",
+      "name": "argo",
+      "description": "Locally download and run Ollama and Huggingface models with RAG on Mac/Windows/Linux. Support LLM API too.",
+      "url": "https://www.xark-argo.com",
+      "tags": ["AI", "Ollama", "Huggingface", "RAG", "multi-platform"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/argo.json"
+    },
+    {
+      "id": "petercat",
+      "name": "PeterCat",
+      "description": "A conversational Q&A agent configuration system, self-hosted deployment solutions, and a convenient all-in-one application SDK, allowing you to create intelligent Q&A bots for your GitHub repositories.",
+      "url": "https://www.petercat.ai",
+      "tags": ["AI", "Q&A", "agent", "GitHub", "self-hosted"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/petercat.json"
+    },
+    {
+      "id": "fastgpt",
+      "name": "FastGPT",
+      "description": "An open-source AI knowledge base platform built on large language models (LLMs), supporting various models including DeepSeek and OpenAI. Provides out-of-the-box capabilities for data processing, model invocation, RAG retrieval, and visual AI workflow orchestration.",
+      "url": "https://fastgpt.cn/en",
+      "tags": ["AI", "knowledge base", "LLM", "RAG", "workflow"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/fastgpt.json"
+    },
+    {
+      "id": "ruzhiai-notes",
+      "name": "RuZhi AI Notes",
+      "description": "RuZhi AI Notes is an intelligent knowledge management tool powered by AI, providing one-stop knowledge management and application services including AI search & exploration, AI results to notes conversion, note management & organization, knowledge presentation & sharing. Integrated with DeepSeek model to provide more stable and higher quality outputs.",
+      "url": "https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/docs/ruzhiai_note/README.md",
+      "tags": ["AI", "knowledge management", "notes", "search", "organization"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/ruzhiai-notes.json"
+    },
+    {
+      "id": "chatgpt-on-wechat",
+      "name": "Chatgpt-on-Wechat",
+      "description": "Chatgpt-on-Wechat(CoW) is a flexible chatbot framework that supports seamless integration of multiple LLMs, including DeepSeek, OpenAI, Claude, Qwen, and others, into commonly used platforms or office software such as WeChat Official Accounts, WeCom, Feishu, DingTalk, and websites. It also supports a wide range of custom plugins.",
+      "url": "https://github.com/zhayujie/chatgpt-on-wechat",
+      "tags": ["AI", "chatbot", "WeChat", "WeCom", "Feishu", "DingTalk", "plugins"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/chatgpt-on-wechat.json"
+    },
+    {
+      "id": "athena",
+      "name": "Athena",
+      "description": "The world's first autonomous general AI with advanced cognitive architecture and human-like reasoning capabilities, designed to tackle complex real-world challenges.",
+      "url": "https://athenalab.ai/",
+      "tags": ["AI", "autonomous", "general AI", "cognitive architecture", "reasoning"],
+      "isFree": false,
+      "isOpenSource": false,
+      "details_file": "../tools/details/applications/athena.json"
+    },
+    {
+      "id": "maxkb",
+      "name": "MaxKB",
+      "description": "MaxKB is a ready-to-use, flexible RAG Chatbot.",
+      "url": "https://github.com/1Panel-dev/MaxKB",
+      "tags": ["AI", "RAG", "chatbot", "knowledge base"],
+      "isFree": true,
+      "isOpenSource": true,
+      "details_file": "../tools/details/applications/maxkb.json"
+    },
+    {
+      "id": "tigergpt",
+      "name": "TigerGPT",
+      "description": "TigerGPT is the first financial AI investment assistant of its kind based on OpenAI, developed by Tiger Group. TigerGPT aims to provide intelligent investment decision-making support for investors. On February 18, 2025, TigerGPT officially integrated the DeepSeek-R1 model to provide users with online Q&A services that support deep reasoning.",
+      "url": "https://ttm.financial/gpt",
+      "tags": ["AI", "finance", "investment", "decision support", "reasoning"],
+      "isFree": true,
+      "isOpenSource": false,
+      "details_file": "../tools/details/applications/tigergpt.json"
+    },
+    {
+      "id": "hix-ai",
+      "name": "HIX.AI",
+      "description": "Try DeepSeek for free and enjoy unlimited AI chat on HIX.AI. Use DeepSeek R1 for AI chat, writing, coding & more. Experience next-gen AI chat now!",
+      "url": "https://hix.ai",
+      "tags": ["AI", "chat", "writing", "coding", "DeepSeek R1"],
+      "isFree": true,
+      "isOpenSource": false,
+      "details_file": "../tools/details/applications/hix-ai.json"
     }
   ],
-  "version": "1.0.0",
-  "last_updated": "2024-11-18"
+  "version": "1.0.0"
 } 

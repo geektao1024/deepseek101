@@ -1,0 +1,91 @@
+{
+  "id": "ruzhiai-notes",
+  "name": "RuZhi AI Notes",
+  "description": "RuZhi AI Notes is an intelligent knowledge management tool powered by AI, providing one-stop knowledge management and application services including AI search & exploration, AI results to notes conversion, note management & organization, knowledge presentation & sharing. Integrated with DeepSeek model to provide more stable and higher quality outputs.",
+  "url": "https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/docs/ruzhiai_note/README.md",
+  "category": "applications",
+  "tags": ["AI", "knowledge management", "notes", "search", "organization"],
+  "rating": {
+    "score": 4.7,
+    "count": 200
+  },
+  "content": {
+    "overview": "RuZhi AI Notes is an intelligent knowledge management tool powered by AI, providing comprehensive knowledge management and application services. It integrates with the DeepSeek model to deliver more stable and higher quality outputs, making it an effective solution for organizing and accessing information.",
+    "features": [
+      {
+        "title": "AI Search & Exploration",
+        "description": "Advanced AI-powered search capabilities to quickly find and explore information"
+      },
+      {
+        "title": "AI Results to Notes Conversion",
+        "description": "Easily convert AI-generated results into organized notes for future reference"
+      },
+      {
+        "title": "Note Management & Organization",
+        "description": "Comprehensive tools for managing and organizing notes in a structured manner"
+      },
+      {
+        "title": "Knowledge Presentation & Sharing",
+        "description": "Features for effectively presenting and sharing knowledge with others"
+      },
+      {
+        "title": "DeepSeek Integration",
+        "description": "Integration with DeepSeek model for more stable and higher quality AI outputs"
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Personal Knowledge Management",
+        "description": "Organize personal knowledge and information in a structured and accessible way"
+      },
+      {
+        "title": "Research and Study",
+        "description": "Support research and study activities with AI-powered search and organization"
+      },
+      {
+        "title": "Professional Knowledge Base",
+        "description": "Create and maintain professional knowledge bases for teams or organizations"
+      },
+      {
+        "title": "Content Creation",
+        "description": "Facilitate content creation by organizing ideas and information effectively"
+      }
+    ],
+    "advantages": [
+      "AI-powered search and exploration capabilities",
+      "Seamless conversion of AI results to organized notes",
+      "Comprehensive note management and organization features",
+      "Effective knowledge presentation and sharing tools",
+      "Integration with DeepSeek model for high-quality outputs",
+      "User-friendly interface for efficient knowledge management"
+    ],
+    "faqs": [
+      {
+        "question": "How does RuZhi AI Notes integrate with DeepSeek?",
+        "answer": "RuZhi AI Notes integrates with the DeepSeek model to provide more stable and higher quality AI outputs for search, exploration, and content generation, enhancing the overall knowledge management experience."
+      },
+      {
+        "question": "Can I share my notes with others?",
+        "answer": "Yes, RuZhi AI Notes includes features for knowledge presentation and sharing, allowing you to effectively share your organized information with others."
+      },
+      {
+        "question": "Is RuZhi AI Notes suitable for team use?",
+        "answer": "While primarily designed for individual use, RuZhi AI Notes can be used to create and maintain knowledge bases that can be shared with team members, making it suitable for collaborative environments."
+      },
+      {
+        "question": "Does RuZhi AI Notes work offline?",
+        "answer": "Some features of RuZhi AI Notes may require an internet connection, particularly those that leverage the DeepSeek AI model. However, basic note management functions may be available offline."
+      }
+    ],
+    "resources": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/docs/ruzhiai_note/README.md"
+      },
+      {
+        "title": "Documentation",
+        "url": "https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/docs/ruzhiai_note/README.md"
+      }
+    ]
+  }
+} 

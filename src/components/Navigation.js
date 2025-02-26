@@ -126,13 +126,13 @@ export function Navigation({ articles }) {
                   Home
                 </Link>
                 <Link 
-                  href="/resources" 
+                  href="/tools" 
                   className={cn(
                     "flex items-center transition-colors whitespace-nowrap",
-                    pathname === "/resources" ? "text-blue-600 font-bold" : "text-gray-600 hover:text-blue-600"
+                    pathname === "/tools" ? "text-blue-600 font-bold" : "text-gray-600 hover:text-blue-600"
                   )}
                 >
-                  Resources
+                  Tools
                 </Link>
                 <Link 
                   href="/posts" 

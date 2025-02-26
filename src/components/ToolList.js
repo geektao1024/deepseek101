@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Star, MessageCircle, Layers, AppWindow, Brain, Database, Code, FileSpreadsheet, MessageSquare, Globe, Terminal, List, Bot, Edit, Shield, MoreHorizontal } from 'lucide-react'
+import { Layers, AppWindow, Brain, Database, Code, FileSpreadsheet, MessageSquare, Globe, Terminal, List, Bot, Edit, Shield, MoreHorizontal } from 'lucide-react'
 import {
   Card,
   CardTitle,
@@ -42,6 +42,8 @@ ToolList.propTypes = {
       category: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
       tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+      isFree: PropTypes.bool,
+      isOpenSource: PropTypes.bool,
       rating: PropTypes.shape({
         score: PropTypes.number.isRequired,
         count: PropTypes.number.isRequired,
@@ -70,6 +72,12 @@ export default function ToolList({ categories, tools }) {
       'edit': Edit,
       'shield': Shield,
       'more-horizontal': MoreHorizontal,
+      'framework': Code,
+      'rag': Database,
+      'browser': Globe,
+      'vscode': Code,
+      'other': MoreHorizontal,
+      'all': Layers
     };
     const IconComponent = iconMap[iconName] || Layers;
     return IconComponent;
@@ -87,30 +95,37 @@ export default function ToolList({ categories, tools }) {
   return (
     <div className="space-y-8 container mx-auto">
       {/* 标签云 */}
-      <div className="tag-cloud">
-        <Badge
-          key="all"
-          variant={activeCategory === 'all' ? 'default' : 'secondary'}
-          className={`tag-cloud-item ${activeCategory === 'all' ? 'active' : ''}`}
-          onClick={() => setActiveCategory('all')}
-        >
-          <Layers className="w-4 h-4 mr-1" />
-          全部
-        </Badge>
-        {categories.map(category => {
-          const IconComponent = getIconComponent(category.icon);
-          return (
-            <Badge
-              key={category.id}
-              variant={activeCategory === category.id ? 'default' : 'secondary'}
-              className={`tag-cloud-item ${activeCategory === category.id ? 'active' : ''}`}
-              onClick={() => setActiveCategory(category.id)}
-            >
-              <IconComponent className="w-4 h-4 mr-1" />
-              {category.name}
-            </Badge>
-          );
-        })}
+      <div className="overflow-x-auto pb-4">
+        <div className="tag-cloud flex flex-wrap gap-2 mb-4 pb-4 border-b">
+          <Badge
+            key="all"
+            variant={activeCategory === 'all' ? 'default' : 'secondary'}
+            className={`tag-cloud-item cursor-pointer transition-all hover:bg-gray-100 ${activeCategory === 'all' ? 'active bg-blue-100 hover:bg-blue-200 text-blue-700' : ''}`}
+            onClick={() => setActiveCategory('all')}
+          >
+            <Layers className="w-4 h-4 mr-1" />
+            All
+          </Badge>
+          {categories.map(category => {
+            const IconComponent = getIconComponent(category.icon);
+            return (
+              <Badge
+                key={category.id}
+                variant={activeCategory === category.id ? 'default' : 'secondary'}
+                className={`tag-cloud-item cursor-pointer transition-all hover:bg-gray-100 ${activeCategory === category.id ? 'active bg-blue-100 hover:bg-blue-200 text-blue-700' : ''}`}
+                onClick={() => setActiveCategory(category.id)}
+              >
+                <IconComponent className="w-4 h-4 mr-1" />
+                {category.name}
+                {category.tool_count > 0 && (
+                  <span className="ml-1 text-xs bg-gray-200 rounded-full px-1.5 py-0.5">
+                    {category.tool_count}
+                  </span>
+                )}
+              </Badge>
+            );
+          })}
+        </div>
       </div>
 
       {/* 工具列表 */}
@@ -143,25 +158,21 @@ export default function ToolList({ categories, tools }) {
                     </CardTitle>
                   </Link>
                   
-                  {/* 评分 - 优化样式 */}
+                  {/* 特性角标 */}
                   <div className="flex items-center gap-1.5">
-                    {/* 评分部分 */}
-                    <div className="flex items-center">
-                      <Star size={12} className="fill-current text-yellow-500" />
-                      <span className="ml-0.5 text-sm font-medium text-gray-700">{tool.rating.score.toFixed(1)}</span>
-                    </div>
+                    {/* 免费标签 */}
+                    {tool.isFree && (
+                      <Badge variant="outline" className="flex items-center px-1.5 py-0.5 border-green-200 bg-green-50 text-green-700 text-[10px]">
+                        <span className="ml-0.5">免费</span>
+                      </Badge>
+                    )}
                     
-                    {/* 用户数量部分 */}
-                    <div className="flex items-center">
-                      <MessageCircle size={12} className="text-gray-400" />
-                      <span className="ml-0.5 text-gray-400 text-xs">
-                        {tool.rating.count >= 1000000 
-                          ? `${(tool.rating.count/1000000).toFixed(0)}M+` 
-                          : tool.rating.count >= 1000 
-                            ? `${(tool.rating.count/1000).toFixed(0)}K+` 
-                            : tool.rating.count}
-                      </span>
-                    </div>
+                    {/* 开源标签 */}
+                    {tool.isOpenSource && (
+                      <Badge variant="outline" className="flex items-center px-1.5 py-0.5 border-blue-200 bg-blue-50 text-blue-700 text-[10px]">
+                        <span className="ml-0.5">开源</span>
+                      </Badge>
+                    )}
                   </div>
                 </div>
 
