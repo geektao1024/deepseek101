@@ -1,0 +1,9 @@
+{
+  "id": "visual-studio-extensions",
+  "name": "Visual Studio Extensions",
+  "description": "Visual Studio 扩展",
+  "icon": "code",
+  "tools": [],
+  "version": "1.0.0",
+  "last_updated": "2024-11-18"
+}

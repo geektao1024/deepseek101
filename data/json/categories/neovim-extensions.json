@@ -1,0 +1,9 @@
+{
+  "id": "neovim-extensions",
+  "name": "Neovim Extensions",
+  "description": "Neovim 扩展",
+  "icon": "terminal",
+  "tools": [],
+  "version": "1.0.0",
+  "last_updated": "2024-11-18"
+}

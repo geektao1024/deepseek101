@@ -1,0 +1,96 @@
+{
+  "id": "liubai",
+  "name": "Liubai",
+  "description": "A note/todo management system within WeChat, where simple tags help with classification, and AI helps with analysis, content creation, summarization and more.",
+  "url": "https://github.com/wenjun-huang/LiuBai",
+  "category": "applications",
+  "tags": ["AI", "WeChat", "notes", "todo", "management", "productivity", "organization"],
+  "rating": {
+    "score": 4.4,
+    "count": 180
+  },
+  "content": {
+    "overview": "Liubai is an innovative note and task management system that operates within the WeChat ecosystem. It leverages simple tagging for efficient classification and organization of notes and tasks, while integrating AI capabilities to help with analysis, content creation, summarization, and more. The tool is designed to fit seamlessly into users' daily workflows by utilizing the familiar WeChat interface, making productivity and organization accessible without requiring additional applications.",
+    "features": [
+      {
+        "title": "WeChat Integration",
+        "description": "Fully embedded within the WeChat ecosystem, allowing users to manage notes and tasks without switching applications"
+      },
+      {
+        "title": "Simple Tag Classification",
+        "description": "Uses straightforward tagging system to categorize and organize notes and tasks efficiently"
+      },
+      {
+        "title": "AI-Assisted Analysis",
+        "description": "Leverages artificial intelligence to analyze notes and provide insights and connections"
+      },
+      {
+        "title": "Content Creation Support",
+        "description": "AI helps generate and refine content based on user needs and existing notes"
+      },
+      {
+        "title": "Summarization Capabilities",
+        "description": "Automatically summarizes lengthy notes or collections of related information for quick review"
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Personal Knowledge Management",
+        "description": "Helps individuals organize their thoughts, ideas, and knowledge within their WeChat environment"
+      },
+      {
+        "title": "Task Tracking",
+        "description": "Enables efficient tracking and management of to-do items and ongoing tasks"
+      },
+      {
+        "title": "Meeting Notes",
+        "description": "Facilitates taking, organizing, and retrieving notes from meetings and discussions"
+      },
+      {
+        "title": "Content Development",
+        "description": "Assists writers and content creators with organizing ideas and generating new content"
+      }
+    ],
+    "advantages": [
+      "No additional app installation required for WeChat users",
+      "Seamless integration with daily communication platform",
+      "Simple tagging system requiring minimal learning curve",
+      "AI enhancement without technical complexity",
+      "Combines note-taking and task management in one system",
+      "Accessible anywhere WeChat is available",
+      "Privacy-focused by keeping data within WeChat ecosystem"
+    ],
+    "faqs": [
+      {
+        "question": "How do I start using Liubai in WeChat?",
+        "answer": "You can start using Liubai by following the official WeChat account or mini program (as specified in the documentation). Once connected, you can begin creating notes and tasks using simple commands or through the interface."
+      },
+      {
+        "question": "Can I export my notes from Liubai?",
+        "answer": "Yes, Liubai provides export functionality to save your notes in common formats for backup or use in other applications."
+      },
+      {
+        "question": "Is Liubai available in languages other than Chinese?",
+        "answer": "While primarily designed for Chinese-speaking users on WeChat, Liubai may offer limited support for other languages. Check the latest documentation for current language availability."
+      },
+      {
+        "question": "Does Liubai require payment or subscription?",
+        "answer": "Liubai offers basic functionality for free, with potential premium features available through subscription. Refer to the current pricing information for details on free vs. paid features."
+      }
+    ],
+    "resources": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/wenjun-huang/LiuBai"
+      },
+      {
+        "title": "Documentation",
+        "url": "https://github.com/wenjun-huang/LiuBai/blob/main/README.md"
+      },
+      {
+        "title": "WeChat Official Account",
+        "url": "https://github.com/wenjun-huang/LiuBai#wechat-access"
+      }
+    ]
+  }
+} 

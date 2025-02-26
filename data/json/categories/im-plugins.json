@@ -1,0 +1,9 @@
+{
+  "id": "im-plugins",
+  "name": "IM Application Plugins",
+  "description": "即时通讯应用插件",
+  "icon": "message-square",
+  "tools": [],
+  "version": "1.0.0",
+  "last_updated": "2024-11-18"
+}

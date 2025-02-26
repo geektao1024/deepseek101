@@ -1,0 +1,97 @@
+{
+  "id": "chatgpt-next-web",
+  "name": "ChatGPT-Next-Web",
+  "description": "A cross-platform ChatGPT web UI with PWA support, optimized for conversation, Prompt Library, and plugins. Based on Vercel.",
+  "url": "https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web",
+  "category": "applications",
+  "tags": ["AI", "web", "chat", "UI", "cross-platform", "PWA", "OpenAI"],
+  "rating": {
+    "score": 4.9,
+    "count": 580
+  },
+  "content": {
+    "overview": "ChatGPT-Next-Web is a sophisticated, cross-platform web user interface for ChatGPT. Built on Vercel, it offers Progressive Web App (PWA) capabilities, allowing users to install it as a native app on various devices. The interface is specifically optimized for conversation experiences, featuring a Prompt Library for efficient interaction and plugin support for extended functionality.",
+    "features": [
+      {
+        "title": "Cross-Platform PWA",
+        "description": "Functions as a Progressive Web App that can be installed on desktop and mobile devices across different operating systems"
+      },
+      {
+        "title": "Optimized Conversation UI",
+        "description": "Specially designed interface that enhances the chat experience with OpenAI's models"
+      },
+      {
+        "title": "Prompt Library",
+        "description": "Built-in collection of prompts to help users get the most out of their interactions with the AI"
+      },
+      {
+        "title": "Plugin Support",
+        "description": "Extensible architecture that allows for additional functionality through plugins"
+      },
+      {
+        "title": "Vercel Deployment",
+        "description": "Easily deployable on Vercel's platform for reliable performance and scaling"
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Personal AI Assistant",
+        "description": "Serves as a personal AI assistant for daily tasks, information retrieval, and problem-solving"
+      },
+      {
+        "title": "Educational Tool",
+        "description": "Helps students and educators with learning materials, explanations, and research assistance"
+      },
+      {
+        "title": "Content Creation",
+        "description": "Assists writers, marketers, and creators with generating and refining content ideas"
+      },
+      {
+        "title": "Programming Help",
+        "description": "Provides coding assistance, debugging help, and technical explanations to developers"
+      }
+    ],
+    "advantages": [
+      "Free and open-source project",
+      "Install once, use anywhere with PWA support",
+      "Optimized specifically for conversation experiences",
+      "Ready-to-use prompt library saves time",
+      "Extensible through plugin architecture",
+      "Easy deployment on Vercel",
+      "Regular updates with new features",
+      "Strong community support"
+    ],
+    "faqs": [
+      {
+        "question": "Do I need an OpenAI API key to use ChatGPT-Next-Web?",
+        "answer": "Yes, you'll need to provide your own OpenAI API key to use the application. This ensures you have control over your usage and billing."
+      },
+      {
+        "question": "How do I deploy ChatGPT-Next-Web?",
+        "answer": "The easiest way is to deploy directly on Vercel using the one-click deployment option from the GitHub repository. You can also self-host it on your own server."
+      },
+      {
+        "question": "Is my conversation data private?",
+        "answer": "Your conversations are processed through OpenAI's API using your personal API key. The application itself doesn't store your conversation data on any central server beyond what's necessary for functionality."
+      },
+      {
+        "question": "Can I use it on my phone?",
+        "answer": "Yes, as a Progressive Web App (PWA), you can install it on both Android and iOS devices from a compatible browser and use it like a native application."
+      }
+    ],
+    "resources": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web"
+      },
+      {
+        "title": "Demo Site",
+        "url": "https://chatgpt1.nextweb.fun/"
+      },
+      {
+        "title": "Documentation",
+        "url": "https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web/blob/main/README.md"
+      }
+    ]
+  }
+} 

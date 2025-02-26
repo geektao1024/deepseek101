@@ -1,0 +1,9 @@
+{
+  "id": "emacs",
+  "name": "Emacs",
+  "description": "Emacs 工具和扩展",
+  "icon": "terminal",
+  "tools": [],
+  "version": "1.0.0",
+  "last_updated": "2024-11-18"
+}

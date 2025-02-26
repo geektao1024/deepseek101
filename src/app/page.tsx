@@ -1,54 +1,81 @@
-// pages/index.js
+import React from 'react'
 import fs from 'fs'
 import path from 'path'
 import { getSortedPostsData } from '@/lib/posts'
-import ResourceList from '@/components/ResourceList'
-import ToolList from '@/components/ToolList'
-import ArticleList from '@/components/ArticleList'
+import { SearchBox } from '@/components/SearchBox'
 import { Metadata } from 'next'
+import { SearchResults } from '@/components/SearchResults'
+import { Sparkles, Zap, Star, Rocket } from 'lucide-react'
 
-// 首页组件: LemoBook 网站的主页面
-// 展示网站概述、资源列表和最新文章列表
+// Home component: Main page of the LemoBook website
+// Displays website overview, resource list and latest articles
 export const metadata: Metadata = {
-  title: 'DeepSeek101 - DeepSeek 工具发现平台',
-  description: '发现和使用最好的 DeepSeek 工具，提升您的工作效率。',
+  title: 'DeepSeek101 - DeepSeek Tool Discovery Platform',
+  description: 'Discover and use the best DeepSeek tools to improve your productivity.',
 }
 
 export default function Home() {
-  // 读取工具数据
+  // Read tool data
   const toolsPath = path.join(process.cwd(), 'data', 'json', 'tools.json')
-  const { categories, tools } = JSON.parse(fs.readFileSync(toolsPath, 'utf8'))
+  const { categories, tools = [] } = JSON.parse(fs.readFileSync(toolsPath, 'utf8'))
   
-  // 获取所有文章数据
+  // Get all article data
   const allPostsData = getSortedPostsData()
 
   return (
-    // 页面主容器,使用 Tailwind 类设置布局和间距
+    // Main container, using Tailwind classes for layout and spacing
     <div className="container mx-auto py-12 space-y-16">
-      {/* 头部区域: 包含网站标题、副标题和简介 */}
-      <section className="text-center space-y-4">
-        {/* 主标题: 响应式字体大小设置 */}
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+      {/* Header area: includes website title, subtitle and intro */}
+      <section className="text-center py-10 relative">
+        {/* Decorative background element */}
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-transparent rounded-3xl -z-10"></div>
+        
+        {/* Feature badges positioned at the top */}
+        <div className="flex justify-center gap-3 mb-8">
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+            <Sparkles className="h-3.5 w-3.5 mr-1" />
+            AI-Powered
+          </span>
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+            <Zap className="h-3.5 w-3.5 mr-1" />
+            Fast
+          </span>
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-amber-100 text-amber-800">
+            <Star className="h-3.5 w-3.5 mr-1" />
+            Trusted
+          </span>
+        </div>
+        
+        {/* Main title: responsive font size settings */}
+        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-4">
           DeepSeek101
         </h1>
-        {/* 副标题: 响应式字体大小设置 */}
+        
+        {/* Subtitle with icon */}
+        <div className="inline-flex items-center justify-center mb-6">
         <h2 className="text-2xl tracking-tighter sm:text-3xl md:text-3xl lg:text-3xl">
-          发现优质 DeepSeek 工具
+            Discover Quality DeepSeek Tools
         </h2>
-        {/* 网站简介: 最大宽度限制和响应式文本大小 */}
-        <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl">
-          DeepSeek101 是一个专注于发现和分享优质 DeepSeek 工具的平台，帮助您找到最适合的 AI 工具提升工作效率。
-        </p>
+          <Rocket className="h-5 w-5 ml-2 text-orange-500" />
+        </div>
+
+        {/* Tool count indicator */}
+        <div className="mb-8">
+          <span className="font-bold text-blue-600">{tools.length}+</span>
+          <span className="text-gray-700"> tools found and counting</span>
+        </div>
+
+        {/* Search box with enhanced styling */}
+        <div className="max-w-2xl mx-auto relative">
+          <SearchBox articles={allPostsData} />
+        </div>
       </section>
 
-      {/* 工具导航 */}
-      <ToolList categories={categories} tools={tools} showMoreLink={true} />
-
-      {/* 文章列表组件: 展示最新12篇文章，不启用分页 */}
-      <ArticleList 
+      {/* Search results display - client component */}
+      <SearchResults 
+        tools={tools} 
         articles={allPostsData} 
-        showMoreLink={true} 
-        enablePagination={false}
+        categories={categories} 
       />
     </div>
   )

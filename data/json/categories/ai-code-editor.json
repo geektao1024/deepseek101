@@ -1,0 +1,9 @@
+{
+  "id": "ai-code-editor",
+  "name": "Native AI Code Editor",
+  "description": "原生 AI 代码编辑器",
+  "icon": "edit",
+  "tools": [],
+  "version": "1.0.0",
+  "last_updated": "2024-11-18"
+}

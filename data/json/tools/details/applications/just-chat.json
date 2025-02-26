@@ -1,0 +1,102 @@
+{
+  "id": "just-chat",
+  "name": "Lobe Chat",
+  "description": "An open-source, modern-design AI chat framework supporting multiple AI providers (OpenAI, Claude 3, Gemini, Ollama, Qwen, DeepSeek), knowledge base, multi-modals, and one-click free deployment.",
+  "url": "https://github.com/lobehub/lobe-chat",
+  "category": "applications",
+  "tags": ["AI", "chat", "open-source", "multi-model", "knowledge-base", "PWA", "DeepSeek", "Claude", "Ollama"],
+  "rating": {
+    "score": 4.8,
+    "count": 520
+  },
+  "content": {
+    "overview": "Lobe Chat is an open-source, modern-design AI chat framework that supports multiple AI providers including OpenAI, Claude 3, Gemini, Ollama, Qwen, and DeepSeek. It features a knowledge base for file uploads and RAG capabilities, multi-modal functionalities (vision, TTS, plugins), and offers one-click free deployment of private ChatGPT/Claude applications. With over 52k stars on GitHub, it offers an elegant, user-friendly interface with both light and dark themes, mobile responsiveness, and PWA support for a native-like experience.",
+    "features": [
+      {
+        "title": "Multi-Provider Support",
+        "description": "Compatible with various AI services including OpenAI, Claude 3, Gemini, Ollama, Qwen, DeepSeek and more"
+      },
+      {
+        "title": "Knowledge Base",
+        "description": "File upload, knowledge management, and RAG (Retrieval Augmented Generation) capabilities"
+      },
+      {
+        "title": "Multi-Modal",
+        "description": "Support for vision, text-to-speech, plugins, and other artifacts"
+      },
+      {
+        "title": "One-Click Deployment",
+        "description": "Easy free deployment of private ChatGPT/Claude applications"
+      },
+      {
+        "title": "Modern UI Design",
+        "description": "Elegant interface with light/dark themes and mobile responsiveness"
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Personal Assistant",
+        "description": "Use as a daily AI assistant with multi-model capabilities for various tasks"
+      },
+      {
+        "title": "Research Tool",
+        "description": "Utilize the knowledge base feature for research and document analysis"
+      },
+      {
+        "title": "Content Creation",
+        "description": "Generate and refine content with support for multiple AI providers"
+      },
+      {
+        "title": "Learning Platform",
+        "description": "Explore different AI models and their capabilities in one interface"
+      }
+    ],
+    "advantages": [
+      "Open-source with Apache 2.0 license",
+      "Support for multiple AI providers",
+      "Knowledge base with RAG capabilities",
+      "Multi-modal support (vision, TTS, plugins)",
+      "Modern, elegant UI design",
+      "Mobile-friendly with PWA support",
+      "One-click deployment options",
+      "Privacy-focused with local data storage",
+      "Active community development"
+    ],
+    "faqs": [
+      {
+        "question": "How do I deploy Lobe Chat?",
+        "answer": "You can deploy Lobe Chat with one click using Vercel, Zeabur, Sealos, or Docker. Documentation provides detailed instructions for each method."
+      },
+      {
+        "question": "Which AI models are supported?",
+        "answer": "Lobe Chat supports multiple AI providers including OpenAI (GPT models), Anthropic (Claude), Google (Gemini), Ollama (local models), Qwen, DeepSeek, and more."
+      },
+      {
+        "question": "Is Lobe Chat free to use?",
+        "answer": "Yes, Lobe Chat is open-source under the Apache 2.0 license. You can deploy and use it for free, though you may need API keys for the various AI providers."
+      },
+      {
+        "question": "Does it support mobile devices?",
+        "answer": "Yes, Lobe Chat features a responsive design and supports Progressive Web App (PWA) functionality for a more native-like experience on mobile devices."
+      }
+    ],
+    "resources": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/lobehub/lobe-chat"
+      },
+      {
+        "title": "Official Website",
+        "url": "https://chat-preview.lobehub.com"
+      },
+      {
+        "title": "Documentation",
+        "url": "https://github.com/lobehub/lobe-chat/blob/main/README.md"
+      },
+      {
+        "title": "Discord Community",
+        "url": "https://discord.gg/AYFPHvv2jT"
+      }
+    ]
+  }
+} 

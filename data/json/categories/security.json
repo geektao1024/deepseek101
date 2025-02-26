@@ -1,0 +1,9 @@
+{
+  "id": "security",
+  "name": "Security",
+  "description": "安全工具",
+  "icon": "shield",
+  "tools": [],
+  "version": "1.0.0",
+  "last_updated": "2024-11-18"
+}

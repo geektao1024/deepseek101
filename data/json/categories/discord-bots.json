@@ -1,0 +1,9 @@
+{
+  "id": "discord-bots",
+  "name": "Discord Bots",
+  "description": "Discord 机器人",
+  "icon": "bot",
+  "tools": [],
+  "version": "1.0.0",
+  "last_updated": "2024-11-18"
+}

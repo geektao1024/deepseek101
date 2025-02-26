@@ -1,0 +1,101 @@
+{
+  "id": "papersgpt",
+  "name": "PapersGPT",
+  "description": "A Zotero plugin for improved papers reading and research with ChatGPT, Gemini, Claude, DeepSeek, Phi 4, Llama 3.2, Gemma and Mistral.",
+  "url": "https://github.com/papersgpt/papersgpt-for-zotero",
+  "category": "applications",
+  "tags": ["AI", "Zotero", "research", "academic", "papers", "reading", "LLM", "DeepSeek", "ChatGPT", "Gemini", "Claude"],
+  "rating": {
+    "score": 4.6,
+    "count": 220
+  },
+  "content": {
+    "overview": "PapersGPT is a specialized Zotero plugin designed to enhance academic research and paper reading through AI integration. It works directly within the Zotero interface, allowing researchers to interact with their PDFs using various language models including ChatGPT, Gemini, Claude, DeepSeek, Phi 4, Llama 3.2, Gemma, and Mistral. The plugin enables users to ask questions about papers, extract insights, and analyze complex research content, serving as a powerful research assistant for scholars and academics.",
+    "features": [
+      {
+        "title": "Multiple AI Model Support",
+        "description": "Integration with various language models including ChatGPT, Gemini, Claude, DeepSeek, Phi 4, Llama 3.2, Gemma, and Mistral"
+      },
+      {
+        "title": "Direct PDF Interaction",
+        "description": "Ask questions and extract insights directly from PDF documents within Zotero"
+      },
+      {
+        "title": "Seamless Zotero Integration",
+        "description": "Works within the Zotero environment, complementing existing research workflow"
+      },
+      {
+        "title": "Local Privacy Options",
+        "description": "For Mac users, offers local model options that ensure data privacy"
+      },
+      {
+        "title": "One-Click Model Selection",
+        "description": "Easy switching between different AI models based on research needs"
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Research Assistance",
+        "description": "Summarize papers, identify key concepts, and quickly get answers to questions about research content"
+      },
+      {
+        "title": "Literature Review",
+        "description": "Generate insights and extract key information for literature reviews"
+      },
+      {
+        "title": "Academic Writing",
+        "description": "Get assistance understanding complex sections of papers and organizing research insights"
+      },
+      {
+        "title": "Collaborative Research",
+        "description": "Share annotated PDFs and AI-generated responses with colleagues and research teams"
+      }
+    ],
+    "advantages": [
+      "Supports multiple state-of-the-art AI models",
+      "Integrates directly with Zotero for seamless workflow",
+      "Provides local model options for privacy-conscious users",
+      "Enhances research efficiency through AI assistance",
+      "Simplifies understanding of complex research papers",
+      "Works with existing research libraries in Zotero",
+      "Offers model flexibility for different research needs",
+      "Local RAG capabilities for enhanced privacy"
+    ],
+    "faqs": [
+      {
+        "question": "How do I install PapersGPT?",
+        "answer": "Download the papersgpt.xpi plugin file, open Zotero, go to Tools > Add-ons, click the gear icon, select 'Install Add-on From File', and open the downloaded plugin file."
+      },
+      {
+        "question": "How do I start using PapersGPT?",
+        "answer": "After installation, open Zotero and press the keys to start the plugin (Command+Enter on MacOS, Ctrl+Enter on Windows). Open any PDF and start asking questions."
+      },
+      {
+        "question": "Which AI models are available?",
+        "answer": "PapersGPT supports multiple models including DeepSeek-R1, DeepSeek-V3, various Gemini models, Phi-4, Llama3.2, QwQ-32B-Preview, Marco-o1, Gemma2, Mistral, ChatGPT-4o, and Claude models."
+      },
+      {
+        "question": "Is my data private when using PapersGPT?",
+        "answer": "Yes, especially when using local models. For Mac users, models are downloaded, installed, and run locally, ensuring your data doesn't leave your machine. The RAG modules of embeddings, vector database, and rerank are all built and run locally."
+      }
+    ],
+    "resources": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/papersgpt/papersgpt-for-zotero"
+      },
+      {
+        "title": "Official Website",
+        "url": "https://www.papersgpt.com"
+      },
+      {
+        "title": "Installation Guide",
+        "url": "https://github.com/papersgpt/papersgpt-for-zotero/blob/main/README.md#how-to-use"
+      },
+      {
+        "title": "Model Information",
+        "url": "https://github.com/papersgpt/papersgpt-for-zotero/blob/main/README.md#key-features"
+      }
+    ]
+  }
+} 

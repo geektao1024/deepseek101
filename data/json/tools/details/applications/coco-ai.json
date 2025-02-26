@@ -1,0 +1,96 @@
+{
+  "id": "coco-ai",
+  "name": "Coco AI",
+  "description": "An open source unified search and productivity tool that searches, summarizes and organizes your digital information.",
+  "url": "https://github.com/cocosearch/coco",
+  "category": "applications",
+  "tags": ["AI", "search", "productivity", "organization", "summarization", "open-source"],
+  "rating": {
+    "score": 4.5,
+    "count": 240
+  },
+  "content": {
+    "overview": "Coco AI is an innovative open-source tool designed to unify search and productivity workflows. It intelligently searches, summarizes, and organizes your digital information across various sources, helping you quickly find what you need and make connections between different pieces of information. The tool aims to reduce information overload and enhance productivity by providing a single interface for accessing and processing diverse digital content.",
+    "features": [
+      {
+        "title": "Unified Search",
+        "description": "Searches across multiple sources of digital information, providing a centralized access point"
+      },
+      {
+        "title": "AI-Powered Summarization",
+        "description": "Automatically generates concise summaries of documents, articles, and other content"
+      },
+      {
+        "title": "Information Organization",
+        "description": "Helps categorize and organize digital content for easier retrieval and connection-making"
+      },
+      {
+        "title": "Cross-Platform Integration",
+        "description": "Works across different platforms and devices to provide a consistent experience"
+      },
+      {
+        "title": "Open-Source Architecture",
+        "description": "Fully open-source design allows for community contributions and customizations"
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Research Assistance",
+        "description": "Helps researchers quickly find, summarize, and organize information from multiple sources"
+      },
+      {
+        "title": "Knowledge Management",
+        "description": "Assists knowledge workers in maintaining and accessing their digital knowledge base"
+      },
+      {
+        "title": "Content Creation",
+        "description": "Supports content creators by providing quick access to reference materials and inspirations"
+      },
+      {
+        "title": "Personal Information Management",
+        "description": "Helps individuals organize and retrieve their personal digital information"
+      }
+    ],
+    "advantages": [
+      "Open-source and free to use",
+      "Reduces time spent searching for information",
+      "Minimizes information overload through summarization",
+      "Creates connections between disparate pieces of information",
+      "Community-driven development ensures continuous improvement",
+      "Privacy-focused design keeps your data secure",
+      "Customizable to fit individual workflows"
+    ],
+    "faqs": [
+      {
+        "question": "What types of information can Coco AI search through?",
+        "answer": "Coco AI is designed to search through various types of digital information, including documents, web pages, notes, emails, and other text-based content depending on the integrations available."
+      },
+      {
+        "question": "Does Coco AI require internet access?",
+        "answer": "While some features may require internet access, particularly for searching web-based content, many core functions can work locally with your stored information."
+      },
+      {
+        "question": "Is my data secure when using Coco AI?",
+        "answer": "As an open-source tool, Coco AI is designed with privacy in mind. Your data remains under your control, and you can review the code to verify security practices."
+      },
+      {
+        "question": "Can I contribute to Coco AI's development?",
+        "answer": "Yes, as an open-source project, Coco AI welcomes contributions from the community. You can contribute code, report issues, or suggest improvements through the GitHub repository."
+      }
+    ],
+    "resources": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/cocosearch/coco"
+      },
+      {
+        "title": "Documentation",
+        "url": "https://github.com/cocosearch/coco/blob/main/README.md"
+      },
+      {
+        "title": "Community Forum",
+        "url": "https://github.com/cocosearch/coco/discussions"
+      }
+    ]
+  }
+} 

@@ -1,0 +1,96 @@
+{
+  "id": "chatbox",
+  "name": "Chatbox",
+  "description": "A desktop client for multiple cutting-edge LLM models. Cross-platform, supports search providers, custom models, Azure OpenAI, and more.",
+  "url": "https://github.com/Bin-Huang/chatbox",
+  "category": "applications",
+  "tags": ["AI", "desktop", "chat", "LLM", "cross-platform", "OpenAI"],
+  "rating": {
+    "score": 4.6,
+    "count": 280
+  },
+  "content": {
+    "overview": "Chatbox is a comprehensive desktop application that provides access to multiple cutting-edge large language models. It offers a cross-platform experience with support for various search providers, custom models, and integrations like Azure OpenAI. The application features a clean, user-friendly interface that makes interacting with advanced AI models simple and efficient.",
+    "features": [
+      {
+        "title": "Multiple Model Support",
+        "description": "Compatible with OpenAI GPT models, Azure OpenAI, Claude, and support for custom model endpoints"
+      },
+      {
+        "title": "Cross-Platform",
+        "description": "Available for Windows, macOS, and Linux, ensuring consistent experience across different operating systems"
+      },
+      {
+        "title": "Search Integration",
+        "description": "Supports various search providers for enhanced information retrieval capabilities"
+      },
+      {
+        "title": "Conversation Management",
+        "description": "Robust conversation and prompt management with options to save, organize, and revisit past interactions"
+      },
+      {
+        "title": "Markdown Rendering",
+        "description": "Full support for Markdown formatting, including code blocks with syntax highlighting"
+      }
+    ],
+    "useCases": [
+      {
+        "title": "AI-Assisted Writing",
+        "description": "Helps with drafting, editing, and improving written content through AI suggestions and enhancements"
+      },
+      {
+        "title": "Code Development",
+        "description": "Assists programmers with code generation, debugging, and explaining programming concepts"
+      },
+      {
+        "title": "Learning and Research",
+        "description": "Facilitates learning and research by providing explanations, summaries, and information on various topics"
+      },
+      {
+        "title": "Creative Content Creation",
+        "description": "Aids in generating creative content like stories, scripts, or marketing materials"
+      }
+    ],
+    "advantages": [
+      "Completely free and open-source",
+      "No need for browser-based interfaces",
+      "Secure, private conversations on your desktop",
+      "Flexible model and provider options",
+      "Regular updates with new features",
+      "Customizable settings and preferences",
+      "Active community support"
+    ],
+    "faqs": [
+      {
+        "question": "Do I need an API key to use Chatbox?",
+        "answer": "Yes, you'll need an API key from the service provider you wish to use (like OpenAI or Anthropic). The application allows you to enter your API key in the settings."
+      },
+      {
+        "question": "Can I use Chatbox offline?",
+        "answer": "Chatbox requires an internet connection to communicate with the AI models' servers. However, your conversation history is stored locally on your device."
+      },
+      {
+        "question": "Is Chatbox available in multiple languages?",
+        "answer": "Yes, Chatbox supports multiple languages for its interface, making it accessible to users worldwide."
+      },
+      {
+        "question": "How do I set up custom models in Chatbox?",
+        "answer": "You can configure custom model endpoints in the settings menu by providing the necessary API endpoint URL and authentication details."
+      }
+    ],
+    "resources": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/Bin-Huang/chatbox"
+      },
+      {
+        "title": "Documentation",
+        "url": "https://github.com/Bin-Huang/chatbox/blob/main/README.md"
+      },
+      {
+        "title": "Release Page",
+        "url": "https://github.com/Bin-Huang/chatbox/releases"
+      }
+    ]
+  }
+} 

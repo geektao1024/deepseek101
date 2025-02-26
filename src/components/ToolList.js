@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ExternalLink, Star, Layers, AppWindow, Brain, Database, Code, FileSpreadsheet, MessageSquare, Globe, Terminal, List, Bot, Edit, Shield, MoreHorizontal } from 'lucide-react'
+import { Star, MessageCircle, Layers, AppWindow, Brain, Database, Code, FileSpreadsheet, MessageSquare, Globe, Terminal, List, Bot, Edit, Shield, MoreHorizontal } from 'lucide-react'
 import {
   Card,
   CardTitle,
@@ -143,22 +143,25 @@ export default function ToolList({ categories, tools }) {
                     </CardTitle>
                   </Link>
                   
-                  {/* 外部链接 */}
-                  <a
-                    href={tool.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-gray-600 transition-colors"
-                    title="访问官网"
-                  >
-                    <ExternalLink size={14} />
-                  </a>
-                  
-                  {/* 评分 */}
-                  <div className="flex items-center gap-1 text-xs text-yellow-500">
-                    <Star size={12} className="fill-current" />
-                    <span>{tool.rating.score}</span>
-                    <span className="text-gray-400">({tool.rating.count})</span>
+                  {/* 评分 - 优化样式 */}
+                  <div className="flex items-center gap-1.5">
+                    {/* 评分部分 */}
+                    <div className="flex items-center">
+                      <Star size={12} className="fill-current text-yellow-500" />
+                      <span className="ml-0.5 text-sm font-medium text-gray-700">{tool.rating.score.toFixed(1)}</span>
+                    </div>
+                    
+                    {/* 用户数量部分 */}
+                    <div className="flex items-center">
+                      <MessageCircle size={12} className="text-gray-400" />
+                      <span className="ml-0.5 text-gray-400 text-xs">
+                        {tool.rating.count >= 1000000 
+                          ? `${(tool.rating.count/1000000).toFixed(0)}M+` 
+                          : tool.rating.count >= 1000 
+                            ? `${(tool.rating.count/1000).toFixed(0)}K+` 
+                            : tool.rating.count}
+                      </span>
+                    </div>
                   </div>
                 </div>
 

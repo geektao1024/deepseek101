@@ -1,0 +1,9 @@
+{
+  "id": "curation",
+  "name": "Curation",
+  "description": "内容策划工具",
+  "icon": "list",
+  "tools": [],
+  "version": "1.0.0",
+  "last_updated": "2024-11-18"
+}

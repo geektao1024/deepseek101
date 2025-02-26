@@ -1,0 +1,9 @@
+{
+  "id": "jetbrains-extensions",
+  "name": "JetBrains Extensions",
+  "description": "JetBrains IDE 扩展",
+  "icon": "code",
+  "tools": [],
+  "version": "1.0.0",
+  "last_updated": "2024-11-18"
+}

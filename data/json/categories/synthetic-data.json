@@ -1,0 +1,9 @@
+{
+  "id": "synthetic-data",
+  "name": "Synthetic Data",
+  "description": "合成数据工具",
+  "icon": "data",
+  "tools": [],
+  "version": "1.0.0",
+  "last_updated": "2024-11-18"
+}
