@@ -22,6 +22,9 @@ interface Tool {
     score: number;
     count: number;
   };
+  stars?: number;
+  forks?: number;
+  views?: number;
 }
 
 interface Category {
@@ -35,6 +38,7 @@ interface SearchResultsProps {
   tools: Tool[];
   articles: Article[];
   categories: Category[];
+  github_stats_updated_at?: string;
 }
 
 interface SearchState {
@@ -44,13 +48,19 @@ interface SearchState {
   articleIds: string[];
 }
 
-export function SearchResults({ tools, articles, categories }: SearchResultsProps) {
+export function SearchResults({ tools, articles, categories, github_stats_updated_at }: SearchResultsProps) {
   const [searchState, setSearchState] = useState<SearchState>({
     term: '',
     isSearching: false,
     count: 0,
     articleIds: []
   })
+  
+  // 将github_stats_updated_at添加到工具数组的每个工具，创建一个新的数组
+  // 这样每个工具都会拥有正确的GitHub统计数据
+  console.log('SearchResults received github_stats_updated_at:', github_stats_updated_at);
+  console.log('Tools count before processing:', tools.length);
+  console.log('First tool before processing:', tools[0]);
   
   // Listen for search result changes
   useEffect(() => {
@@ -111,7 +121,10 @@ export function SearchResults({ tools, articles, categories }: SearchResultsProp
     return (
       <>
         {/* Tool navigation */}
-        <ToolList categories={categories} tools={tools} />
+        <ToolList 
+          categories={categories} 
+          tools={tools} 
+        />
         
         {/* Article list component: display the latest 12 articles, no pagination */}
         <ArticleList 
@@ -130,7 +143,10 @@ export function SearchResults({ tools, articles, categories }: SearchResultsProp
       <section>
         <h2 className="text-2xl font-bold mb-4">Tool Search Results</h2>
         {filteredTools.length > 0 ? (
-          <ToolList categories={categories} tools={filteredTools} />
+          <ToolList 
+            categories={categories} 
+            tools={filteredTools} 
+          />
         ) : (
           <p className="text-gray-500 py-8 text-center">No matching tools found</p>
         )}

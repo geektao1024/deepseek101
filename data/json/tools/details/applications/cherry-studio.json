@@ -1,0 +1,157 @@
+{
+  "id": "cherry-studio",
+  "name": "Cherry Studio",
+  "description": "A powerful desktop AI client supporting multiple large language model services, including DeepSeek integration",
+  "url": "https://github.com/CherryHQ/cherry-studio",
+  "category": "applications",
+  "tags": [
+    "DeepSeek Integration",
+    "AI Client",
+    "Desktop Application",
+    "Cross-platform",
+    "AI Assistant",
+    "Multi-model Support",
+    "Open Source"
+  ],
+  "content": {
+    "overview": "Cherry Studio is a desktop client designed for professional users, supporting multiple large language model services including DeepSeek and other mainstream LLM providers. As a comprehensive AI assistant platform, it integrates over 300 pre-configured AI assistants covering more than 30 industries, aimed at helping users improve efficiency in various scenarios.\n\nCherry Studio features a clean and intuitive design, compatible with multiple operating systems including Windows, Mac, and Linux, allowing users from various industries to easily leverage advanced AI technology to enhance their workflow. As open-source software, Cherry Studio encourages community participation and contributions, continuously expanding its features and application scenarios.\n\nThrough DeepSeek API integration, Cherry Studio provides users with high-quality AI interaction experiences, particularly suitable for professional users dealing with complex tasks, such as developers, content creators, and researchers.",
+    "features": [
+      {
+        "title": "Diverse LLM Provider Support",
+        "description": "Cherry Studio supports multiple mainstream large language model services, allowing users to choose the most suitable model for different needs:\n- Major LLM cloud services: OpenAI, Gemini, Anthropic, and more\n- AI web service integration: Claude, Perplexity, Poe, and others\n- Local model support: Run local models via Ollama\n- DeepSeek support: Full integration with DeepSeek API, providing high-quality AI interaction"
+      },
+      {
+        "title": "AI Assistants & Conversation Management",
+        "description": "Cherry Studio offers rich AI assistant features to meet the needs of various professional users:\n- 300+ pre-configured AI assistants covering different industries and application scenarios\n- Custom assistant creation, allowing users to customize dedicated AI assistants as needed\n- Multi-model simultaneous conversation support, convenient for comparing answers from different models\n- Intelligent conversation management for easy organization and retrieval of historical dialogues"
+      },
+      {
+        "title": "Document & Data Processing Capabilities",
+        "description": "Cherry Studio has powerful document processing capabilities to improve information processing efficiency:\n- Support for text, images, Office documents, PDFs, and various file formats\n- WebDAV file management and backup functionality\n- Mermaid chart visualization\n- Code syntax highlighting\n- Intelligent cross-document retrieval and analysis"
+      },
+      {
+        "title": "Practical Tools Integration",
+        "description": "Cherry Studio integrates multiple practical tools to enhance user experience:\n- Global search functionality for quickly finding needed information\n- Topic management system for effectively organizing knowledge content\n- AI-powered translation supporting multilingual communication\n- Drag-and-drop sorting to simplify operations\n- Mini program support to expand application scenarios\n- One-click content sharing functionality"
+      },
+      {
+        "title": "Enhanced User Experience",
+        "description": "Cherry Studio focuses on various aspects of user experience:\n- Cross-platform support: Full compatibility with Windows, Mac, and Linux systems\n- Ready to use without complex environment configuration\n- Light/dark theme switching and transparent window effects\n- Complete Markdown rendering support\n- Clean and intuitive interface design for easy operation"
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Developer Programming Assistant",
+        "description": "For software developers, Cherry Studio serves as a powerful programming companion. It can generate and debug code, making programming more efficient. Developers can switch between different LLM models at any time to answer technical questions, quickly find solutions, significantly improve development efficiency, and reduce debugging time."
+      },
+      {
+        "title": "Content Creator's Creative Partner",
+        "description": "Content creators can use Cherry Studio to generate creative copy, edit articles, design story structures, and more. By conversing with different AI models, they can gain multi-perspective creative inspiration, while using built-in translation and optimization tools to enhance content quality and multilingual adaptability."
+      },
+      {
+        "title": "Researcher's Knowledge Assistant",
+        "description": "Researchers can use Cherry Studio to analyze research data, summarize academic literature, generate research reports, and more. Its powerful document processing capabilities and knowledge management system help organize complex information, discover research clues, and accelerate the research process."
+      },
+      {
+        "title": "Professional Work Assistant",
+        "description": "Professionals across industries can use Cherry Studio to handle daily work tasks, such as meeting notes organization, email writing, professional document generation, and more. Through more than 300 pre-configured industry-specific AI assistants, they can quickly obtain support and advice in their professional domains."
+      },
+      {
+        "title": "Educator's Teaching Tool",
+        "description": "Teachers and education professionals can use Cherry Studio to prepare course materials, design teaching activities, generate quiz questions, and more. Its powerful content generation and organization capabilities help educators create more personalized and effective teaching resources."
+      }
+    ],
+    "advantages": [
+      {
+        "title": "Flexible Multi-model Switching",
+        "description": "Supports multiple mainstream LLM services, allowing users to freely choose the most suitable model for different task requirements without switching between multiple applications."
+      },
+      {
+        "title": "Rich Pre-configured Assistants",
+        "description": "Provides over 300 pre-configured professional AI assistants covering more than 30 industries, which users can utilize directly without configuring from scratch."
+      },
+      {
+        "title": "Powerful Document Processing",
+        "description": "Supports multiple file formats including text, images, Office documents, PDFs, etc., providing comprehensive document analysis and processing capabilities."
+      },
+      {
+        "title": "Open Source Community Support",
+        "description": "As an open-source project, Cherry Studio has an active developer community continuously improving and expanding its features, maintaining product innovation."
+      },
+      {
+        "title": "Cross-platform Compatibility",
+        "description": "Supports Windows, Mac, and Linux, three major operating systems, providing users with consistent experiences across different devices."
+      },
+      {
+        "title": "Personalization Capabilities",
+        "description": "Allows users to create and customize dedicated AI assistants, setting prompts, parameters, and workflows according to specific needs."
+      },
+      {
+        "title": "Privacy and Security",
+        "description": "Supports local model deployment, allowing sensitive data to avoid being sent to third-party servers, enhancing data privacy and security."
+      },
+      {
+        "title": "Efficient Knowledge Management",
+        "description": "Topic management and global search functions help users effectively organize and quickly retrieve AI-generated content and conversation history."
+      },
+      {
+        "title": "Multilingual Support",
+        "description": "Built-in AI translation functionality supports multilingual communication, helping users overcome language barriers and expand global application scenarios."
+      },
+      {
+        "title": "Continuous Updates and Iterations",
+        "description": "The product is frequently updated, continuously integrating new models and features, ensuring users can utilize the most cutting-edge AI technology."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Which operating systems does Cherry Studio support?",
+        "answer": "Cherry Studio supports Windows, Mac, and Linux, the three major operating systems, providing a consistent cross-platform user experience."
+      },
+      {
+        "question": "How do I integrate DeepSeek in Cherry Studio?",
+        "answer": "Users can add the DeepSeek API key in the Cherry Studio settings interface. After configuration is complete, they can select DeepSeek as the conversation model to enjoy its powerful AI capabilities."
+      },
+      {
+        "question": "Does Cherry Studio support local models?",
+        "answer": "Yes, Cherry Studio supports local model deployment through Ollama. For users concerned about data privacy, they can choose to run models locally without relying on cloud services."
+      },
+      {
+        "question": "What domains do Cherry Studio's pre-configured AI assistants cover?",
+        "answer": "Cherry Studio provides over 300 pre-configured AI assistants covering software development, content creation, design, education, research, business analysis, and more than 30 industries and professional fields."
+      },
+      {
+        "question": "Which file formats does Cherry Studio support?",
+        "answer": "Cherry Studio supports multiple file formats, including but not limited to text files, images, Office documents (Word, Excel, PowerPoint), PDFs, code files, etc., and can perform intelligent analysis and processing."
+      },
+      {
+        "question": "Can I create custom AI assistants?",
+        "answer": "Yes, Cherry Studio allows users to create and customize dedicated AI assistants based on specific needs, including setting prompts, parameters, knowledge bases, and workflows."
+      },
+      {
+        "question": "Is Cherry Studio open source?",
+        "answer": "Yes, Cherry Studio is an open-source project. Users can view the source code, report issues, or contribute code on GitHub, participating in product improvement and development."
+      }
+    ],
+    "resources": [
+      {
+        "title": "Official GitHub Repository",
+        "url": "https://github.com/CherryHQ/cherry-studio"
+      },
+      {
+        "title": "Official Website",
+        "url": "https://cherry-ai.com"
+      },
+      {
+        "title": "Official Documentation",
+        "url": "https://github.com/CherryHQ/cherry-studio-docs"
+      },
+      {
+        "title": "Telegram Community",
+        "url": "https://t.me/CherryStudioAI"
+      },
+      {
+        "title": "Discord Community",
+        "url": "https://discord.gg/CherryStudio"
+      }
+    ]
+  }
+} 

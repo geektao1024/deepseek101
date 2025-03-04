@@ -1,36 +1,40 @@
 {
   "id": "papersgpt",
   "name": "PapersGPT",
-  "description": "A Zotero plugin for improved papers reading and research with ChatGPT, Gemini, Claude, DeepSeek, Phi 4, Llama 3.2, Gemma and Mistral.",
+  "description": "PapersGPT is an advanced Zotero plugin that revolutionizes academic research by integrating DeepSeek's powerful language models alongside other AI systems (ChatGPT, Gemini, Claude, Phi 4, Llama 3.2, Gemma, Mistral), enabling researchers to analyze papers, extract insights, generate summaries, and interact with complex scientific literature directly within their research workflow—all while offering local processing options for enhanced privacy and data security.",
   "url": "https://github.com/papersgpt/papersgpt-for-zotero",
   "category": "applications",
-  "tags": ["AI", "Zotero", "research", "academic", "papers", "reading", "LLM", "DeepSeek", "ChatGPT", "Gemini", "Claude"],
+  "tags": ["DeepSeek integration", "DeepSeek-R1", "DeepSeek-V3", "AI research assistant", "academic research", "scientific literature", "Zotero plugin", "PDF analysis", "scholarly articles", "research enhancement", "literature review", "paper summarization", "AI for academia", "LLM integration", "research workflow", "semantic search", "PDF interaction", "knowledge extraction", "scientific reading", "local AI processing"],
   "rating": {
     "score": 4.6,
     "count": 220
   },
   "content": {
-    "overview": "PapersGPT is a specialized Zotero plugin designed to enhance academic research and paper reading through AI integration. It works directly within the Zotero interface, allowing researchers to interact with their PDFs using various language models including ChatGPT, Gemini, Claude, DeepSeek, Phi 4, Llama 3.2, Gemma, and Mistral. The plugin enables users to ask questions about papers, extract insights, and analyze complex research content, serving as a powerful research assistant for scholars and academics.",
+    "overview": "PapersGPT represents a significant advancement in AI-enhanced academic research, offering seamless integration with Zotero through a sophisticated plugin architecture that connects scholarly literature directly to multiple state-of-the-art language models, with special emphasis on DeepSeek's advanced capabilities. The platform transforms how researchers interact with scientific literature by creating an intuitive interface between complex research papers and DeepSeek's powerful semantic understanding, enabling natural language queries, comprehensive analysis, and insight extraction directly from PDFs within the familiar Zotero environment. By leveraging DeepSeek's specialized scientific knowledge and contextual understanding, PapersGPT dramatically accelerates the research process, helping scholars navigate technical literature, extract critical information, synthesize findings across multiple papers, and generate structured summaries that capture essential research insights. For privacy-conscious researchers, the platform offers local processing options that ensure sensitive research data remains secure while still benefiting from advanced AI analysis capabilities. This innovative bridge between scholarly content management and DeepSeek's language intelligence creates a powerful research companion that addresses key challenges in academic work including information overload, complex technical comprehension, efficient knowledge extraction, and research synthesis.",
     "features": [
       {
-        "title": "Multiple AI Model Support",
-        "description": "Integration with various language models including ChatGPT, Gemini, Claude, DeepSeek, Phi 4, Llama 3.2, Gemma, and Mistral"
+        "title": "Advanced DeepSeek Model Integration",
+        "description": "PapersGPT features comprehensive integration with DeepSeek's specialized language models including DeepSeek-R1 and DeepSeek-V3, optimized for scientific and academic content processing. The implementation leverages DeepSeek's exceptional abilities in understanding complex scientific concepts, technical terminology, and research methodologies, enabling more accurate and nuanced analysis of scholarly papers compared to general-purpose models. The integration includes specialized configurations that enhance DeepSeek's performance with different academic disciplines and publication types, from empirical studies to theoretical papers, literature reviews to technical reports. Researchers can select the appropriate DeepSeek model variation based on their specific research needs, benefiting from DeepSeek's ongoing advancements in scientific language understanding and knowledge extraction capabilities."
       },
       {
-        "title": "Direct PDF Interaction",
-        "description": "Ask questions and extract insights directly from PDF documents within Zotero"
+        "title": "Multi-Model AI Ecosystem",
+        "description": "Comprehensive support for various AI systems alongside DeepSeek, including ChatGPT, Gemini, Claude, Phi 4, Llama 3.2, Gemma, and Mistral, allowing researchers to select the optimal model for specific research tasks and content types"
+      },
+      {
+        "title": "Intelligent PDF Analysis & Interaction",
+        "description": "Advanced capabilities for direct interaction with research papers through natural language queries, enabling researchers to ask specific questions about methodologies, findings, implications, and technical details with context-aware responses generated by DeepSeek and other models"
       },
       {
         "title": "Seamless Zotero Integration",
-        "description": "Works within the Zotero environment, complementing existing research workflow"
+        "description": "Native implementation within the Zotero research environment that preserves existing workflow while enhancing capabilities, maintaining all citation management and organization features while adding powerful AI-assisted analysis options"
       },
       {
-        "title": "Local Privacy Options",
-        "description": "For Mac users, offers local model options that ensure data privacy"
+        "title": "Local Processing & Privacy Protection",
+        "description": "Comprehensive local processing options that download and run models directly on the researcher's machine, ensuring sensitive research data never leaves local storage while still benefiting from advanced AI capabilities through secure implementation"
       },
       {
-        "title": "One-Click Model Selection",
-        "description": "Easy switching between different AI models based on research needs"
+        "title": "Research-Optimized RAG Architecture",
+        "description": "Specialized Retrieval-Augmented Generation system with locally-built embeddings, vector database, and reranking capabilities that enhance model accuracy when analyzing scientific literature by providing relevant contextual information from the paper"
       }
     ],
     "useCases": [

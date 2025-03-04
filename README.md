@@ -119,3 +119,28 @@ LemoBook is built with the following open-source libraries:
 - [Shadcn/UI](https://ui.shadcn.com/)
 
 We are grateful to the maintainers and contributors of these projects.
+
+## GitHub统计信息自动更新
+
+本项目支持自动获取并更新GitHub仓库的统计信息（星星数、fork数和查看数），以展示在工具卡片中。
+
+### 使用方法
+
+1. 手动更新GitHub统计信息：
+
+```bash
+npm run update:github-stats
+```
+
+2. 设置定时任务（使用cron或其他调度工具）定期更新数据。例如，通过crontab每天更新一次：
+
+```bash
+# 每天凌晨2点更新GitHub统计信息
+0 2 * * * cd /path/to/project && npm run update:github-stats >> logs/github-stats.log 2>&1
+```
+
+### 注意事项
+
+- GitHub API有调用限制，未认证的请求每小时限制60次
+- 如果有大量工具，建议申请GitHub Token并在脚本中配置
+- 可以在工具列表底部看到最后更新时间

@@ -1,0 +1,114 @@
+{
+  "id": "gpt-ai-flow",
+  "name": "GPT AI Flow",
+  "description": "The ultimate productivity weapon built by engineers for efficiency enthusiasts, with features like desktop intelligent hub, local encrypted storage, and custom instruction engine.",
+  "url": "https://www.gptaiflow.tech/",
+  "official_url": "https://www.gptaiflow.tech/",
+  "pricing": {
+    "model": "free",
+    "details": "免费使用的桌面工具"
+  },
+  "category": "applications",
+  "tags": [
+    "AI",
+    "productivity",
+    "desktop",
+    "encryption",
+    "custom instructions",
+    "deepseek"
+  ],
+  "overview": "GPT AI Flow是一款专为提高效率设计的桌面AI工具，它提供了智能桌面中枢、本地加密存储和自定义指令引擎等功能，使用户能够在日常工作中充分利用AI的力量。该工具集成了DeepSeek等多种AI模型，让用户无需订阅捆绑即可按需调用强大的AI功能。",
+  "features": [
+    {
+      "name": "桌面智能中枢",
+      "description": "使用快捷键Shift+Alt+Space唤醒桌面AI助手，随时随地获取AI支持"
+    },
+    {
+      "name": "本地加密存储",
+      "description": "所有数据都存储在本地并进行加密，确保用户数据的安全性和隐私保护"
+    },
+    {
+      "name": "自定义指令引擎",
+      "description": "用户可以创建和保存自定义指令，为特定任务优化AI响应"
+    },
+    {
+      "name": "DeepSeek集成",
+      "description": "支持DeepSeek API，让用户能够利用DeepSeek的高级AI功能进行工作"
+    },
+    {
+      "name": "按需调用",
+      "description": "无需订阅捆绑，用户可以根据需要使用不同的AI服务"
+    }
+  ],
+  "use_cases": [
+    {
+      "title": "高效文档创作",
+      "description": "利用DeepSeek的自然语言处理能力，快速生成和编辑各类文档，如报告、文章和邮件等"
+    },
+    {
+      "title": "智能工作流程",
+      "description": "使用自定义指令引擎创建自动化工作流程，提高日常任务的处理效率"
+    },
+    {
+      "title": "私密数据分析",
+      "description": "通过本地加密存储功能，安全地处理和分析敏感数据，同时获得AI的深度分析能力"
+    },
+    {
+      "title": "多语言交流",
+      "description": "借助DeepSeek的多语言支持，进行高质量的实时翻译和跨语言沟通"
+    }
+  ],
+  "advantages": [
+    {
+      "title": "隐私保护",
+      "description": "本地加密存储确保所有敏感数据不会泄露到云端，为用户提供最高级别的隐私保护"
+    },
+    {
+      "title": "操作便捷",
+      "description": "通过简单的快捷键即可唤醒AI助手，无需切换应用或打开浏览器，提高工作效率"
+    },
+    {
+      "title": "灵活性强",
+      "description": "支持多种AI模型（包括DeepSeek），用户可以根据不同任务选择最适合的AI服务"
+    },
+    {
+      "title": "工程师视角",
+      "description": "由工程师为效率爱好者设计，具有实用性强、功能丰富等特点，满足专业用户的需求"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "GPT AI Flow是否支持DeepSeek API？",
+      "answer": "是的，GPT AI Flow支持DeepSeek API集成。用户可以在设置中配置DeepSeek API密钥，以使用DeepSeek提供的AI功能。"
+    },
+    {
+      "question": "如何设置DeepSeek API密钥？",
+      "answer": "在GPT AI Flow应用内，进入设置页面，找到API密钥设置选项，选择DeepSeek，然后输入您从DeepSeek官方网站获取的API密钥。"
+    },
+    {
+      "question": "GPT AI Flow的数据安全性如何？",
+      "answer": "GPT AI Flow采用本地加密存储技术，所有用户数据都存储在用户自己的设备上，并进行加密处理，确保数据安全和用户隐私。"
+    },
+    {
+      "question": "是否需要订阅才能使用GPT AI Flow？",
+      "answer": "不需要。GPT AI Flow采用按需调用模式，用户可以免费使用基本功能，只需为使用第三方AI服务（如DeepSeek）支付相关费用。"
+    }
+  ],
+  "resources": [
+    {
+      "type": "website",
+      "title": "官方网站",
+      "url": "https://www.gptaiflow.tech/"
+    },
+    {
+      "type": "documentation",
+      "title": "API密钥设置文档",
+      "url": "https://www.gptaiflow.tech/docs/product/api-keys-setup"
+    },
+    {
+      "type": "github",
+      "title": "DeepSeek集成信息",
+      "url": "https://github.com/deepseek-ai/awesome-deepseek-integration"
+    }
+  ]
+} 

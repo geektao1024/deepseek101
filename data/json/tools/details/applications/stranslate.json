@@ -1,0 +1,151 @@
+{
+  "id": "stranslate",
+  "name": "STranslate",
+  "description": "一款基于WPF开发的即开即用、即用即走的翻译和OCR工具，支持多种翻译服务（包括DeepSeek）的Windows平台工具。",
+  "urls": {
+    "main": "https://github.com/ZGGSONG/STranslate",
+    "documentation": "https://stranslate.zggsong.com/",
+    "source": "https://github.com/ZGGSONG/STranslate"
+  },
+  "pricing": {
+    "isFree": true,
+    "description": "开源免费。部分高级功能可能需要自行申请第三方服务API。"
+  },
+  "category": "applications",
+  "tags": [
+    "windows",
+    "translation",
+    "ocr",
+    "clipboard",
+    "screenshot",
+    "plugin",
+    "deepseek",
+    "wpf"
+  ],
+  "overview": {
+    "headline": "一款即开即用、易于配置的Windows翻译与OCR工具",
+    "description": "STranslate是一款基于WPF开发的Windows平台翻译和OCR工具，具有即开即用的特点。它支持多种翻译服务的集成，包括DeepSeek等AI翻译服务，用户可以根据自己的需求自由配置使用不同的翻译接口。该工具采用现代化界面设计，支持丰富的交互方式，为用户提供流畅的翻译体验。"
+  },
+  "features": [
+    {
+      "title": "多样化的翻译方式",
+      "description": "支持划词翻译、截图翻译、输入翻译等多种翻译方式，满足不同场景下的翻译需求。"
+    },
+    {
+      "title": "强大的OCR功能",
+      "description": "集成了高效的OCR功能，能够识别图像中的文字并提供翻译，支持PaddleOCR等先进技术。"
+    },
+    {
+      "title": "多服务支持",
+      "description": "支持多种翻译服务，包括DeepSeek、Google、Microsoft、Baidu等，用户可以根据需要自由切换。"
+    },
+    {
+      "title": "DeepSeek集成",
+      "description": "支持通过API集成DeepSeek的AI翻译功能，利用先进的AI技术提供高质量的翻译结果。"
+    },
+    {
+      "title": "灵活的配置选项",
+      "description": "提供丰富的配置选项，包括热键设置、界面主题、翻译API设置等，满足个性化需求。"
+    },
+    {
+      "title": "便捷的操作方式",
+      "description": "支持热键操作、托盘快捷访问，让翻译过程更加便捷高效。"
+    }
+  ],
+  "use_cases": [
+    {
+      "title": "日常阅读翻译",
+      "description": "在阅读外文网页、文档时，可以快速划选文本获取翻译，提高阅读效率。"
+    },
+    {
+      "title": "图像文字识别",
+      "description": "对含有文字的图像进行OCR识别，快速提取并翻译其中的文字内容。"
+    },
+    {
+      "title": "专业文档翻译",
+      "description": "结合DeepSeek等AI翻译服务，对专业文档进行高质量翻译，保持专业术语的准确性。"
+    },
+    {
+      "title": "跨语言交流",
+      "description": "在跨语言交流时，快速翻译对话内容，支持多语种互译。"
+    },
+    {
+      "title": "学习外语",
+      "description": "作为外语学习辅助工具，提供即时翻译帮助理解外语内容。"
+    }
+  ],
+  "advantages": [
+    {
+      "title": "开源免费",
+      "description": "完全开源且免费使用，用户可以自由获取和修改源代码。"
+    },
+    {
+      "title": "即开即用",
+      "description": "无需复杂安装，下载后即可使用，符合「即用即走」的设计理念。"
+    },
+    {
+      "title": "高度可定制",
+      "description": "提供丰富的配置选项，用户可以根据自己的需求进行定制。"
+    },
+    {
+      "title": "多服务集成",
+      "description": "支持多种翻译服务的集成，在某一服务不可用时可以快速切换到其他服务。"
+    },
+    {
+      "title": "AI增强翻译",
+      "description": "通过集成DeepSeek等AI服务，提供更加智能和准确的翻译结果。"
+    },
+    {
+      "title": "Windows原生体验",
+      "description": "基于WPF开发，提供与Windows系统高度契合的用户体验。"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "如何配置DeepSeek翻译服务？",
+      "answer": "需要先获取DeepSeek的API密钥，然后在STranslate的设置中添加自定义翻译服务，填入API地址和密钥信息即可。具体可参考项目文档或DeepSeek集成指南。"
+    },
+    {
+      "question": "STranslate支持哪些操作系统？",
+      "answer": "STranslate主要支持Windows操作系统，由于使用WPF框架开发，目前不支持MacOS和Linux。"
+    },
+    {
+      "question": "如何设置快捷键？",
+      "answer": "在STranslate的设置界面中可以自定义各种功能的快捷键，包括翻译、OCR等功能。"
+    },
+    {
+      "question": "使用DeepSeek翻译需要付费吗？",
+      "answer": "STranslate本身是免费的，但使用DeepSeek翻译服务可能需要按照DeepSeek的计费标准支付API使用费用。通常DeepSeek会提供一定量的免费额度。"
+    },
+    {
+      "question": "如何解决OCR识别不准确的问题？",
+      "answer": "可以尝试调整OCR设置，选择更适合的OCR引擎，或者提高图像清晰度。STranslate支持多种OCR引擎，可以根据实际情况进行选择。"
+    },
+    {
+      "question": "如何更新STranslate？",
+      "answer": "可以通过项目的GitHub页面下载最新版本，或者使用软件内置的更新功能（如果有）。"
+    }
+  ],
+  "resources": [
+    {
+      "title": "GitHub仓库",
+      "url": "https://github.com/ZGGSONG/STranslate"
+    },
+    {
+      "title": "官方文档",
+      "url": "https://stranslate.zggsong.com/"
+    },
+    {
+      "title": "问题讨论",
+      "url": "https://github.com/ZGGSONG/STranslate/discussions"
+    },
+    {
+      "title": "DeepSeek AI官网",
+      "url": "https://deepseek.com/"
+    },
+    {
+      "title": "DeepSeek API指南",
+      "url": "https://github.com/deepseek-ai/awesome-deepseek-integration"
+    }
+  ]
+} 

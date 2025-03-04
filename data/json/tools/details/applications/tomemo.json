@@ -1,0 +1,159 @@
+{
+  "id": "tomemo",
+  "name": "ToMemo",
+  "description": "A phrasebook, clipboard history, and keyboard iOS app with integrated AI macromodeling for quick output use in the keyboard",
+  "url": "https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/docs/tomemo/README.md",
+  "official_url": "https://tomemo.top/en/",
+  "category": "applications",
+  "tags": [
+    "DeepSeek Integration",
+    "iOS",
+    "iPadOS",
+    "Keyboard",
+    "Clipboard Manager",
+    "Phrasebook",
+    "Productivity",
+    "AI Assistant"
+  ],
+  "content": {
+    "overview": "ToMemo is a versatile iOS and iPadOS application that combines the functionality of a phrasebook, clipboard history manager, and custom keyboard with integrated AI capabilities. It serves as an efficient tool for managing and retrieving frequently used content and temporary information, significantly enhancing productivity during daily tasks.\n\nWith its minimalist design and powerful features, ToMemo provides an intuitive platform for entering, managing, extracting, and sharing information across various applications. The app particularly excels in handling short-term memory tasks, allowing users to collect temporary content, copy multiple items at once, and quickly access them when needed.\n\nToMemo distinguishes itself through its DeepSeek integration, providing AI-powered assistance directly within the keyboard interface. This enables users to leverage advanced AI capabilities for text generation, editing, and optimization without switching between applications, making it an invaluable tool for professionals, writers, and anyone who frequently works with text on mobile devices.",
+    "features": [
+      {
+        "title": "Minimalist Sticky Notes",
+        "description": "ToMemo offers a clean, intuitive interface for managing frequently used content:\n- Simple content organization system for quick retrieval\n- Easy entry and extraction of information\n- Streamlined sharing capabilities\n- Minimalist design focused on functionality"
+      },
+      {
+        "title": "Short-term Memory Management",
+        "description": "The app excels at handling temporary content that needs to be quickly accessible:\n- Clipboard history tracking for easy access to recently copied items\n- Multiple content selection for batch operations\n- Filtering rules to keep only relevant content in memory\n- Preprocessing actions to automate text formatting tasks\n- Quick entry through shortcuts integration"
+      },
+      {
+        "title": "Custom Keyboard Integration",
+        "description": "ToMemo's keyboard extension brings powerful functionality directly to any app:\n- Access to frequently used phrases without switching apps\n- Direct access to clipboard history\n- Customizable keyboard skins for personalized experience\n- Optimized keyboard layout for efficiency"
+      },
+      {
+        "title": "AI Assistant with DeepSeek Integration",
+        "description": "Leveraging DeepSeek's powerful AI capabilities directly within the keyboard:\n- AI-powered text generation and suggestions\n- Simple configuration for DeepSeek API access\n- Model selection based on specific needs\n- Immediate AI assistance without leaving the current application"
+      },
+      {
+        "title": "Advanced Productivity Features",
+        "description": "Additional tools to enhance daily workflow efficiency:\n- Dynamic variables support for automated content filling\n- iCloud synchronization across multiple devices\n- Widget support for quick access to specific memos\n- Multiple selection features for bulk operations\n- Text preprocessing options including case conversion and formatting"
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Professional Communication",
+        "description": "For business professionals who frequently use standard responses or templates in emails and messages, ToMemo provides quick access to pre-written content. With DeepSeek AI integration, users can also generate contextually appropriate responses on the fly, maintaining professional communication standards while saving significant time."
+      },
+      {
+        "title": "Content Creation and Writing",
+        "description": "Writers, journalists, and content creators can use ToMemo to store frequently used phrases, manage snippets of text, and organize ideas. The DeepSeek AI integration helps with generating creative content, refining existing text, and overcoming writer's block, all without leaving the document or writing app."
+      },
+      {
+        "title": "Programming and Development",
+        "description": "Developers working on iOS can store code snippets, command sequences, and documentation references in ToMemo for quick access. The clipboard history feature is particularly useful for managing multiple pieces of code that need to be implemented across different files or applications."
+      },
+      {
+        "title": "Research and Data Collection",
+        "description": "Researchers can use ToMemo to collect and organize information from various sources. The short-term memory feature helps in temporarily storing important facts, quotes, or data points while conducting research across multiple applications or websites on iOS devices."
+      },
+      {
+        "title": "Multilingual Communication",
+        "description": "For users who communicate in multiple languages, ToMemo can store common phrases in different languages, and with DeepSeek AI integration, it can assist with translations and language-specific content generation directly within any messaging or email application."
+      }
+    ],
+    "advantages": [
+      {
+        "title": "Seamless Workflow Integration",
+        "description": "ToMemo's keyboard extension eliminates the need to switch between apps, providing immediate access to all functionality within any application that accepts text input."
+      },
+      {
+        "title": "AI-Powered Text Enhancement",
+        "description": "With DeepSeek integration, users can leverage advanced AI capabilities for generating, editing, and optimizing text directly within the keyboard interface."
+      },
+      {
+        "title": "Efficient Content Management",
+        "description": "The combination of phrasebook and clipboard history features provides a comprehensive system for managing both permanent and temporary textual content."
+      },
+      {
+        "title": "Cross-Device Synchronization",
+        "description": "iCloud sync ensures that all content is available across multiple iOS and iPadOS devices, maintaining productivity regardless of which device is being used."
+      },
+      {
+        "title": "Enhanced Text Processing",
+        "description": "Advanced preprocessing options automate common text formatting tasks, such as adding spaces between mixed language text, removing extra spaces, and converting text case."
+      },
+      {
+        "title": "Widget Support",
+        "description": "Home screen widgets provide immediate access to specific memos, further reducing the time needed to retrieve frequently used content."
+      },
+      {
+        "title": "Dynamic Content Variables",
+        "description": "Support for dynamic variables enables automatic content filling with dates, clipboard contents, and precise cursor positioning for enhanced productivity."
+      },
+      {
+        "title": "Flexible Content Filtering",
+        "description": "Customizable filtering rules help manage clipboard content, ensuring only relevant information is stored in short-term memory."
+      },
+      {
+        "title": "Visual Customization",
+        "description": "Keyboard skin options allow users to personalize their experience, making daily interactions more engaging and comfortable."
+      },
+      {
+        "title": "Time-Saving Shortcuts Integration",
+        "description": "Integration with the iOS Shortcuts app enables automated content capture and manipulation, significantly reducing manual effort for repetitive tasks."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do I integrate DeepSeek AI with ToMemo?",
+        "answer": "To integrate DeepSeek AI, go to 'Settings-Extensions-AI Services-AI Providers', click 'Add' in the top right corner, and select 'DeepSeek' in the Provider field. Enter your API Key, click 'Test' to verify, then 'Load Models' to select your preferred model. Enable the service and save your settings."
+      },
+      {
+        "question": "Can I use ToMemo on multiple devices?",
+        "answer": "Yes, ToMemo supports iCloud synchronization, allowing you to access your content across all your iOS and iPadOS devices. Simply ensure you're signed in with the same Apple ID on all devices and have iCloud enabled in the app's settings."
+      },
+      {
+        "question": "How does the short-term memory feature work?",
+        "answer": "Short-term memory in ToMemo automatically captures clipboard content as you copy text. You can configure filtering rules to manage which content is stored, apply preprocessing actions for automatic formatting, and quickly access this temporary content through the app or keyboard extension."
+      },
+      {
+        "question": "Is ToMemo's keyboard extension available in all apps?",
+        "answer": "Yes, ToMemo's keyboard extension can be used in any iOS or iPadOS app that accepts text input. You can switch to the ToMemo keyboard just like any other third-party keyboard by tapping the globe icon on the standard iOS keyboard."
+      },
+      {
+        "question": "What are dynamic variables in ToMemo?",
+        "answer": "Dynamic variables are special placeholders that automatically generate content when a memo is used. They can insert the current date/time, clipboard contents, or position the cursor at a specific point in the text, making templates more flexible and reducing manual editing."
+      },
+      {
+        "question": "How can I customize filtering rules for short-term memory?",
+        "answer": "In the Settings section under Short-term Memory, you can add specific filtering rules using regular expressions or exact text matches. This allows you to automatically exclude certain types of content from being stored in your short-term memory, helping keep it organized and relevant."
+      },
+      {
+        "question": "Can I use ToMemo without the DeepSeek AI integration?",
+        "answer": "Absolutely. While the DeepSeek AI integration adds powerful capabilities, ToMemo functions fully as a phrasebook, clipboard manager, and keyboard extension without AI features. You can choose to enable or disable the AI integration based on your preferences and needs."
+      }
+    ],
+    "resources": [
+      {
+        "title": "Official Website",
+        "url": "https://tomemo.top/en/"
+      },
+      {
+        "title": "DeepSeek Integration Documentation",
+        "url": "https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/docs/tomemo/README.md"
+      },
+      {
+        "title": "App Store",
+        "url": "https://apps.apple.com/app/tomemo/id1622345353"
+      },
+      {
+        "title": "User Guide",
+        "url": "https://tomemo.top/en/guide.html"
+      },
+      {
+        "title": "Keyboard Guide",
+        "url": "https://tomemo.top/en/keyboard.html"
+      }
+    ]
+  }
+} 

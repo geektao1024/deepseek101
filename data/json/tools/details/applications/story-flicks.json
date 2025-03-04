@@ -1,0 +1,159 @@
+{
+  "id": "story-flicks",
+  "name": "Story-Flicks",
+  "description": "Generate high-definition story short videos with just one sentence, supporting models such as DeepSeek",
+  "url": "https://github.com/alecm20/story-flicks",
+  "official_url": "https://story-flicks.com/",
+  "category": "applications",
+  "tags": [
+    "AI",
+    "video",
+    "generation",
+    "storytelling",
+    "DeepSeek Integration",
+    "open-source",
+    "Python",
+    "React"
+  ],
+  "content": {
+    "overview": "Story-Flicks is an innovative open-source application that transforms simple text prompts into complete story-based short videos using advanced AI technology. With just a single sentence describing a story theme, the platform leverages large language models, including DeepSeek, to generate comprehensive story content, which is then paired with AI-generated images, audio narration, and synchronized subtitles to create engaging video narratives.\n\nBuilt with a Python and FastAPI backend, complemented by a React and Ant Design frontend, Story-Flicks offers a user-friendly interface that simplifies the otherwise complex process of video creation. The application supports multiple AI model providers for both text and image generation, giving users flexibility in choosing models that best suit their needs or preferences.\n\nWhether for educational content, creative storytelling, or digital marketing, Story-Flicks opens up new possibilities for quick video production without requiring specialized skills or equipment. Its segment-based approach to story creation allows for structured narratives with corresponding visuals, resulting in coherent and engaging short-form video content that can be generated with minimal input and technical knowledge.",
+    "features": [
+      {
+        "title": "AI-Powered Story Generation",
+        "description": "Story-Flicks uses advanced language models to create complete narratives from simple prompts:\n- Support for multiple AI providers including DeepSeek, OpenAI, Aliyun, Ollama, and SiliconFlow\n- Automatic creation of structured, coherent storytelling\n- Customizable number of story segments for controlling video length and complexity\n- Genre and theme-specific content generation\n- Appropriate content tailored for different audiences and contexts"
+      },
+      {
+        "title": "Automated Visual Generation",
+        "description": "The platform creates custom visuals to match each segment of the generated story:\n- Integration with multiple image generation models\n- One unique image generated per story segment\n- Visual style consistency throughout the video\n- High-definition image output\n- Contextually relevant imagery that matches narrative content\n- Support for various image generation providers including OpenAI, Aliyun, and SiliconFlow"
+      },
+      {
+        "title": "Complete Video Production Pipeline",
+        "description": "Story-Flicks handles the entire video creation process from start to finish:\n- Automatic audio narration generation with multiple voice options\n- Synchronized subtitle creation and overlay\n- Seamless integration of text, images, audio, and subtitles\n- Final video rendering in standard formats\n- Language selection for both story content and narration\n- Background music integration for enhanced storytelling"
+      },
+      {
+        "title": "User-Friendly Interface",
+        "description": "The application offers an intuitive experience for users of all technical levels:\n- Simple form-based input for story generation parameters\n- Real-time progress tracking during video creation\n- Preview capabilities for generated content\n- Easy configuration of model providers and specific models\n- Straightforward selection of language and voice options\n- Direct access to the generated video for playback and download"
+      },
+      {
+        "title": "Flexible Deployment Options",
+        "description": "Story-Flicks can be deployed in various environments to suit different needs:\n- Docker containerization for easy setup and deployment\n- Manual installation option for customized configurations\n- Self-hosting capabilities for privacy and control\n- Comprehensive documentation for setup and usage\n- Cross-platform compatibility\n- Environment variable configuration for API keys and model settings"
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Educational Content Creation",
+        "description": "Teachers and educational content creators can use Story-Flicks to quickly produce engaging storytelling videos for various learning objectives. By inputting simple prompts related to historical events, scientific concepts, or moral lessons, educators can generate age-appropriate videos that capture students' attention while conveying important information in an accessible and memorable format."
+      },
+      {
+        "title": "Children's Entertainment",
+        "description": "Parents, children's content creators, and educational platforms can utilize Story-Flicks to generate appropriate, engaging stories for young audiences. The ability to create custom fairy tales, fables, and adventure stories with corresponding visuals provides a safe, controlled way to produce children's entertainment content that can be tailored to specific themes, values, or learning objectives."
+      },
+      {
+        "title": "Marketing and Brand Storytelling",
+        "description": "Marketing professionals can leverage Story-Flicks to create brand narratives and promotional content quickly and cost-effectively. By generating short video stories around product concepts, brand values, or customer scenarios, businesses can produce engaging social media content, product demonstrations, or explainer videos without the typical resources required for video production."
+      },
+      {
+        "title": "Content Creation for Social Media",
+        "description": "Social media influencers and content creators can use Story-Flicks to rapidly produce engaging short-form video content for platforms like TikTok, Instagram Reels, and YouTube Shorts. The automated generation process allows creators to maintain consistent posting schedules while experimenting with different story concepts and formats to engage their audience."
+      },
+      {
+        "title": "Creative Writing and Visualization",
+        "description": "Writers, storytellers, and creative professionals can use Story-Flicks as a brainstorming and visualization tool. By inputting story concepts or plot ideas, they can quickly see how these narratives might unfold visually, helping to inspire further creative development, assess narrative flow, or create proof-of-concept videos for larger projects."
+      }
+    ],
+    "advantages": [
+      {
+        "title": "Time and Resource Efficiency",
+        "description": "Story-Flicks dramatically reduces the time and resources typically required for video creation, enabling users to produce complete story videos in minutes instead of hours or days of traditional production."
+      },
+      {
+        "title": "Accessibility for Non-Technical Users",
+        "description": "The platform's intuitive interface and automatic process make video creation accessible to users without specialized skills in writing, design, video editing, or animation, democratizing content creation."
+      },
+      {
+        "title": "Model Provider Flexibility",
+        "description": "Support for multiple AI providers gives users the freedom to choose which models they prefer or have access to, whether it's DeepSeek, OpenAI, Aliyun, or other supported services."
+      },
+      {
+        "title": "Customizable Output",
+        "description": "Users can control key aspects of the video production including story length, language, voice, and the number of segments, allowing for customization while maintaining the simplicity of the process."
+      },
+      {
+        "title": "Open-Source Architecture",
+        "description": "As an open-source project, Story-Flicks offers transparency, community support, and the ability for technical users to customize or extend the application to meet specific needs."
+      },
+      {
+        "title": "Complete End-to-End Solution",
+        "description": "Story-Flicks handles the entire video creation pipeline from story generation to final rendering, eliminating the need to use multiple tools or services for different aspects of production."
+      },
+      {
+        "title": "Self-Hosted Privacy Option",
+        "description": "The ability to self-host the application provides users with privacy and control over their data and content, an important consideration when working with AI-generated materials."
+      },
+      {
+        "title": "Cost-Effective Content Production",
+        "description": "By automating the creative and production processes, Story-Flicks significantly reduces the cost barriers to video content creation, making it accessible to individuals and organizations with limited budgets."
+      },
+      {
+        "title": "Rapid Iteration and Experimentation",
+        "description": "The speed of content generation enables quick experimentation with different story concepts, allowing users to test multiple ideas and approaches before committing to a final version."
+      },
+      {
+        "title": "Cross-Platform Compatibility",
+        "description": "The application's output is compatible with all major video platforms and social media channels, ensuring that created content can be easily shared and distributed across different mediums."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What AI models does Story-Flicks support?",
+        "answer": "Story-Flicks supports multiple AI providers for both text and image generation. For text generation, it supports OpenAI (like GPT-4o), DeepSeek, Aliyun (Qwen models), Ollama (recommended with larger models like qwen2.5:14b), and SiliconFlow. For image generation, it supports OpenAI (like DALL-E 3), Aliyun (such as flux-dev), and SiliconFlow models."
+      },
+      {
+        "question": "How do I integrate DeepSeek models with Story-Flicks?",
+        "answer": "To use DeepSeek models with Story-Flicks, you need to set 'text_provider' to 'deepseek' in your environment configuration, provide your DeepSeek API key, and set the appropriate base URL for the DeepSeek API. Currently, DeepSeek is supported for text generation. Detailed configuration instructions are available in the project documentation."
+      },
+      {
+        "question": "How long does it take to generate a video?",
+        "answer": "The generation time depends on several factors including the number of story segments (each requiring an image), the models being used, and your system resources. Generally, a story with 5-10 segments might take a few minutes to complete. More segments will increase the generation time proportionally."
+      },
+      {
+        "question": "Can I control the content and style of the generated stories?",
+        "answer": "Yes, you can influence the content and style by specifying the story theme and adjusting the number of segments. The application allows you to select the text and image generation models, which can also affect the style and quality of the output. More detailed control would require modifications to the prompts used in the backend code."
+      },
+      {
+        "question": "What are the system requirements for running Story-Flicks?",
+        "answer": "Story-Flicks is primarily a web application that relies on external API services for AI capabilities. For deployment, you need Python 3.10+ for the backend and Node.js for the frontend. The application can be run on most modern operating systems. For Docker deployment, you need Docker and Docker Compose installed. The actual processing is done via API calls, so the local system requirements are modest."
+      },
+      {
+        "question": "Does Story-Flicks work offline or require internet connectivity?",
+        "answer": "Story-Flicks requires internet connectivity to function properly as it relies on API calls to various AI service providers for text and image generation. The exception is if you're using Ollama locally for text generation, but even then, image generation and other components typically require external API access."
+      },
+      {
+        "question": "What file format and resolution are the output videos?",
+        "answer": "The videos are generally output in MP4 format with standard HD resolution. The exact specifications may vary depending on the configuration and the image generation models used. The application uses MoviePy for video generation, which supports various output formats and quality settings."
+      }
+    ],
+    "resources": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/alecm20/story-flicks"
+      },
+      {
+        "title": "Installation Documentation",
+        "url": "https://github.com/alecm20/story-flicks#1-download-the-project"
+      },
+      {
+        "title": "Configuration Guide",
+        "url": "https://github.com/alecm20/story-flicks#2-set-model-information"
+      },
+      {
+        "title": "Docker Deployment Instructions",
+        "url": "https://github.com/alecm20/story-flicks#32-start-via-docker"
+      },
+      {
+        "title": "Usage Guide",
+        "url": "https://github.com/alecm20/story-flicks#4-get-started"
+      }
+    ]
+  }
+} 

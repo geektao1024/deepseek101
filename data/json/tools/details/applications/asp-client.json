@@ -1,0 +1,152 @@
+{
+  "id": "asp-client",
+  "name": "ASP Client",
+  "description": "一个轻量级的ASP.NET包装器，专为DeepSeek AI API设计，旨在简化.NET应用程序中的AI驱动文本处理。",
+  "urls": {
+    "main": "https://github.com/Anwar-alhitar/Deepseek.Asp.Client",
+    "documentation": "https://github.com/Anwar-alhitar/Deepseek.Asp.Client/blob/master/README.md",
+    "source": "https://github.com/Anwar-alhitar/Deepseek.Asp.Client"
+  },
+  "pricing": {
+    "isFree": true,
+    "description": "完全开源免费，使用MIT许可证发布。使用DeepSeek API可能需要支付API使用费用。"
+  },
+  "category": "applications",
+  "tags": [
+    "dotnet",
+    "asp.net",
+    "api",
+    "wrapper",
+    "sdk",
+    "development",
+    "deepseek",
+    "ai",
+    "integration"
+  ],
+  "overview": {
+    "headline": "简化.NET开发者集成DeepSeek AI的首选工具",
+    "description": "ASP Client是一个专为ASP.NET开发者设计的DeepSeek AI API包装器，它提供了简洁流畅的API接口，支持依赖注入，内置错误处理，使用HttpClient最佳实践，并且支持异步和线程安全操作。通过这个工具，.NET开发者可以轻松地将DeepSeek的AI能力集成到他们的应用程序中，无需关心底层API调用的复杂性。"
+  },
+  "features": [
+    {
+      "title": "简洁流畅的API",
+      "description": "提供易于使用的API接口，最小化集成DeepSeek AI所需的代码量，使开发过程更加高效。"
+    },
+    {
+      "title": "支持依赖注入",
+      "description": "完全兼容ASP.NET Core的依赖注入系统，便于在现代.NET应用程序架构中使用。"
+    },
+    {
+      "title": "内置错误处理",
+      "description": "所有API错误都被封装在DeepseekException中，提供统一的错误处理方式，简化异常管理。"
+    },
+    {
+      "title": "HttpClient最佳实践",
+      "description": "采用推荐的HttpClient使用模式，确保高性能和资源有效利用。"
+    },
+    {
+      "title": "异步和线程安全",
+      "description": "支持异步操作和线程安全调用，适合现代多线程应用程序环境。"
+    },
+    {
+      "title": "简化的DeepSeek API调用",
+      "description": "轻松访问DeepSeek的各种AI功能，包括文本生成、问答等，无需处理复杂的HTTP请求逻辑。"
+    }
+  ],
+  "use_cases": [
+    {
+      "title": "智能客服应用",
+      "description": "在ASP.NET Web应用中集成聊天机器人功能，利用DeepSeek AI提供自然语言理解和响应能力。"
+    },
+    {
+      "title": "内容生成工具",
+      "description": "开发能够自动生成高质量文本内容的.NET应用，如文章、描述或代码片段。"
+    },
+    {
+      "title": "数据分析辅助系统",
+      "description": "利用DeepSeek的AI能力进行数据解释、摘要生成和见解提取，增强现有.NET数据分析应用。"
+    },
+    {
+      "title": "企业知识库集成",
+      "description": "将DeepSeek AI与企业内部知识库系统集成，提供智能搜索和问答功能。"
+    },
+    {
+      "title": "教育和学习应用",
+      "description": "开发具有智能辅导、问题解答和内容解释能力的教育软件。"
+    }
+  ],
+  "advantages": [
+    {
+      "title": "降低开发复杂度",
+      "description": "大幅简化与DeepSeek API交互所需的代码，让开发者专注于业务逻辑而非API集成细节。"
+    },
+    {
+      "title": "与.NET生态系统完美集成",
+      "description": "设计符合.NET最佳实践，无缝融入现有的.NET项目结构和开发工作流。"
+    },
+    {
+      "title": "减少错误和异常情况",
+      "description": "通过内置的错误处理机制，减少API调用可能引起的未处理异常。"
+    },
+    {
+      "title": "提高开发效率",
+      "description": "提供简单直观的API，减少与DeepSeek服务集成所需的开发时间。"
+    },
+    {
+      "title": "适应现代应用程序架构",
+      "description": "支持异步编程模型和依赖注入，适合现代Web应用程序和微服务架构。"
+    },
+    {
+      "title": "开源社区支持",
+      "description": "作为开源项目，持续改进并受益于社区贡献。"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "如何安装ASP Client？",
+      "answer": "可以通过NuGet包管理器安装，只需运行命令 `dotnet add package Deepseek.ASPClient`。"
+    },
+    {
+      "question": "ASP Client支持哪些.NET版本？",
+      "answer": "ASP Client支持.NET Standard 2.0及以上版本，兼容.NET Core和.NET 5+项目。"
+    },
+    {
+      "question": "如何在ASP.NET Core应用中集成ASP Client？",
+      "answer": "在Startup.cs或Program.cs中使用依赖注入：`services.AddSingleton<IDeepseekClient>(provider => new DeepseekClient(Configuration[\"Deepseek:ApiKey\"]));`，然后在控制器中通过构造函数注入使用。"
+    },
+    {
+      "question": "ASP Client是否支持DeepSeek的所有API功能？",
+      "answer": "ASP Client设计为覆盖DeepSeek的核心API功能，如文本生成。随着DeepSeek API的更新，ASP Client也会不断更新以支持新功能。"
+    },
+    {
+      "question": "使用ASP Client需要DeepSeek API密钥吗？",
+      "answer": "是的，您需要从DeepSeek平台获取API密钥，并在初始化DeepseekClient时提供。"
+    },
+    {
+      "question": "如何处理API调用中的错误？",
+      "answer": "所有API错误都会封装在DeepseekException中，您可以使用try-catch块捕获并处理这些异常。例如：`try { var response = await client.GenerateResponseAsync(prompt); } catch (DeepseekException ex) { Console.WriteLine($\"Error: {ex.Message}\"); }`"
+    }
+  ],
+  "resources": [
+    {
+      "title": "GitHub仓库",
+      "url": "https://github.com/Anwar-alhitar/Deepseek.Asp.Client"
+    },
+    {
+      "title": "NuGet包",
+      "url": "https://www.nuget.org/packages/Deepseek.ASPClient"
+    },
+    {
+      "title": "DeepSeek API文档",
+      "url": "https://api-docs.deepseek.com/"
+    },
+    {
+      "title": "使用示例",
+      "url": "https://github.com/Anwar-alhitar/Deepseek.Asp.Client#usage-example"
+    },
+    {
+      "title": "问题报告",
+      "url": "https://github.com/Anwar-alhitar/Deepseek.Asp.Client/issues"
+    }
+  ]
+} 

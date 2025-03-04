@@ -1,9 +1,6 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
 import { Layout } from '@/components/Layout'
 import { Metadata } from 'next'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
@@ -91,7 +88,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="alternate" href="https://lemobook.vercel.app/en-US" hrefLang="en-US" />
         <link rel="alternate" href="https://lemobook.vercel.app/zh-CN" hrefLang="zh-CN" />
       </head>
-      <body className={inter.className}>
+      <body>
         <Layout>{children}</Layout>
       </body>
     </html>

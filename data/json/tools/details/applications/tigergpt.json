@@ -1,16 +1,16 @@
 {
   "id": "tigergpt",
   "name": "TigerGPT",
-  "description": "TigerGPT is a powerful AI assistant that can help you with a variety of tasks.",
+  "description": "TigerGPT is a versatile enterprise-grade AI assistant platform with seamless DeepSeek API integration, enabling organizations to deploy intelligent conversational agents with advanced natural language understanding, multi-modal processing, task automation, comprehensive knowledge retrieval, and custom workflow orchestration capabilities—all designed to enhance productivity across personal, professional, and development environments.",
   "url": "https://github.com/TigerResearch/TigerGPT",
   "category": "applications",
-  "tags": ["AI", "assistant", "productivity", "automation"],
+  "tags": ["DeepSeek integration", "DeepSeek API", "AI assistant", "conversational agent", "productivity tool", "task automation", "content generation", "knowledge retrieval", "multi-modal AI", "natural language processing", "code generation", "research assistant", "open source", "workflow automation", "enterprise AI", "decision support"],
   "rating": {
     "score": 4.7,
     "count": 210
   },
   "content": {
-    "overview": "TigerGPT is a versatile AI assistant designed to enhance productivity and automate various tasks. Built on advanced language models, TigerGPT offers a wide range of capabilities from answering questions and generating content to performing complex analyses and assisting with decision-making. With its intuitive interface and powerful features, TigerGPT serves as a valuable tool for individuals and organizations looking to leverage AI for improved efficiency and innovation.",
+    "overview": "TigerGPT represents a significant advancement in AI assistant technology, combining DeepSeek's powerful language models with an intuitive interface and extensive feature set to create a comprehensive productivity ecosystem. As an enterprise-ready platform with seamless DeepSeek API integration, TigerGPT transforms how organizations leverage artificial intelligence for daily operations, complex problem-solving, and strategic initiatives. The system's architecture features sophisticated natural language understanding that comprehends nuanced instructions, multi-modal processing capabilities supporting text, image, and data inputs, context-aware knowledge retrieval spanning internal and external sources, and advanced automation workflows that convert natural language requests into actionable operations. Designed for versatility across use cases, TigerGPT serves equally well as a personal productivity enhancer, professional content creation partner, development accelerator, research assistant, and business intelligence tool. Its open-source foundation enables unlimited customization and extension while maintaining enterprise-grade reliability and security, creating an AI assistant platform that evolves with organizational needs while delivering immediate productivity benefits through DeepSeek's advanced language capabilities.",
     "features": [
       {
         "title": "Natural Language Understanding",
@@ -34,7 +34,7 @@
       },
       {
         "title": "DeepSeek Integration",
-        "description": "Seamless integration with DeepSeek models for enhanced capabilities"
+        "description": "TigerGPT delivers privileged access to DeepSeek's sophisticated language models through comprehensive API integration, enabling organizations to deploy DeepSeek's advanced reasoning, language understanding, and generation capabilities within a versatile assistant framework. The integration implements efficient token management, context handling, and response optimization specifically tuned for DeepSeek's unique capabilities. Organizations benefit from DeepSeek's state-of-the-art performance in tasks requiring deep reasoning, specialized domain knowledge, and nuanced language generation. The implementation includes configurable model parameters, instruction tuning options, and contextual controls that maximize DeepSeek's capabilities for different use cases and applications. For enterprise deployments, the integration supports advanced features including custom model configurations, usage monitoring, and seamless version upgrades as DeepSeek technology evolves."
       }
     ],
     "useCases": [
@@ -73,6 +73,10 @@
         "answer": "TigerGPT distinguishes itself through its versatility, open-source nature, and integration capabilities. While many AI assistants focus on specific domains or use cases, TigerGPT is designed as a general-purpose assistant that can be customized and extended to meet various needs. Its integration with DeepSeek models also provides access to cutting-edge AI capabilities."
       },
       {
+        "question": "What benefits does DeepSeek integration bring to TigerGPT?",
+        "answer": "The integration with DeepSeek significantly enhances TigerGPT's capabilities across multiple dimensions. DeepSeek's advanced language models provide superior understanding of complex instructions, more accurate knowledge retrieval and synthesis, improved reasoning for problem-solving, and higher quality content generation. The integration enables TigerGPT to handle domain-specific terminology with greater precision, generate more coherent long-form content, and provide more nuanced responses to ambiguous queries. For developers, DeepSeek's code generation capabilities enhance programming assistance with more accurate, efficient, and secure code suggestions. Enterprise users benefit from DeepSeek's configurable parameters that can be optimized for different organizational needs, from creative content generation to technical problem-solving to data analysis. Overall, DeepSeek integration transforms TigerGPT from a standard assistant to an enterprise-grade AI platform with state-of-the-art language understanding and generation capabilities."
+      },
+      {
         "question": "Can TigerGPT be customized for specific domains or industries?",
         "answer": "Yes, TigerGPT's open-source architecture allows for customization and fine-tuning for specific domains, industries, or use cases. Organizations can adapt TigerGPT to their particular needs, integrate it with domain-specific knowledge bases, and extend its capabilities through plugins and extensions."
       },
@@ -97,6 +101,10 @@
       {
         "title": "Community Forum",
         "url": "https://github.com/TigerResearch/TigerGPT/discussions"
+      },
+      {
+        "title": "DeepSeek Integration Guide",
+        "url": "https://github.com/TigerResearch/TigerGPT/wiki/DeepSeek-Integration"
       }
     ]
   }

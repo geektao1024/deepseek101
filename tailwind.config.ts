@@ -18,6 +18,12 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Helvetica', 'Arial', 'sans-serif'],
+        display: ['Helvetica', 'Arial', 'sans-serif'],
+        mono: ['Helvetica', 'monospace'],
+        bangla: ['Helvetica', 'Arial', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

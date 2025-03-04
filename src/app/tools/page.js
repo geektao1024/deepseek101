@@ -40,7 +40,7 @@ export default function Tools() {
   });
 
   return (
-    <div className="container mx-auto py-12">
+    <div className="container mx-auto py-12 px-4">
       <h1 className="text-3xl font-bold mb-6 text-center">DeepSeek Tools</h1>
       <ToolList categories={categories} tools={allTools} showMoreLink={false} />
     </div>

@@ -143,25 +143,27 @@ export default function ArticleList({
               <CardHeader>
                 <div className="space-y-2">
                   <Link href={`/posts/${id}`} className="group">
-                    <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">
+                    <CardTitle className="text-[20px] group-hover:text-blue-600 transition-colors">
                       {title}
                     </CardTitle>
                   </Link>
-                  <CardDescription className="line-clamp-4">
-                    {description}
-                  </CardDescription>
+                  
                   {tags.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mt-2">
+                    <div className="flex flex-wrap gap-2">
                       {tags.map(tag => (
                         <span 
                           key={tag}
-                          className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800"
+                          className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[14px] font-medium bg-blue-100 text-blue-800 h-[24px]"
                         >
                           {tag}
                         </span>
                       ))}
                     </div>
                   )}
+                  
+                  <CardDescription className="text-[14px] line-clamp-4">
+                    {description}
+                  </CardDescription>
                 </div>
               </CardHeader>
             </Card>
@@ -178,10 +180,10 @@ export default function ArticleList({
                     href={`/posts/${id}`}
                     className="text-blue-600 hover:text-blue-800 transition-colors inline-flex items-center gap-1"
                   >
-                    <CardTitle>{title}</CardTitle>
+                    <CardTitle className="text-[20px]">{title}</CardTitle>
                     →
                   </Link>
-                  <CardDescription>{description}</CardDescription>
+                  
                   {tags.length > 0 && (
                     <div className="flex flex-wrap gap-2">
                       {tags.map(tag => (
@@ -194,6 +196,8 @@ export default function ArticleList({
                       ))}
                     </div>
                   )}
+                  
+                  <CardDescription className="text-[14px]">{description}</CardDescription>
                 </div>
               </CardHeader>
             </Card>

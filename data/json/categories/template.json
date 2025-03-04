@@ -10,13 +10,11 @@
       "name": "Tool Name",
       "description": "Tool description",
       "url": "https://tool-url.com",
+      "official_url": "https://tool-official-url.com",
       "tags": ["tag1", "tag2", "tag3"],
       "isFree": true,
       "isOpenSource": true,
-      "rating": {
-        "score": 4.5,
-        "count": 100
-      }
+      "details_file": "../tools/details/applications/hix-ai.json"
     }
   ]
 } 

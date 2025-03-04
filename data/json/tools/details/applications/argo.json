@@ -1,0 +1,20 @@
+{
+  "id": "argo",
+  "name": "argo",
+  "description": "Locally download and run Ollama and Huggingface models with RAG on Mac/Windows/Linux. Support LLM API too.",
+  "url": "https://www.xark-argo.com",
+  "official_url": "https://www.xark-argo.com",
+  "category": "applications",
+  "tags": [
+    "AI",
+    "Ollama",
+    "Huggingface",
+    "RAG",
+    "multi-platform",
+    "deepseek",
+    "integration"
+  ],
+  "content": {
+    "overview": "Argo is a powerful cross-platform application that allows users to download and run various AI language models locally, with DeepSeek API integration."
+  }
+}

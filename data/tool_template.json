@@ -1,0 +1,78 @@
+{
+  "id": "tool_id",
+  "name": "Tool Name",
+  "description": "Brief description of the tool's main functionality and value, summarizing its core features, applicable scenarios, and key advantages.",
+  "url": "https://example.com/tool",
+  "category": "Tool Category",
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+  "content": {
+    "overview": "This is a comprehensive overview of the tool, which should include a general description of its core functionality, main advantages, and applicable scenarios. This is typically a longer paragraph that thoroughly introduces the value and positioning of the tool. The overview should cover the tool's main features, technical characteristics, core problems it solves, and its differentiated advantages compared to competitors. This content needs to be both highly summarized yet provide sufficient detail for readers to quickly understand the tool's value proposition and application areas.",
+    "features": [
+      {
+        "title": "Feature One Title",
+        "description": "Detailed description of feature one, explaining how this feature works, its technical characteristics, and value to users. This section should explain in detail the feature's implementation method, applicable scenarios, operation process, and specific benefits to users. The description should include both technical explanations and practical application examples to help readers fully understand the importance and usage of this feature."
+      },
+      {
+        "title": "Feature Two Title",
+        "description": "Detailed description of feature two, explaining how this feature works, its technical characteristics, and value to users. This section should explain in detail the feature's implementation method, applicable scenarios, operation process, and specific benefits to users. The description should include both technical explanations and practical application examples to help readers fully understand the importance and usage of this feature."
+      },
+      {
+        "title": "Feature Three Title",
+        "description": "Detailed description of feature three, explaining how this feature works, its technical characteristics, and value to users. This section should explain in detail the feature's implementation method, applicable scenarios, operation process, and specific benefits to users. The description should include both technical explanations and practical application examples to help readers fully understand the importance and usage of this feature."
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Use Case One Title",
+        "description": "Detailed description of this scenario, explaining how the tool functions in this specific context and what value users can gain. The description should include the scenario background, user needs, application method of the tool, and final effects, helping readers understand the tool's practical value in real work or life situations. It's appropriate to add actual cases or user feedback to enhance persuasiveness and authenticity."
+      },
+      {
+        "title": "Use Case Two Title",
+        "description": "Detailed description of this scenario, explaining how the tool functions in this specific context and what value users can gain. The description should include the scenario background, user needs, application method of the tool, and final effects, helping readers understand the tool's practical value in real work or life situations. It's appropriate to add actual cases or user feedback to enhance persuasiveness and authenticity."
+      },
+      {
+        "title": "Use Case Three Title",
+        "description": "Detailed description of this scenario, explaining how the tool functions in this specific context and what value users can gain. The description should include the scenario background, user needs, application method of the tool, and final effects, helping readers understand the tool's practical value in real work or life situations. It's appropriate to add actual cases or user feedback to enhance persuasiveness and authenticity."
+      }
+    ],
+    "advantages": [
+      "Advantage One: Detailed description of the tool's first main advantage",
+      "Advantage Two: Detailed description of the tool's second main advantage",
+      "Advantage Three: Detailed description of the tool's third main advantage",
+      "Advantage Four: Detailed description of the tool's fourth main advantage",
+      "Advantage Five: Detailed description of the tool's fifth main advantage"
+    ],
+    "faqs": [
+      {
+        "question": "Question one about the tool?",
+        "answer": "Detailed answer to question one, which should comprehensively and clearly address the user's query. It can include operational guidance, technical explanations, or usage suggestions. The answer should be as specific as possible, avoiding vague or general statements. If it involves complex operations, step-by-step instructions can be provided to ensure users can easily understand and execute them."
+      },
+      {
+        "question": "Question two about the tool?",
+        "answer": "Detailed answer to question two, which should comprehensively and clearly address the user's query. It can include operational guidance, technical explanations, or usage suggestions. The answer should be as specific as possible, avoiding vague or general statements. If it involves complex operations, step-by-step instructions can be provided to ensure users can easily understand and execute them."
+      },
+      {
+        "question": "Question three about the tool?",
+        "answer": "Detailed answer to question three, which should comprehensively and clearly address the user's query. It can include operational guidance, technical explanations, or usage suggestions. The answer should be as specific as possible, avoiding vague or general statements. If it involves complex operations, step-by-step instructions can be provided to ensure users can easily understand and execute them."
+      }
+    ],
+    "resources": [
+      {
+        "title": "Official Website",
+        "url": "https://example.com/"
+      },
+      {
+        "title": "Tutorials Center",
+        "url": "https://example.com/tutorials"
+      },
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/example/tool"
+      },
+      {
+        "title": "Community Forum",
+        "url": "https://community.example.com"
+      }
+    ]
+  }
+} 

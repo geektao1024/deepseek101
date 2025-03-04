@@ -1,0 +1,150 @@
+{
+  "id": "16x-prompt",
+  "name": "16x Prompt",
+  "description": "An AI coding tool with context management. It helps developers manage source code context and craft prompts for complex coding tasks on existing codebases.",
+  "url": "https://prompt.16x.engineer/",
+  "official_url": "https://prompt.16x.engineer/",
+  "category": "applications",
+  "tags": [
+    "AI",
+    "coding",
+    "context management",
+    "prompts",
+    "development",
+    "deepseek",
+    "integration"
+  ],
+  "content": {
+    "overview": "16x Prompt是一个专为开发人员设计的强大AI编码工具，专注于高效的代码上下文管理。在处理复杂代码库时，它允许开发人员选择最相关的代码上下文，并为AI模型准备精确的提示，从而获得更高质量的编码建议和解决方案。与其他编码工具不同，16x Prompt特别强调上下文管理的重要性，让开发人员可以控制提交给AI模型的内容，确保生成的代码与现有代码库保持一致。\n\n该工具支持多种领先的AI模型，包括DeepSeek，允许用户根据特定任务选择最合适的模型。16x Prompt的桌面应用程序提供了直观的界面，用于组织源代码文件并在项目之间切换上下文。无论是解决复杂的编码问题、重构代码还是学习新的编程概念，16x Prompt都能通过其精确的上下文管理功能提供卓越的AI辅助编码体验。",
+    "features": [
+      {
+        "title": "高级上下文管理",
+        "description": "16x Prompt提供了一套完整的工具来管理提交给AI模型的代码上下文：\n- 直观的文件选择器，用于包含相关代码文件\n- 智能上下文优化，确保不超过模型的令牌限制\n- 自动上下文压缩，保留关键信息的同时减少令牌使用\n- 项目间快速切换，支持同时处理多个代码库\n- 上下文历史记录，便于返回到之前使用过的上下文配置"
+      },
+      {
+        "title": "DeepSeek集成",
+        "description": "16x Prompt与DeepSeek AI模型无缝集成：\n- 原生支持DeepSeek模型API\n- 简化的API密钥设置流程\n- 针对编码任务优化的DeepSeek参数配置\n- 与OpenRouter集成，提供更多DeepSeek模型选项\n- 专为DeepSeek优化的提示模板"
+      },
+      {
+        "title": "多模型支持",
+        "description": "16x Prompt支持多种领先的AI模型，让用户可以根据需要选择：\n- DeepSeek模型家族完整支持\n- OpenAI GPT模型集成\n- Claude模型接入\n- Qwen大模型支持\n- 使用OpenRouter访问更多专业模型\n- 模型性能对比功能，帮助选择最佳模型"
+      },
+      {
+        "title": "高效的提示工程",
+        "description": "为开发人员提供先进的提示工程工具：\n- 预设的编码相关提示模板库\n- 提示历史记录和收藏功能\n- 自定义提示模板创建和管理\n- 提示变量和占位符支持\n- 基于上下文的智能提示建议\n- 提示效果评估和优化建议"
+      },
+      {
+        "title": "开发人员友好的界面",
+        "description": "专为编码工作流程设计的直观界面：\n- 干净简洁的设计，减少干扰\n- 代码语法高亮显示\n- 分屏视图，同时显示上下文和AI响应\n- 键盘快捷键支持高效操作\n- 深色和浅色主题选项\n- 响应式布局适应不同屏幕尺寸"
+      }
+    ],
+    "useCases": [
+      {
+        "title": "复杂代码问题求解",
+        "description": "当开发人员面临复杂的编程挑战时，16x Prompt允许他们选择最相关的代码上下文并精确描述问题。通过将正确的上下文与明确的问题描述结合，开发人员可以获得针对其特定代码库定制的解决方案，而不是通用的代码片段。这种方法特别适用于调试难以追踪的错误、优化性能瓶颈或实现复杂算法时。"
+      },
+      {
+        "title": "代码重构和优化",
+        "description": "重构大型代码库是一项挑战性的任务，需要深入理解现有代码结构和设计模式。16x Prompt使开发人员能够提供当前代码的上下文，并要求AI建议重构策略或直接生成重构后的代码。工具的上下文管理功能确保AI理解所有相关依赖和接口，从而产生与整个系统兼容的重构建议。"
+      },
+      {
+        "title": "学习新框架和库",
+        "description": "当学习新的编程框架或库时，开发人员可以使用16x Prompt探索如何将这些技术应用到他们现有的代码中。通过提供当前项目的上下文并询问如何集成特定功能，开发人员可以获得针对其特定用例的实际示例和解释，加速学习过程并确保正确实施。"
+      },
+      {
+        "title": "代码文档生成",
+        "description": "为现有代码库创建全面的文档通常是一项耗时的任务。16x Prompt可以分析提供的代码上下文，并生成详细的注释、函数说明、模块概述甚至用户文档。这种方法不仅节省时间，还确保文档与代码的实际功能一致，有助于维护技术文档的准确性和最新状态。"
+      },
+      {
+        "title": "团队协作和知识共享",
+        "description": "在团队环境中，16x Prompt可以帮助新成员快速理解复杂的代码库。资深开发人员可以使用该工具解释代码的关键部分，生成概述文档，或提供实现特定功能的指导。这促进了团队内的知识共享，并减少了新成员的入职时间，同时确保所有团队成员对代码库有一致的理解。"
+      }
+    ],
+    "advantages": [
+      {
+        "title": "精确的上下文控制",
+        "description": "16x Prompt的核心优势在于让开发人员完全控制提交给AI模型的上下文。这种精确性确保AI生成的代码与特定项目的要求和约束完全一致，减少了不适用的建议并提高了结果的相关性。"
+      },
+      {
+        "title": "高效的令牌使用",
+        "description": "通过智能上下文管理，16x Prompt优化了提交给AI模型的令牌数量。这不仅减少了API成本，还提高了响应速度，同时避免了因上下文过大而导致模型混淆或遗忘重要细节的问题。"
+      },
+      {
+        "title": "无缝的DeepSeek集成",
+        "description": "16x Prompt提供了与DeepSeek AI模型的优化集成，包括简化的API设置和针对编码任务调整的参数配置。这使开发人员能够充分利用DeepSeek的强大功能，特别是在处理复杂的编程挑战时。"
+      },
+      {
+        "title": "模型灵活性",
+        "description": "支持多种AI模型（包括DeepSeek、OpenAI和Claude）使开发人员能够为每个任务选择最合适的模型。用户可以根据特定编码任务的需求、性能考虑或成本限制灵活切换模型。"
+      },
+      {
+        "title": "桌面应用程序便利性",
+        "description": "作为专用的桌面应用程序，16x Prompt提供了比基于浏览器的替代方案更流畅、更高效的体验。这种方法消除了浏览器相关的限制，并优化了IDE和开发工作流程的集成。"
+      },
+      {
+        "title": "高级提示工程工具",
+        "description": "16x Prompt的提示管理功能超越了基本的文本输入，提供了模板、变量支持和历史记录等高级功能。这些工具帮助开发人员创建更有效的提示，并随着时间推移改进他们的提示工程技能。"
+      },
+      {
+        "title": "专注于开发者体验",
+        "description": "16x Prompt的每个方面都是为了开发人员的需求而设计的，从其代码友好的界面到键盘快捷键再到语法高亮。这种专注确保工具无缝融入现有的开发工作流程，最大限度地提高生产力。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "16x Prompt如何与DeepSeek集成？",
+        "answer": "16x Prompt通过其API设置提供与DeepSeek的原生集成。用户可以在设置菜单中输入他们的DeepSeek API密钥，并选择首选的DeepSeek模型。此外，16x Prompt还通过OpenRouter支持额外的DeepSeek模型选项，为用户提供更多灵活性。设置完成后，用户可以在提示中直接使用DeepSeek的AI能力，获取编码建议和解决方案。"
+      },
+      {
+        "question": "如何在16x Prompt中设置DeepSeek API？",
+        "answer": "要在16x Prompt中设置DeepSeek API，请按照以下步骤操作：1. 打开16x Prompt应用程序并点击右上角的设置图标。2. 导航到"API设置"选项卡。3. 找到DeepSeek API部分并输入您的API密钥。4. 如果需要，您还可以切换到OpenRouter选项卡，并设置OpenRouter API密钥以访问更多DeepSeek模型变体。5. 保存设置，现在您可以在模型选择器中选择DeepSeek模型了。如果您没有DeepSeek API密钥，可以从DeepSeek官方网站获取。"
+      },
+      {
+        "question": "16x Prompt是否适用于所有编程语言？",
+        "answer": "是的，16x Prompt设计为支持所有主要的编程语言。它的上下文管理和提示功能是语言无关的，可以处理从Python、JavaScript和Java到C++、Go、Rust等各种语言的代码。界面支持代码语法高亮，可以识别多种编程语言的语法，以提高可读性。DeepSeek和其他支持的AI模型也经过训练，可以处理多种编程语言，使16x Prompt成为各类开发人员的多功能工具。"
+      },
+      {
+        "question": "16x Prompt如何处理大型代码库的上下文限制？",
+        "answer": "16x Prompt使用几种策略来处理大型代码库的上下文限制：1. 智能文件选择：允许用户准确选择最相关的文件，而不是加载整个代码库。2. 上下文压缩：自动减少不必要的空白、注释和格式，同时保留代码功能。3. 相关性排序：根据查询将最相关的代码部分放在上下文的前面。4. 令牌计数监控：提供实时反馈，显示当前上下文使用了多少令牌。5. 分段处理：将大型问题分解为可以单独处理的较小组件。这些技术共同确保即使在复杂的项目中，也能将最重要的上下文提供给AI模型。"
+      },
+      {
+        "question": "16x Prompt的定价模式是什么？",
+        "answer": "16x Prompt提供免费下载的基本版本，具有核心上下文管理和AI集成功能。用户需要提供自己的AI模型API密钥（如DeepSeek、OpenAI等）。高级功能，如更高级的上下文优化、更多提示模板和团队协作工具，可能需要订阅高级版本。具体的定价信息可在16x Prompt官方网站上找到：https://prompt.16x.engineer/pricing。某些功能可能有使用限制或只在付费计划中提供。"
+      },
+      {
+        "question": "16x Prompt与IDE如何集成？",
+        "answer": "虽然16x Prompt主要是一个独立的桌面应用程序，但它设计为与开发工作流程无缝协作。用户可以轻松地在16x Prompt和他们的IDE之间复制粘贴代码。一些用户选择将16x Prompt与IDE并排打开，以便在编码时快速获取AI建议。该工具还支持直接从文件系统导入代码文件，简化了将现有项目文件纳入上下文的过程。未来的版本可能包括更直接的IDE插件集成。"
+      },
+      {
+        "question": "16x Prompt如何保护我的代码和API密钥？",
+        "answer": "16x Prompt将安全性作为首要任务：1. 本地处理：代码上下文在本地处理，只有在用户明确请求时才发送到AI提供商。2. 不存储代码：不会在其服务器上存储用户代码。3. 加密API密钥：所有API密钥都在本地安全存储并加密。4. 无遥测：默认情况下不收集代码数据或使用模式。5. 透明数据策略：清晰说明数据如何使用的隐私政策。用户对其代码和API使用保持完全控制，可以选择何时以及如何将数据发送到AI服务。"
+      }
+    ],
+    "resources": [
+      {
+        "title": "官方网站",
+        "url": "https://prompt.16x.engineer/"
+      },
+      {
+        "title": "DeepSeek设置指南",
+        "url": "https://prompt.16x.engineer/guide/deepseek"
+      },
+      {
+        "title": "OpenRouter设置（支持更多DeepSeek模型）",
+        "url": "https://prompt.16x.engineer/guide/openrouter"
+      },
+      {
+        "title": "下载页面",
+        "url": "https://prompt.16x.engineer/download"
+      },
+      {
+        "title": "使用指南",
+        "url": "https://prompt.16x.engineer/guide"
+      },
+      {
+        "title": "Discord社区",
+        "url": "https://prompt.16x.engineer/discord"
+      }
+    ]
+  }
+} 

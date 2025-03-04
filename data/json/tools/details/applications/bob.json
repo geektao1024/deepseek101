@@ -1,0 +1,150 @@
+{
+    "id": "bob",
+    "name": "Bob",
+    "description": "macOS平台的翻译和OCR软件，可通过各种插件支持DeepSeek等大模型",
+    "urls": {
+      "website": "https://bobtranslate.com/",
+      "github": "https://github.com/ripperhe/Bob"
+    },
+    "pricing": {
+      "is_free": true,
+      "is_open_source": false
+    },
+    "category": "applications",
+    "tags": [
+      "macos",
+      "translation",
+      "ocr",
+      "clipboard",
+      "screenshot",
+      "plugin",
+      "deepseek"
+    ],
+    "overview": {
+      "headline": "随时随地进行翻译和OCR的macOS应用",
+      "description": "Bob是一款macOS平台上的翻译和OCR工具，允许用户在任何应用程序中进行即时翻译和文本识别。它具有简洁的界面和丰富的功能，支持划词翻译、截图翻译和输入翻译等多种交互方式。通过其灵活的插件系统，Bob可以集成多种翻译服务，包括DeepSeek等大型语言模型，为用户提供高质量的翻译和OCR体验。"
+    },
+    "features": [
+      {
+        "name": "多样化翻译方式",
+        "description": "支持划词翻译、截图翻译和输入翻译，让用户在各种场景下都能快速获取翻译结果。"
+      },
+      {
+        "name": "强大的OCR功能",
+        "description": "提供截图OCR、静默截图OCR和访达选图OCR，支持离线识别、连续识别、二维码识别以及智能分段。"
+      },
+      {
+        "name": "多服务支持",
+        "description": "内置支持多种翻译服务，如火山、腾讯、阿里、百度、有道、Google、Microsoft等，用户可以同时启用多个服务进行比较。"
+      },
+      {
+        "name": "灵活的插件系统",
+        "description": "通过插件系统，用户可以轻松接入更多翻译服务，包括DeepSeek等AI大模型，以获取更准确、更自然的翻译结果。"
+      },
+      {
+        "name": "DeepSeek集成",
+        "description": "通过插件如bob-plugin-vac-gptranslate，Bob可以调用DeepSeek-v3和DeepSeek-r1等模型实现高质量翻译，甚至支持展示翻译思考过程。"
+      }
+    ],
+    "use_cases": [
+      {
+        "name": "外语学习",
+        "description": "学习外语时，遇到不理解的单词或句子，可以通过划词或截图快速翻译，辅助理解和学习。"
+      },
+      {
+        "name": "国际交流",
+        "description": "与外国朋友交流时，可以使用Bob快速翻译对话内容，减少语言障碍。"
+      },
+      {
+        "name": "文档翻译",
+        "description": "处理外语文档时，可以通过截图OCR和翻译功能，快速理解文档内容。"
+      },
+      {
+        "name": "网页浏览",
+        "description": "浏览外语网站时，遇到不理解的内容可以迅速翻译，提高网页浏览效率。"
+      },
+      {
+        "name": "图像文字提取",
+        "description": "从图片、截图或PDF中快速提取文字，进行后续处理或翻译。"
+      }
+    ],
+    "advantages": [
+      {
+        "name": "即用即走体验",
+        "description": "Bob设计为即用即走的体验，不需要切换应用，在任何软件中都能快速调用翻译和OCR功能。"
+      },
+      {
+        "name": "高度可定制",
+        "description": "通过丰富的设置选项和插件系统，用户可以根据自己的需求定制Bob的功能和外观。"
+      },
+      {
+        "name": "多服务比较",
+        "description": "支持同时开启多个翻译服务，方便用户对比不同服务的翻译结果，选择最准确的翻译。"
+      },
+      {
+        "name": "隐私保护",
+        "description": "在本地进行OCR识别的选项，保护用户的数据隐私，适合处理敏感内容。"
+      },
+      {
+        "name": "AI增强翻译",
+        "description": "通过集成DeepSeek等大模型，Bob可以提供比传统翻译服务更加准确、自然的翻译结果。"
+      },
+      {
+        "name": "macOS原生体验",
+        "description": "为macOS平台专门设计，提供与系统高度集成的用户体验。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Bob是如何与DeepSeek集成的？",
+        "answer": "Bob通过插件系统与DeepSeek集成。用户可以安装如bob-plugin-vac-gptranslate等插件，配置相应的账号信息后，即可调用DeepSeek-v3、DeepSeek-r1等模型进行高质量翻译。这些插件支持流式传输，并且特别是DeepSeek-r1模型还能展示翻译的思考过程。"
+      },
+      {
+        "question": "Bob的插件系统如何工作？",
+        "answer": "Bob提供了标准化的插件接口，允许开发者创建各种服务的翻译和OCR插件。用户可以从插件网站或GitHub下载插件文件（通常是.bobplugin格式），双击安装后在Bob的设置中启用并配置即可使用。"
+      },
+      {
+        "question": "Bob是否支持离线使用？",
+        "answer": "Bob的基本功能和部分OCR功能支持离线使用，但大多数翻译服务（包括DeepSeek）需要网络连接才能工作。"
+      },
+      {
+        "question": "如何使用Bob进行截图翻译？",
+        "answer": "用户可以通过设置的快捷键（默认为Option+S）调出截图工具，选择需要翻译的区域后，Bob会自动识别文字并显示翻译结果。"
+      },
+      {
+        "question": "Bob是否适用于所有macOS应用程序？",
+        "answer": "Bob设计为可在大多数macOS应用程序中工作，包括浏览器、文档编辑器、聊天软件等。但某些特殊应用可能存在兼容性问题。"
+      },
+      {
+        "question": "使用DeepSeek插件是否需要付费？",
+        "answer": "这取决于具体插件的设计。一些插件如bob-plugin-vac-gptranslate需要注册账号并可能涉及一定的费用，但通常会提供一些免费额度。具体请查看插件的说明文档。"
+      }
+    ],
+    "resources": [
+      {
+        "name": "官方网站",
+        "url": "https://bobtranslate.com/",
+        "type": "website"
+      },
+      {
+        "name": "Bob插件索引",
+        "url": "https://bobplugin.ripperhe.com/",
+        "type": "website"
+      },
+      {
+        "name": "DeepSeek插件(bob-plugin-vac-gptranslate)",
+        "url": "https://github.com/vacuityv/bob-plugin-vac-gptranslate",
+        "type": "github"
+      },
+      {
+        "name": "安装教程",
+        "url": "https://bobtranslate.com/guide/",
+        "type": "tutorial"
+      },
+      {
+        "name": "插件开发文档",
+        "url": "https://bobtranslate.com/plugin/",
+        "type": "documentation"
+      }
+    ]
+  }

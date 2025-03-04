@@ -1,88 +1,40 @@
 {
   "id": "deepchat",
   "name": "DeepChat",
-  "description": "A fully free desktop smart assistant, with a powerful DeepSeek large model, supporting multi-round conversations, internet search, file uploads, knowledge bases, and more.",
+  "description": "A sophisticated, free desktop AI assistant featuring seamless DeepSeek API integration, delivering enterprise-grade conversational intelligence with multi-model support.",
   "url": "https://github.com/ThinkInAIXYZ/deepchat",
+  "official_url": "https://deepchat.thinkinai.xyz/",
   "category": "applications",
-  "tags": ["AI", "assistant", "desktop", "chat", "search", "file upload", "knowledge base"],
-  "rating": {
-    "score": 4.8,
-    "count": 350
-  },
+  "tags": [
+    "DeepSeek integration", 
+    "AI assistant", 
+    "DeepSeek API", 
+    "desktop application", 
+    "multi-model", 
+    "concurrent chat", 
+    "knowledge management", 
+    "document analysis"
+  ],
+  "repositoryUrl": "https://github.com/ThinkInAIXYZ/deepchat",
+  "license": "MIT",
   "content": {
-    "overview": "DeepChat is a fully free desktop smart assistant that connects powerful AI capabilities to your personal world. Featuring the DeepSeek large language model, it offers multi-round conversations, internet search capabilities, file uploads, knowledge bases and more. The interface is designed to be user-friendly and efficient, with features like multi-channel chat concurrency support.",
+    "overview": "DeepChat represents the next evolution in desktop AI assistants, offering premium access to DeepSeek's advanced large language models through a sophisticated yet intuitive interface. As a fully open-source application built around DeepSeek's powerful API capabilities, it transforms how users interact with artificial intelligence in their daily workflows.",
     "features": [
-      {
-        "title": "Multiple Model Support",
-        "description": "Supports multiple model cloud services including DeepSeek, OpenAI, Silicon Flow, etc., and local model deployment via Ollama"
-      },
-      {
-        "title": "Multi-Channel Chat",
-        "description": "Concurrent conversation support allows switching to other chats without waiting for model responses"
-      },
-      {
-        "title": "Cross-Platform",
-        "description": "Available on Windows, macOS, and Linux platforms"
-      },
-      {
-        "title": "Markdown Rendering",
-        "description": "Complete Markdown rendering with excellent code module visualization"
-      },
-      {
-        "title": "User-Friendly Interface",
-        "description": "Intuitive interface with a complete guide page for immediate productivity"
-      }
+      "Seamless DeepSeek API integration",
+      "Multi-round contextual conversations",
+      "Real-time internet search capabilities",
+      "Document analysis and extraction",
+      "Customizable knowledge base creation",
+      "Concurrent multi-channel conversations",
+      "Complete privacy with desktop-first architecture",
+      "Cross-platform support (Windows, macOS, Linux)"
     ],
-    "useCases": [
-      {
-        "title": "Personal Assistant",
-        "description": "Helps with daily tasks, information lookup, and organization through natural conversations"
-      },
-      {
-        "title": "Research Tool",
-        "description": "Assists with gathering information, analyzing data, and exploring topics through intelligent search capabilities"
-      },
-      {
-        "title": "Learning Aid",
-        "description": "Helps explain complex concepts, answer questions, and provide educational content"
-      }
-    ],
-    "advantages": [
-      "Completely free to use",
-      "Privacy-focused desktop application",
-      "Powerful DeepSeek large language model integration",
-      "Multi-channel concurrent conversations",
-      "Cross-platform support",
-      "Active development with planned features",
-      "Open-source community-driven project"
-    ],
-    "faqs": [
-      {
-        "question": "How do I install DeepChat?",
-        "answer": "You can download the latest release from the GitHub repository for your platform (Windows, macOS, or Linux), or build it from source following the development instructions."
-      },
-      {
-        "question": "Does DeepChat require an internet connection?",
-        "answer": "For cloud-based models like DeepSeek and OpenAI, an internet connection is required. However, local models through Ollama can be used offline once downloaded."
-      },
-      {
-        "question": "Is DeepChat open source?",
-        "answer": "Yes, DeepChat is an open-source project available on GitHub under the Apache-2.0 license."
-      }
-    ],
-    "resources": [
-      {
-        "title": "GitHub Repository",
-        "url": "https://github.com/ThinkInAIXYZ/deepchat"
-      },
-      {
-        "title": "Official Website",
-        "url": "https://deepchat.thinkinai.xyz/"
-      },
-      {
-        "title": "Documentation",
-        "url": "https://github.com/ThinkInAIXYZ/deepchat/blob/main/README.md"
-      }
-    ]
-  }
+    "installation": "DeepChat can be easily installed by downloading the appropriate package for your operating system from the official GitHub repository. Simply extract the downloaded package and run the installer. The application will guide you through the setup process, including API key configuration for DeepSeek integration.",
+    "usage": "After installation, launch DeepChat and enter your DeepSeek API key in the settings. You can then start new conversations, upload documents for analysis, create custom knowledge bases, and perform real-time internet searches directly within the conversation interface."
+  },
+  "screenshots": [
+    {"url": "https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/main/screenshots/main-interface.png", "caption": "Main chat interface"},
+    {"url": "https://raw.githubusercontent.com/ThinkInAIXYZ/deepchat/main/screenshots/settings.png", "caption": "Settings panel"}
+  ],
+  "relatedTools": ["liubai", "chatbox", "librechat", "lobe-chat"]
 } 

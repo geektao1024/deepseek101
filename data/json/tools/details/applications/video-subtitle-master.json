@@ -1,0 +1,159 @@
+{
+  "id": "video-subtitle-master",
+  "name": "Video Subtitle Master",
+  "description": "A powerful desktop application for batch generating subtitles for videos and translating them into other languages",
+  "url": "https://github.com/buxuku/video-subtitle-master",
+  "official_url": "https://video-subtitle-master.com/",
+  "category": "applications",
+  "tags": [
+    "AI",
+    "video",
+    "subtitles",
+    "translation",
+    "multi-platform",
+    "DeepSeek Integration",
+    "batch processing",
+    "desktop"
+  ],
+  "content": {
+    "overview": "Video Subtitle Master is a comprehensive desktop application designed for efficient batch generation of subtitles for videos and their translation into various languages. Built as an enhanced version of the open-source VideoSubtitleGenerator, it transforms the original command-line tool into a user-friendly client with a graphical interface, making it accessible to users of all technical levels.\n\nThe application leverages advanced AI technologies, including Whisper for speech recognition and various translation services like DeepSeek, to deliver accurate subtitle generation and translation. Its batch processing capabilities enable users to handle multiple files simultaneously, significantly improving workflow efficiency for content creators, translators, and media professionals.\n\nWith support for multiple platforms including macOS and Windows, Video Subtitle Master offers a comprehensive solution for anyone working with video content who needs to generate subtitles or translate existing ones. The integration with DeepSeek's AI capabilities enhances the translation quality, making it suitable for professional use cases requiring high accuracy and natural-sounding translations.",
+    "features": [
+      {
+        "title": "User-Friendly Interface",
+        "description": "Video Subtitle Master provides an intuitive graphical user interface that simplifies the entire subtitle generation and translation process:\n- Easy file selection and batch processing\n- Clear visualization of processing status and progress\n- Simplified parameter configuration for various tasks\n- Organized settings management for translation services and model selection"
+      },
+      {
+        "title": "Advanced Subtitle Generation",
+        "description": "The application offers powerful speech recognition capabilities for creating accurate subtitles:\n- Integration with Whisper.cpp optimized for performance, especially on Apple Silicon\n- Support for multiple language speech recognition\n- Ability to generate subtitles from video or audio files\n- Flexible subtitle file naming for compatibility with various media players\n- Option to use locally installed Whisper command for additional customization"
+      },
+      {
+        "title": "Comprehensive Translation Support",
+        "description": "Video Subtitle Master includes multiple translation services to meet different needs:\n- DeepSeek API integration for high-quality AI-powered translations\n- Volcano Engine Translation service support\n- Baidu Translation integration\n- DeepLX Translation capabilities\n- Local Ollama model translation for offline use\n- Support for OpenAI-style API translations\n- Customizable translation output format: pure translation or bilingual subtitles"
+      },
+      {
+        "title": "Efficient Batch Processing",
+        "description": "The application is designed for handling multiple files efficiently:\n- Ability to process entire folders of videos simultaneously\n- Customizable number of concurrent tasks to optimize performance\n- Progress tracking for all batch operations\n- Intelligent file management for organized output\n- Source and target language subtitle files saved in the same directory as the video"
+      },
+      {
+        "title": "Performance Optimization",
+        "description": "Video Subtitle Master includes several features to enhance processing speed and efficiency:\n- Core ML support on Apple Silicon for faster speech recognition\n- Integrated fluent-ffmpeg, eliminating the need for separate ffmpeg installation\n- Model management with options to download from mirrored sources\n- Manual model import capabilities for large model files\n- Optimized processing algorithms for faster subtitle generation"
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Content Localization for Creators",
+        "description": "Video content creators can use Video Subtitle Master to easily translate their content into multiple languages, expanding their global reach. The batch processing feature allows them to prepare entire video series for international audiences efficiently, while the high-quality translation services like DeepSeek ensure their message is accurately conveyed across language barriers."
+      },
+      {
+        "title": "Educational Video Accessibility",
+        "description": "Educational institutions and online learning platforms can improve the accessibility of their video content by automatically generating subtitles in the original language and translating them for non-native speakers. This makes educational materials more inclusive and accessible to diverse student populations, enhancing the learning experience for all."
+      },
+      {
+        "title": "Media Localization Workflows",
+        "description": "Professional media localization teams can streamline their workflows by using Video Subtitle Master to handle the initial subtitle generation and translation, reducing manual transcription time. The output can then be further refined by human translators, significantly increasing productivity in the localization process for films, documentaries, and other video content."
+      },
+      {
+        "title": "International Conference and Webinar Support",
+        "description": "Organizations hosting international conferences or webinars can use the application to quickly generate subtitles for recorded sessions, making them accessible to participants who speak different languages. This enhances audience engagement and ensures important information is available to all participants regardless of their native language."
+      },
+      {
+        "title": "Personal Media Library Enhancement",
+        "description": "Individual users with personal media collections can add subtitles to their favorite foreign films or shows, enhancing their viewing experience. The application's user-friendly interface makes it accessible even to non-technical users, allowing anyone to improve their media library with accurate subtitles in their preferred language."
+      }
+    ],
+    "advantages": [
+      {
+        "title": "All-in-One Solution",
+        "description": "Video Subtitle Master combines subtitle generation, translation, and batch processing in a single application, eliminating the need for multiple tools and streamlining the entire workflow."
+      },
+      {
+        "title": "High-Quality AI Translation",
+        "description": "Integration with advanced AI translation services like DeepSeek ensures natural-sounding, accurate translations that maintain the context and meaning of the original content."
+      },
+      {
+        "title": "Efficient Resource Utilization",
+        "description": "Optimized for performance, especially on Apple Silicon with Core ML support, the application maximizes hardware resources for faster processing without requiring high-end specifications."
+      },
+      {
+        "title": "Flexible Translation Options",
+        "description": "With support for multiple translation services, users can choose the most appropriate option based on their specific requirements, language pairs, or budget constraints."
+      },
+      {
+        "title": "Time-Saving Batch Processing",
+        "description": "The ability to process multiple files simultaneously with customizable concurrency settings significantly reduces the time required for large projects compared to processing files individually."
+      },
+      {
+        "title": "No External Dependencies",
+        "description": "Built-in ffmpeg and Whisper integration eliminates the need to install and configure additional software, making setup and usage straightforward for users of all technical levels."
+      },
+      {
+        "title": "Cross-Platform Compatibility",
+        "description": "Available for both macOS and Windows, ensuring accessibility across different operating systems commonly used by content creators and media professionals."
+      },
+      {
+        "title": "Customizable Output Format",
+        "description": "Options to customize subtitle file naming and content format (bilingual or translated only) provide flexibility in adapting the output to specific requirements and player compatibility."
+      },
+      {
+        "title": "Offline Processing Capabilities",
+        "description": "Support for local models allows for subtitle generation and certain translation tasks even without internet connectivity, useful for work in environments with limited online access."
+      },
+      {
+        "title": "Regular Updates and Community Support",
+        "description": "As an open-source project with active development, the application benefits from community contributions, regular updates, and responsive issue resolution."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Which operating systems are supported by Video Subtitle Master?",
+        "answer": "Video Subtitle Master is available for macOS and Windows. It has been thoroughly tested on macOS, while Windows testing was conducted in a virtual environment. If you encounter any issues on either platform, you can report them through the project's GitHub Issues page."
+      },
+      {
+        "question": "How can I set up translation services with DeepSeek in Video Subtitle Master?",
+        "answer": "To use DeepSeek for translations, go to the application's settings, navigate to the 'Translation Services' section, and select the OpenAI-style API option. Enter your DeepSeek API key, set the appropriate endpoint URL, and select the model you wish to use for translations. Save your settings, and DeepSeek will be available as a translation service option when processing files."
+      },
+      {
+        "question": "What should I do if I encounter the 'The application is damaged and can't be opened' message on macOS?",
+        "answer": "This is a common macOS security feature. To resolve it, open Terminal and run the following command: sudo xattr -dr com.apple.quarantine /Applications/Video\\ Subtitle\\ Master.app and then try running the application again. This removes the quarantine attribute that macOS places on applications downloaded from the internet."
+      },
+      {
+        "question": "How can I manually import Whisper models if the in-app download is too slow?",
+        "answer": "You can manually download models from either the domestic mirror (https://hf-mirror.com/ggerganov/whisper.cpp/tree/main) or Hugging Face official source (https://huggingface.co/ggerganov/whisper.cpp/tree/main). After downloading, go to the 'Model Management' page in the application, click 'Import Model', select your downloaded model file in the file selector, and confirm the import."
+      },
+      {
+        "question": "Can I generate subtitles from audio files as well as video files?",
+        "answer": "Yes, Video Subtitle Master supports generating subtitles from both video and audio files. The process is the same – simply select your audio files through the file selection interface, configure your desired parameters, and start the generation process."
+      },
+      {
+        "question": "How can I optimize performance on Apple Silicon Macs?",
+        "answer": "For optimal performance on Apple Silicon Macs, ensure you're using version 1.20.0 or later which includes Core ML support. If upgrading from an older version, uninstall the old version first, then install the new version. Additionally, select 'Reinstall Whisper' in the settings interface to enable Core ML acceleration, which significantly improves speech recognition speed."
+      },
+      {
+        "question": "Is there a limit to the number of files I can process in a batch?",
+        "answer": "There's no hard limit on the number of files you can process in a batch. However, practical limitations such as system resources and processing time should be considered. You can adjust the number of concurrent tasks in the settings to optimize performance based on your computer's capabilities."
+      }
+    ],
+    "resources": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/buxuku/video-subtitle-master"
+      },
+      {
+        "title": "Downloads Page",
+        "url": "https://github.com/buxuku/video-subtitle-master/releases"
+      },
+      {
+        "title": "Issue Tracker",
+        "url": "https://github.com/buxuku/video-subtitle-master/issues"
+      },
+      {
+        "title": "Whisper Models (Official)",
+        "url": "https://huggingface.co/ggerganov/whisper.cpp/tree/main"
+      },
+      {
+        "title": "Whisper Models (Mirror)",
+        "url": "https://hf-mirror.com/ggerganov/whisper.cpp/tree/main"
+      }
+    ]
+  }
+}

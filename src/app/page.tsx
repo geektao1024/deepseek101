@@ -17,7 +17,15 @@ export const metadata: Metadata = {
 export default function Home() {
   // Read tool data
   const toolsPath = path.join(process.cwd(), 'data', 'json', 'tools.json')
-  const { categories, tools = [] } = JSON.parse(fs.readFileSync(toolsPath, 'utf8'))
+  const toolsData = JSON.parse(fs.readFileSync(toolsPath, 'utf8'))
+  const { categories, tools = [], github_stats_updated_at } = toolsData
+  
+  // 详细分析工具数据
+  console.log('Home component loaded tools:', tools.length)
+  console.log('GitHub stats updated at:', github_stats_updated_at)
+  console.log('First tool data structure:', JSON.stringify(tools[0], null, 2))
+  console.log('Has stars property?', Object.prototype.hasOwnProperty.call(tools[0], 'stars'))
+  console.log('Stars type:', typeof tools[0].stars)
   
   // Get all article data
   const allPostsData = getSortedPostsData()
@@ -76,6 +84,7 @@ export default function Home() {
         tools={tools} 
         articles={allPostsData} 
         categories={categories} 
+        github_stats_updated_at={github_stats_updated_at}
       />
     </div>
   )
